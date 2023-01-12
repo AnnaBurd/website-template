@@ -19,6 +19,18 @@
   padding-bottom: 7px;
 }
 
+nav {
+  top: 0;
+  z-index: 10;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: yellow;
+}
+
 a {
   text-decoration: none;
 }
@@ -51,4 +63,26 @@ header {
 }
 .header__icons svg:hover {
   fill-opacity: 0.9;
+}
+
+nav {
+  background-color: #FFFFFF;
+}
+
+.navbar__logo {
+  background-color: orange;
+}
+.navbar__links {
+  background-color: green;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.navbar__links__simple {
+  background-color: red;
+}
+.navbar__links__buttons {
+  margin-left: 15px;
+  background-color: black;
 }/*# sourceMappingURL=style.css.map */

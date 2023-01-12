@@ -2,10 +2,9 @@
 $nice-page-bg: #F6F4F5
 $nice-header-bg:#939778
 $nice-header-text: rgba(white, 0.7)
+$nice-nav-bg:#FFFFFF
 
 
-// $header-background: #939778
-// $navbar-background: #FFFFFF
 // $cards-background: #FFFEFF
 // $accent: #CF6F49
 // $header-background-darken: darken($header-background, 15%)
@@ -43,6 +42,16 @@ $nice-header-text: rgba(white, 0.7)
     justify-content: center
     padding-top: 7px
     padding-bottom: 7px
+nav
+    position:sticky
+    top: 0
+    z-index: 10
+.navbar
+    display: flex
+    justify-content: space-between
+    padding-top: 16px
+    padding-bottom: 16px
+    background-color: yellow
 
 // Styles
 a
@@ -75,3 +84,23 @@ header
             fill-opacity: 0.8
             &:hover
                 fill-opacity: 0.9
+
+nav
+    background-color: $nice-nav-bg
+    // todo @include box-shadow
+.navbar
+    &__logo
+        background-color: orange
+        // margin-top: -10px // TODO Vertical alignment with links
+    &__links
+        background-color: green
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+        text-align: right
+        &__simple
+            background-color: red
+            // margin-top: 7px // TODO Vertical alignment with buttons
+        &__buttons
+            margin-left: 15px
+            background-color: black
