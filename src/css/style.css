@@ -66,6 +66,7 @@ header {
 
 nav {
   background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .navbar__links {
@@ -75,7 +76,7 @@ nav {
   text-align: right;
 }
 .navbar__links__simple {
-  margin-top: 12px;
+  margin-top: 13px;
 }
 .navbar__links__simple a {
   color: rgba(42, 44, 31, 0.95);
@@ -104,6 +105,9 @@ nav {
 .navbar__links__buttons .nice-bt--transparent span {
   margin-left: 22px;
 }
+.navbar__links__buttons .nice-bt--transparent:hover {
+  background-color: whitesmoke;
+}
 .navbar__links__buttons .nice-bt--accent {
   margin-left: 2px;
 }
@@ -121,13 +125,21 @@ nav {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.03em;
+  transition: border-color 200ms ease, background-color 200ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.nice-bt:hover {
+  background-color: #797c60;
 }
 .nice-bt--transparent {
   background: none;
   border: 1px solid #E7E8E3;
   color: rgba(42, 44, 31, 0.95);
   font-weight: 600;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
 .nice-bt--accent {
   background-color: #CF6F49;
+}
+.nice-bt--accent:hover {
+  background-color: #b55630;
 }/*# sourceMappingURL=style.css.map */
