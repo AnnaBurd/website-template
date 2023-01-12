@@ -142,4 +142,11 @@ nav {
 }
 .nice-bt--accent:hover {
   background-color: #b55630;
+}
+
+.hero {
+  background-color: red;
+}
+.hero__container {
+  background-color: pink;
 }/*# sourceMappingURL=style.css.map */
