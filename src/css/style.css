@@ -1,3 +1,54 @@
 * {
   box-sizing: border-box;
+}
+
+.padding {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #F6F4F5;
+}
+
+header {
+  background-color: #939778;
+}
+
+.header__text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 20px;
+  margin-right: 10px;
+}
+.header__icons {
+  width: 80px;
+  display: inline-flex;
+  justify-content: space-between;
+}
+.header__icons svg {
+  fill: white;
+  fill-opacity: 0.8;
+}
+.header__icons svg:hover {
+  fill-opacity: 0.9;
 }/*# sourceMappingURL=style.css.map */

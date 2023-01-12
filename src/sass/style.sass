@@ -1,2 +1,77 @@
+// Colors
+$nice-page-bg: #F6F4F5
+$nice-header-bg:#939778
+$nice-header-text: rgba(white, 0.7)
+
+
+// $header-background: #939778
+// $navbar-background: #FFFFFF
+// $cards-background: #FFFEFF
+// $accent: #CF6F49
+// $header-background-darken: darken($header-background, 15%)
+// $navbar-background-darken: darken($navbar-background, 5%)
+// $accent-darken: darken($accent, 15%)
+
+// // Size variables
+// $border-radius: 8px
+
+// // Shadows
+// @mixin box-shadow
+//     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08)
+
+// @mixin transition-on-hover
+//     transition: 150ms ease // TODO adjust
+
+// @mixin button-transition-on-hover
+//     transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1) // TODO adjust
+
+
+    
+// Layout
 *
     box-sizing: border-box // include paddings when calculating width-height
+.padding
+    padding-left: 60px
+    padding-right: 60px
+    // background-color: pink
+.container
+    max-width: 1160px
+    margin: 0 auto
+    // background-color: yellow
+.header
+    display: flex
+    justify-content: center
+    padding-top: 7px
+    padding-bottom: 7px
+
+// Styles
+a
+    text-decoration: none
+
+body
+    font-family: 'Noto Sans', sans-serif
+    background-color: $nice-page-bg
+
+header
+    background-color: $nice-header-bg
+    // todo @include box-shadow
+.header
+    // background-color: red
+    &__text
+        color: $nice-header-text
+        font-size: 14px
+        font-weight: 400
+        letter-spacing: -0.05em
+        line-height: 20px // Vertical alignment with icons
+        margin-right: 10px // Indent from icons
+        // background-color: blue
+    &__icons
+        // background-color: black
+        width: 80px
+        display: inline-flex
+        justify-content: space-between
+        svg
+            fill: white
+            fill-opacity: 0.8
+            &:hover
+                fill-opacity: 0.9
