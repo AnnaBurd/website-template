@@ -1,18 +1,37 @@
 // Colors
 $nice-page-bg: #F6F4F5
 $nice-header-bg:#939778
-$nice-header-text: rgba(white, 0.7)
+$nice-header-text:rgba(white, 0.7)
 $nice-nav-bg:#FFFFFF
-
+$nice-nav-text:rgba(42, 44, 31, 0.95)
+$nice-bt-bg:#939778
+$nice-bt-bg--accent:#CF6F49
+$nice-bt-text:rgba(white, 0.9)
+$nice-bt-text--transparent:rgba(42, 44, 31, 0.95)
 
 // $cards-background: #FFFEFF
-// $accent: #CF6F49
+
 // $header-background-darken: darken($header-background, 15%)
 // $navbar-background-darken: darken($navbar-background, 5%)
 // $accent-darken: darken($accent, 15%)
 
-// // Size variables
-// $border-radius: 8px
+// Lenghts
+$border-radius: 8px
+$border: 1px solid #E7E8E3
+$noborder:1px solid transparent
+
+// Fonts
+$ff-sans-serif: 'Noto Sans', sans-serif
+$ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif
+
+$fs-normal:14px
+
+$fw-normal: 400
+$fw-medium: 500
+$fw-semibold: 600
+
+$ls-normal: -0.05em
+$ls-less: -0.03em
 
 // // Shadows
 // @mixin box-shadow
@@ -26,17 +45,15 @@ $nice-nav-bg:#FFFFFF
 
 
     
-// Layout
+// Page Layout
 *
     box-sizing: border-box // include paddings when calculating width-height
 .padding
     padding-left: 60px
     padding-right: 60px
-    // background-color: pink
 .container
     max-width: 1160px
     margin: 0 auto
-    // background-color: yellow
 .header
     display: flex
     justify-content: center
@@ -51,14 +68,13 @@ nav
     justify-content: space-between
     padding-top: 16px
     padding-bottom: 16px
-    background-color: yellow
 
 // Styles
 a
     text-decoration: none
 
 body
-    font-family: 'Noto Sans', sans-serif
+    font-family: $ff-sans-serif
     background-color: $nice-page-bg
 
 header
@@ -68,14 +84,12 @@ header
     // background-color: red
     &__text
         color: $nice-header-text
-        font-size: 14px
-        font-weight: 400
-        letter-spacing: -0.05em
+        font-size: $fs-normal
+        font-weight: $fw-normal
+        letter-spacing: $ls-normal
         line-height: 20px // Vertical alignment with icons
         margin-right: 10px // Indent from icons
-        // background-color: blue
     &__icons
-        // background-color: black
         width: 80px
         display: inline-flex
         justify-content: space-between
@@ -90,17 +104,65 @@ nav
     // todo @include box-shadow
 .navbar
     &__logo
-        background-color: orange
+        // background-color: orange
         // margin-top: -10px // TODO Vertical alignment with links
     &__links
-        background-color: green
         display: flex
         justify-content: flex-end
         flex-wrap: wrap
         text-align: right
         &__simple
-            background-color: red
-            // margin-top: 7px // TODO Vertical alignment with buttons
+            margin-top: 12px // TODO Vertical alignment with buttons
+            a
+                color: $nice-nav-text
+                font-family: $ff-display
+                font-size: $fs-normal
+                font-weight: $fw-medium
+                letter-spacing: $ls-less
+                white-space: nowrap
+                padding: 7px // TODO Size of clickable area
+                margin: 3px
+            a:last-child // TODO remove margin for the last child in flex wrapped row
+                margin-right: 0px
+                padding-right: 0px
         &__buttons
-            margin-left: 15px
-            background-color: black
+            margin-left: 20px
+            .nice-bt--transparent // Position svg icon
+                position: relative
+                svg
+                    position: absolute
+                    top: 10px
+                span
+                    margin-left: 22px
+            .nice-bt--accent
+                margin-left: 2px
+
+
+.nice-bt
+    background-color: $nice-bt-bg    
+    min-height: 44px
+    padding-left: 12px
+    padding-right: 12px
+    border: $noborder
+    border-radius: $border-radius
+    cursor: pointer
+    color: $nice-bt-text
+    font-family: $ff-display
+    font-size: $fs-normal
+    font-weight: $fw-normal
+    letter-spacing: $ls-less
+    // @include button-transition-on-hover TODO
+    // &:hover
+    //     background-color: $header-background-darken
+    &--transparent
+        background: none
+        border: $border
+        color: $nice-bt-text--transparent
+        font-weight: $fw-semibold
+        // @include box-shadow
+        // &:hover
+        //     background-color: $navbar-background-darken
+    &--accent
+        background-color: $nice-bt-bg--accent
+        // &:hover
+        //     background-color: $accent-darken

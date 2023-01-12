@@ -28,7 +28,6 @@ nav {
   justify-content: space-between;
   padding-top: 16px;
   padding-bottom: 16px;
-  background-color: yellow;
 }
 
 a {
@@ -69,20 +68,66 @@ nav {
   background-color: #FFFFFF;
 }
 
-.navbar__logo {
-  background-color: orange;
-}
 .navbar__links {
-  background-color: green;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   text-align: right;
 }
 .navbar__links__simple {
-  background-color: red;
+  margin-top: 12px;
+}
+.navbar__links__simple a {
+  color: rgba(42, 44, 31, 0.95);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  padding: 7px;
+  margin: 3px;
+}
+.navbar__links__simple a:last-child {
+  margin-right: 0px;
+  padding-right: 0px;
 }
 .navbar__links__buttons {
-  margin-left: 15px;
-  background-color: black;
+  margin-left: 20px;
+}
+.navbar__links__buttons .nice-bt--transparent {
+  position: relative;
+}
+.navbar__links__buttons .nice-bt--transparent svg {
+  position: absolute;
+  top: 10px;
+}
+.navbar__links__buttons .nice-bt--transparent span {
+  margin-left: 22px;
+}
+.navbar__links__buttons .nice-bt--accent {
+  margin-left: 2px;
+}
+
+.nice-bt {
+  background-color: #939778;
+  min-height: 44px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+}
+.nice-bt--transparent {
+  background: none;
+  border: 1px solid #E7E8E3;
+  color: rgba(42, 44, 31, 0.95);
+  font-weight: 600;
+}
+.nice-bt--accent {
+  background-color: #CF6F49;
 }/*# sourceMappingURL=style.css.map */
