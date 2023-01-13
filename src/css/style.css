@@ -1,3 +1,68 @@
+.nice-h1 {
+  color: rgba(255, 255, 255, 0.9019607843);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 65px;
+}
+.nice-h1-p {
+  color: rgba(255, 255, 255, 0.9019607843);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nice-h2 {
+  color: #292823;
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 50px;
+}
+.nice-h2-p {
+  color: rgba(41, 40, 35, 0.9254901961);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+.nice-bt {
+  background-color: #939778;
+  min-height: 44px;
+  padding-left: 12px;
+  padding-right: 12px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.9019607843);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  transition: border-color 200ms ease, background-color 200ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+.nice-bt:hover {
+  background-color: #797c60;
+}
+.nice-bt--transparent {
+  background: none;
+  border: 1px solid #E7E8E3;
+  color: rgba(42, 44, 31, 0.9490196078);
+  font-weight: 600;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+.nice-bt--accent {
+  background-color: #cf6f49;
+}
+.nice-bt--accent:hover {
+  background-color: #b55630;
+}
+
+a {
+  text-decoration: none;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -19,8 +84,26 @@
   padding-bottom: 7px;
 }
 
-a {
-  text-decoration: none;
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.hero {
+  height: 60vh;
+  margin-bottom: 10vh;
+}
+
+.projects {
+  margin-bottom: 10vh;
 }
 
 body {
@@ -33,7 +116,7 @@ header {
 }
 
 .header__text {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7019607843);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: -0.05em;
@@ -51,4 +134,111 @@ header {
 }
 .header__icons svg:hover {
   fill-opacity: 0.9;
+}
+
+nav {
+  background-color: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.navbar__logo {
+  margin-top: 5px;
+}
+.navbar__links {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  text-align: right;
+}
+.navbar__links__simple {
+  margin-top: 13px;
+}
+.navbar__links__simple a {
+  color: rgba(42, 44, 31, 0.9490196078);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  padding: 7px;
+  margin: 3px;
+}
+.navbar__links__simple a:last-child {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.navbar__links__buttons {
+  margin-left: 20px;
+}
+.navbar__links__buttons .nice-bt--transparent {
+  position: relative;
+}
+.navbar__links__buttons .nice-bt--transparent svg {
+  position: absolute;
+  top: 10px;
+}
+.navbar__links__buttons .nice-bt--transparent span {
+  margin-left: 22px;
+}
+.navbar__links__buttons .nice-bt--transparent:hover {
+  background-color: whitesmoke;
+}
+.navbar__links__buttons .nice-bt--accent {
+  margin-left: 2px;
+}
+
+.hero {
+  background: linear-gradient(rgba(107, 57, 37, 0.5), rgba(147, 151, 120, 0.8)), url("../img/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero__content {
+  margin: 0 auto;
+  text-align: center;
+}
+.hero__content h1 {
+  padding-top: 24vh;
+}
+
+.projects__intro .nice-h2-p {
+  max-width: 230px;
+  padding-bottom: 7vh;
+}
+.projects__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5vw;
+  grid-row-gap: 1.5vw;
+}
+
+.card {
+  background-color: #FFFEFF;
+  border-radius: 8px;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+.card__image {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 70%;
+  background-image: url("../img/items/item-1/view_1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.card__description {
+  position: absolute;
+  bottom: 0px;
+  height: 30%;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.card:hover .card__image {
+  height: 40%;
+}
+.card:hover .card__description {
+  height: 70%;
 }/*# sourceMappingURL=style.css.map */

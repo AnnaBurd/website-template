@@ -1,72 +1,157 @@
 // Colors
-$nice-page-bg: #F6F4F5
+$nice-page-bg:#F6F4F5
 $nice-header-bg:#939778
-$nice-header-text: rgba(white, 0.7)
+$nice-header-text:#ffffffb3
+$nice-nav-bg:#FFFFFF
+$nice-nav-text:#2a2c1ff2
+$nice-bt-bg:#939778
+$nice-bt-bg--accent:#cf6f49
+$nice-bt-text:#ffffffe6
+$nice-bt-text--transparent:#2a2c1ff2
+$nice-card-bg:#FFFEFF
 
+$nice-h1:#ffffffe6
+$nice-h2:#292823
+$nice-h2-p:#292823ec
 
-// $header-background: #939778
-// $navbar-background: #FFFFFF
-// $cards-background: #FFFEFF
-// $accent: #CF6F49
-// $header-background-darken: darken($header-background, 15%)
-// $navbar-background-darken: darken($navbar-background, 5%)
-// $accent-darken: darken($accent, 15%)
+// Lenghts
+$border-radius: 8px
+$border: 1px solid #E7E8E3
+$noborder:1px solid transparent
+$between-sections: 10vh
 
-// // Size variables
-// $border-radius: 8px
+// Shadows
+$nice-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08)
 
-// // Shadows
-// @mixin box-shadow
-//     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08)
+// Fonts
+$ff-sans-serif: 'Noto Sans', sans-serif
+$ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif
 
+$fs-small:12px
+$fs-normal:14px
+// $fs-normalbg:16px
+$fs-largesm:30px
+$fs-large:48px
+
+$fw-normal: 400
+$fw-medium: 500
+$fw-semibold: 600
+
+$ls-normal: -0.05em
+$ls-less: -0.03em
+$ls-lessest: -0.01em
+
+.nice-h1
+    color: $nice-h1
+    font-family: $ff-display
+    font-size: $fs-large
+    font-weight: $fw-semibold
+    line-height: 65px
+    &-p
+        color: $nice-h1
+        font-family: $ff-sans-serif
+        font-size: $fs-normal
+        font-weight: $fw-semibold
+
+.nice-h2
+    color: $nice-h2
+    font-family: $ff-display
+    font-size: $fs-largesm
+    font-weight: $fw-semibold
+    line-height: 50px
+    &-p
+        color: $nice-h2-p
+        font-family: $ff-display
+        font-size: $fs-small
+        font-weight: $fw-medium
+        line-height: 16px
+
+// Transitions
+$nice-transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1)
+$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)
+
+// Todo transitions and animations:
 // @mixin transition-on-hover
 //     transition: 150ms ease // TODO adjust
 
-// @mixin button-transition-on-hover
-//     transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1) // TODO adjust
 
+// User control elements
+.nice-bt
+    background-color: $nice-bt-bg    
+    min-height: 44px
+    padding-left: 12px
+    padding-right: 12px
+    border: $noborder
+    border-radius: $border-radius
+    cursor: pointer
+    color: $nice-bt-text
+    font-family: $ff-display
+    font-size: $fs-normal
+    font-weight: $fw-medium
+    letter-spacing: $ls-less
+    transition: $nice-transition
+    // @include button-transition-on-hover TODO
+    &:hover
+        background-color: darken($nice-bt-bg,10%)
+    &--transparent
+        background: none
+        border: $border
+        color: $nice-bt-text--transparent
+        font-weight: $fw-semibold
+        box-shadow: $nice-shadow
+    &--accent
+        background-color: $nice-bt-bg--accent
+        &:hover
+            background-color: darken($nice-bt-bg--accent,10%)
 
-    
-// Layout
+a
+    text-decoration: none
+
+// Page Layout
 *
     box-sizing: border-box // include paddings when calculating width-height
 .padding
     padding-left: 60px
     padding-right: 60px
-    // background-color: pink
 .container
     max-width: 1160px
     margin: 0 auto
-    // background-color: yellow
 .header
     display: flex
     justify-content: center
     padding-top: 7px
     padding-bottom: 7px
+nav
+    position: sticky
+    top: 0
+    z-index: 10
+.navbar
+    display: flex
+    justify-content: space-between
+    padding-top: 16px
+    padding-bottom: 16px
+.hero
+    height: 60vh
+    margin-bottom: $between-sections
+.projects
+    margin-bottom: $between-sections
 
-// Styles
-a
-    text-decoration: none
-
+// Styles by sections
 body
-    font-family: 'Noto Sans', sans-serif
+    font-family: $ff-sans-serif
     background-color: $nice-page-bg
 
 header
     background-color: $nice-header-bg
-    // todo @include box-shadow
 .header
-    // background-color: red
     &__text
         color: $nice-header-text
-        font-size: 14px
-        font-weight: 400
-        letter-spacing: -0.05em
+        font-size: $fs-normal
+        font-weight: $fw-normal
+        letter-spacing: $ls-normal
         line-height: 20px // Vertical alignment with icons
         margin-right: 10px // Indent from icons
-        // background-color: blue
     &__icons
-        // background-color: black
         width: 80px
         display: inline-flex
         justify-content: space-between
@@ -75,3 +160,104 @@ header
             fill-opacity: 0.8
             &:hover
                 fill-opacity: 0.9
+
+
+nav
+    background-color: $nice-nav-bg
+    box-shadow: $nice-shadow
+.navbar
+    &__logo
+        margin-top: 5px // TODO Vertical alignment with links
+    &__links
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+        text-align: right
+        &__simple
+            margin-top: 13px // TODO Vertical alignment with buttons
+            a
+                color: $nice-nav-text
+                font-family: $ff-display
+                font-size: $fs-normal
+                font-weight: $fw-medium
+                letter-spacing: $ls-lessest
+                white-space: nowrap
+                padding: 7px // TODO Size of clickable area
+                margin: 3px
+                // TODO animation on hover? - change color or make like a shadow-button?
+            a:last-child // TODO remove margin for the last child in flex wrapped row
+                margin-right: 0px
+                padding-right: 0px
+        &__buttons
+            margin-left: 20px
+            .nice-bt--transparent // Position phone icon
+                position: relative
+                svg
+                    position: absolute
+                    top: 10px
+                span
+                    margin-left: 22px
+                &:hover
+                    background-color: darken($nice-nav-bg,4%)
+            .nice-bt--accent
+                margin-left: 2px
+
+
+.hero
+    // background: url('../img/hero.jpg')
+    // TODO choose image and set up overlays for nice looks
+    background: linear-gradient(rgba(107, 57, 37, 0.5), rgb(147,151,120,0.8)), url("../img/hero.jpg")
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center center
+    &__content
+        margin:0 auto
+        text-align: center
+        h1
+            padding-top: 24vh // TODO vertical allighnent
+
+.projects
+    // background-color: red
+    &__intro
+        // background-color: yellow
+        .nice-h2-p
+            // background-color: yellow
+            max-width: 230px
+            padding-bottom: 7vh // TODO vertical allighnent
+    &__cards
+        // background-color: green
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        column-gap: 1.5vw // TODO vertical allighnent
+        grid-row-gap: 1.5vw // TODO horizontal allighnent
+
+
+.card
+    background-color: $nice-card-bg
+    border-radius: $border-radius
+    height: 50vh
+    overflow: hidden
+    position: relative
+    &__image
+        // background-color: yellow
+        position: absolute
+        top: 0px        
+        width: 100%
+        height: 70%
+        background-image: url('../img/items/item-1/view_1.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        transition: $nice-card-transition // TODO smooth transition
+    &__description
+        // background-color: red
+        position: absolute
+        bottom:0px
+        height: 30%
+        transition: $nice-card-transition
+    &:hover .card__image
+        height: 40%
+        // background-color: green
+    &:hover .card__description
+        // background-color: pink
+        height: 70%
