@@ -68,6 +68,7 @@ $ls-lessest: -0.01em
 
 // Transitions
 $nice-transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1)
+$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)
 
 // Todo transitions and animations:
 // @mixin transition-on-hover
@@ -234,7 +235,29 @@ nav
 .card
     background-color: $nice-card-bg
     border-radius: $border-radius
+    height: 50vh
+    overflow: hidden
+    position: relative
     &__image
-        background-color: yellow
+        // background-color: yellow
+        position: absolute
+        top: 0px        
+        width: 100%
+        height: 70%
+        background-image: url('../img/items/item-1/view_1.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        transition: $nice-card-transition // TODO smooth transition
     &__description
-        background-color: red
+        // background-color: red
+        position: absolute
+        bottom:0px
+        height: 30%
+        transition: $nice-card-transition
+    &:hover .card__image
+        height: 40%
+        // background-color: green
+    &:hover .card__description
+        // background-color: pink
+        height: 70%
