@@ -74,6 +74,7 @@ $ls-lessest: -0.01em
     font-family: $ff-display
     font-size: $fs-normalbg
     font-weight: $fw-semibold
+    // line-height: 50px
     &-p
         color: $nice-h4-p
         font-family: $ff-sans-serif
@@ -86,7 +87,7 @@ $ls-lessest: -0.01em
         font-size: $fs-small
         font-weight: $fw-medium
         letter-spacing: $ls-normal
-        line-height: 19px
+        line-height: 16px
         &--accent
             color: $nice-bt-bg--accent
 
@@ -281,9 +282,43 @@ nav
         height: 30%
         transition: $nice-card-transition
         background-color: $nice-card-bg
+        padding: 7% 4% 7% 5%
+        &__name
+            // background-color: red
+            margin-bottom: 8px
+            margin-left: -1px // TODO visually allign
+            // text-align: center
+        &__note
+            margin-bottom: 8px // TODO visually allign
+        &__address
+            margin-bottom: 8px // TODO visually allign
+            position: relative
+            margin-left: 18px
+            svg
+                position: absolute
+                top: -1px // TODO visually allign
+                left: -15px // TODO visually allign
+        &__area
+            margin-bottom: 8px // TODO visually allign so cards fit into and not too much empty space
+            position: relative
+            margin-left: 18px
+            svg
+                position: absolute
+                top: 3px // TODO visually allign
+                left: -16px // TODO visually allign
+            &:after
+                content: "\00a0\00a0m2" // TODO add JS superscript text m^2
+        &__price
+            position: relative
+            margin-left: 18px
+            svg
+                position: absolute
+                top: -1px // TODO visually allign
+                left: -14px // TODO visually allign
+            &:after
+                content: "\00a0\00a0tỷ"
     &:hover .card__image
         height: 40%
-        // background-color: green
     &:hover .card__description
         // background-color: pink
         height: 70%
