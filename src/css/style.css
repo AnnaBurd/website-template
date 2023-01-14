@@ -28,6 +28,21 @@
   line-height: 16px;
 }
 
+.nice-h3 {
+  color: #292823;
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+.nice-h3-p {
+  color: rgba(41, 40, 35, 0.8);
+  font-family: "Noto Sans Display", "Noto Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
 .nice-h4 {
   color: #292823;
   font-family: "Noto Sans Display", "Noto Sans", sans-serif;
@@ -129,7 +144,7 @@ nav {
 }
 
 .projects {
-  margin-bottom: 5vh;
+  margin-bottom: 12.5vh;
 }
 
 .about {
@@ -231,9 +246,11 @@ nav {
   padding-top: 24vh;
 }
 
+.projects__intro {
+  padding-bottom: 5vh;
+}
 .projects__intro .nice-h2-p {
   max-width: 230px;
-  padding-bottom: 5vh;
 }
 .projects__cards {
   display: grid;
@@ -244,6 +261,7 @@ nav {
 
 .card {
   border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   height: 40vh;
   overflow: hidden;
   position: relative;
@@ -340,9 +358,13 @@ nav {
 }
 .about__intro {
   text-align: center;
+  padding-bottom: 5vh;
+}
+.about__intro div {
+  width: 60%;
+  margin: 0 auto;
 }
 .about__boxes {
-  background-color: pink;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5vw;
@@ -368,5 +390,24 @@ nav {
   background-color: #FFFEFF;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 7% 4% 7% 5%;
   text-align: center;
+}
+.box__icon {
+  background-color: #fae8e1;
+  display: inline-block;
+  border-radius: 8px;
+  margin-bottom: 1.3em;
+}
+.box__icon span {
+  color: #cf6f49;
+  font-size: 32px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box__name {
+  margin-bottom: 0.4em;
 }/*# sourceMappingURL=style.css.map */

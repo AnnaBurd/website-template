@@ -9,10 +9,14 @@ $nice-bt-bg--accent:#cf6f49
 $nice-bt-text:#ffffffe6
 $nice-bt-text--transparent:#2a2c1ff2
 $nice-card-bg:#FFFEFF
+$nice-material-icons:#cf6f49
+$nice-material-icons-bg: #fae8e1
 
 $nice-h1:#ffffffe6
 $nice-h2:#292823
 $nice-h2-p:#292823ec
+$nice-h3: #292823
+$nice-h3-p: #292823cc
 $nice-h4: #292823
 $nice-h4-p: #292823cc
 $nice-h4-l: #29282380
@@ -38,12 +42,14 @@ $ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif
 $fs-small:12px
 $fs-normal:14px
 $fs-normalbg:18px
+$fs-normalbgbg:24px
 $fs-largesm:30px
 $fs-large:48px
 
 $fw-normal: 400
 $fw-medium: 500
 $fw-semibold: 600
+$fw-bold: 700
 
 $ls-normal: -0.05em
 $ls-less: -0.03em
@@ -73,6 +79,19 @@ $ls-lessest: -0.01em
         font-size: $fs-small
         font-weight: $fw-medium
         line-height: 16px
+.nice-h3
+    color: $nice-h3
+    font-family: $ff-display
+    font-size: $fs-normalbgbg
+    font-weight: $fw-semibold
+    letter-spacing: $ls-less
+    // line-height: 50px
+    &-p
+        color: $nice-h3-p
+        font-family: $ff-display
+        font-size: $fs-small
+        font-weight: $fw-medium
+        line-height: 20px //
 
 .nice-h4
     color: $nice-h4
@@ -164,7 +183,7 @@ nav
     height: 60vh
     margin-bottom: $between-sections
 .projects
-    margin-bottom: $between-sections
+    margin-bottom: $between-sections * 2.5 // TODO
 .about
     margin-bottom: $between-sections * 3 // TODO
     // height: 50vh TODO height!
@@ -257,7 +276,7 @@ nav
         .nice-h2-p
             // background-color: yellow
             max-width: 230px
-            padding-bottom: $between-sections--afterheading // TODO vertical allighnent
+        padding-bottom: $between-sections--afterheading // TODO vertical allighnent
     &__cards
         // background-color: green
         display: grid
@@ -269,6 +288,7 @@ nav
 .card
     // background-color: $nice-card-bg
     border-radius: $border-radius
+    box-shadow: $nice-shadow
     height: 40vh // TODO set up size for different medias
     overflow: hidden
     position: relative
@@ -351,8 +371,14 @@ nav
     &__intro
         // background-color: yellow
         text-align: center
+        padding-bottom: $between-sections--afterheading
+        div
+            width: 60%
+            // background-color: yellow
+            margin: 0 auto
+        
     &__boxes
-        background-color: pink
+        // background-color: pink
         display: grid
         grid-template-columns: $grid-template-columns
         column-gap: $column-gap
@@ -381,7 +407,25 @@ nav
     background-color: $nice-card-bg
     border-radius: $border-radius
     box-shadow: $nice-shadow
-    // height: 30vh // TODO set up size for different medias
+    padding: 7% 4% 7% 5% // TODO compare with project cards
+    // height: 30vh // TODO set up max-min size for different medias
     text-align: center
-    // overflow: hidden 
-    
+    // overflow: hidden
+    &__icon
+        background-color: $nice-material-icons-bg
+        display: inline-block
+        border-radius: $border-radius
+        margin-bottom: 1.3em
+        span
+            color: $nice-material-icons
+            font-size: 32px
+            width: 48px
+            height: 48px
+            display: flex
+            align-items: center
+            justify-content: center
+    &__name
+        // background-color: pink
+        margin-bottom: 0.4em
+    &__description
+        // background-color: yellow
