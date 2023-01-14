@@ -249,7 +249,7 @@ nav {
   top: 0px;
   width: 100%;
   height: 70%;
-  background-image: url("../img/items/item-1/view_1.png");
+  background-image: url("../img/items/item-1/view_1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -263,6 +263,15 @@ nav {
 }
 .card__image--item3 {
   background-image: url("../img/items/item-3/view_1.jpg");
+}
+.card__image--item4 {
+  background-image: url("../img/items/item-4/view_1.jpg");
+}
+.card__image--item5 {
+  background-image: url("../img/items/item-5/view_1.jpg");
+}
+.card__image--item6 {
+  background-image: url("../img/items/item-6/view_1.jpg");
 }
 .card__description {
   position: absolute;
