@@ -255,6 +255,15 @@ nav {
   background-position: center center;
   transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+.card__image--item1 {
+  background-image: url("../img/items/item-1/view_1.jpg");
+}
+.card__image--item2 {
+  background-image: url("../img/items/item-2/view_1.jpg");
+}
+.card__image--item3 {
+  background-image: url("../img/items/item-3/view_1.jpg");
+}
 .card__description {
   position: absolute;
   bottom: 0px;
