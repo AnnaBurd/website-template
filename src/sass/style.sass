@@ -21,7 +21,12 @@ $nice-h4-l: #29282380
 $border-radius: 8px
 $border: 1px solid #E7E8E3
 $noborder:1px solid transparent
-$between-sections: 10vh
+$between-sections: 5vh
+$between-sections--afterheading: 5vh
+// Grids
+$grid-template-columns: repeat(3, 1fr)
+$column-gap: 1.5vw
+
 
 // Shadows
 $nice-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08)
@@ -160,6 +165,9 @@ nav
     margin-bottom: $between-sections
 .projects
     margin-bottom: $between-sections
+.about
+    margin-bottom: $between-sections * 3 // TODO
+    // height: 50vh TODO height!
 
 // Styles by sections
 body
@@ -169,6 +177,7 @@ body
 header
     background-color: $nice-header-bg
 .header
+    // TODO smooth transition of sticky header
     &__text
         color: $nice-header-text
         font-size: $fs-normal
@@ -248,19 +257,19 @@ nav
         .nice-h2-p
             // background-color: yellow
             max-width: 230px
-            padding-bottom: 7vh // TODO vertical allighnent
+            padding-bottom: $between-sections--afterheading // TODO vertical allighnent
     &__cards
         // background-color: green
         display: grid
-        grid-template-columns: repeat(3, 1fr)
-        column-gap: 1.5vw // TODO vertical allighnent
-        grid-row-gap: 1.5vw // TODO horizontal allighnent
+        grid-template-columns: $grid-template-columns
+        column-gap: $column-gap // TODO vertical allighnent
+        row-gap: $column-gap // TODO horizontal allighnent
 
 
 .card
     // background-color: $nice-card-bg
     border-radius: $border-radius
-    height: 50vh
+    height: 40vh // TODO set up size for different medias
     overflow: hidden
     position: relative
     // -webkit-font-smoothing: antialiased // TODO check about antialiasing
@@ -287,7 +296,6 @@ nav
             background-image: url('../img/items/item-5/view_1.jpg')
         &--item6
             background-image: url('../img/items/item-6/view_1.jpg')
-
     &__description
         // background-color: red
         position: absolute
@@ -336,3 +344,44 @@ nav
         // background-color: pink
         height: 70%
         cursor: pointer
+
+.about
+    // background-color: orange
+    position: relative
+    &__intro
+        // background-color: yellow
+        text-align: center
+    &__boxes
+        background-color: pink
+        display: grid
+        grid-template-columns: $grid-template-columns
+        column-gap: $column-gap
+        row-gap: $column-gap
+
+.decorative
+    // background-color: red
+    position: absolute
+    min-width: 50px // TODO allign responsively
+    max-width: 7vw
+    max-height: 20vh
+    // &--top-right
+    //     right: 0%
+    //     top: -30%
+    // &--bottom-left
+    //     left: 0%
+    //     bottom: -30%
+    &--top-left
+        left: 0%
+        top: -15% // TODO allign responsively
+    &--bottom-right
+        right: 0%
+        bottom: -30% // TODO allign responsively
+
+.box
+    background-color: $nice-card-bg
+    border-radius: $border-radius
+    box-shadow: $nice-shadow
+    // height: 30vh // TODO set up size for different medias
+    text-align: center
+    // overflow: hidden 
+    
