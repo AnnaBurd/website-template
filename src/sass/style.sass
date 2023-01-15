@@ -4,10 +4,14 @@ $nice-header-bg:#939778
 $nice-header-text:#ffffffb3
 $nice-nav-bg:#FFFFFF
 $nice-nav-text:#2a2c1ff2
+$nice-footer-bg: #FFFEFF
+$nice-footer-text: #292823cc
 $nice-bt-bg:#939778
 $nice-bt-bg--accent:#cf6f49
 $nice-bt-text:#ffffffe6
 $nice-bt-text--transparent:#2a2c1ff2
+$nice-input-text:#2a2c1ff2
+$nice-input-text-placeholder: #2a2c1fbf
 $nice-card-bg:#FFFEFF
 $nice-material-icons:#cf6f49
 $nice-material-icons-bg: #fae8e1
@@ -128,8 +132,8 @@ $nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)
 .nice-bt
     background-color: $nice-bt-bg    
     min-height: 44px
-    padding-left: 12px
-    padding-right: 12px
+    padding-left: 1em
+    padding-right: 1em
     border: $noborder
     border-radius: $border-radius
     cursor: pointer
@@ -152,6 +156,26 @@ $nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)
         background-color: $nice-bt-bg--accent
         &:hover
             background-color: darken($nice-bt-bg--accent,10%)
+
+.nice-input
+    // background-color: pink
+    background: none
+    min-height: 44px
+    border: $border
+    border-radius: $border-radius
+    box-shadow: $nice-shadow
+    font-family: $ff-display
+    font-size: $fs-normal
+    font-weight: $fw-medium
+    letter-spacing: $ls-less
+    color: $nice-input-text
+    padding-left: 1em
+    padding-right: 1em
+    &::placeholder
+        color: $nice-input-text-placeholder
+    &:focus
+        outline: $nice-bt-bg solid 1px
+
 
 a
     text-decoration: none
@@ -426,16 +450,55 @@ nav
         // background-color: yellow
 
 .footer
-    background-color: yellow
+    background-color: $nice-footer-bg
     &__boxes
-        background-color: orange
         display: grid
         grid-template-columns: $grid-template-columns
         column-gap: $column-gap
         padding-top: 4vh
         padding-bottom: 4vh
-        div
-            background-color: red
+    .sociallinks
+        &__icons
+            display: inline-flex
+            justify-content: space-between
+            width: 110px
+            padding-bottom: 14px // TODO allign vertically 
+            svg
+                fill-opacity: 1
+                &:hover
+                    fill-opacity: 0.8
+        &__text
+            color: $nice-footer-text
+            font-family: $ff-sans-serif
+            font-size: $fs-small
+            font-weight: $fw-normal
+            line-height: 1.4em
+            width: 80% // TODO adjust split place
+    .subscription
+        &__title
+            color: $nice-footer-text
+            font-family: $ff-sans-serif
+            font-size: $fs-small
+            font-weight: 700
+            padding-bottom: 7px // TODO allign vertically 
+        &__conditions
+            color: $nice-footer-text
+            font-family: $ff-sans-serif
+            font-size: $fs-small
+            font-weight: $fw-normal
+            line-height: 1.2em
+            letter-spacing: $ls-less
+            width: 80% // TODO adjust split place
+            padding-bottom: 14px // TODO allign vertically 
+        &__form
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            input
+                flex: 1 1 auto
+            button
+                margin-left: 5px // TODO allign buttons within the page
+
 
 .credits
     background-color: blue
