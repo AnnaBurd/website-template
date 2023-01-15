@@ -494,13 +494,28 @@ nav {
 }
 
 .credits {
-  background-color: blue;
-}
-.credits__content {
+  padding-top: 1.3vh;
+  padding-bottom: 1.3vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-.credits__content div {
-  background-color: pink;
+.credits__text {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: rgba(41, 40, 35, 0.6);
+}
+.credits__links a {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  color: rgba(41, 40, 35, 0.6);
+  padding: 0px 10px;
+}
+.credits__links a:not(:first-child):not(:last-child) {
+  border-left: 0.05em solid rgba(41, 40, 35, 0.1764705882);
+  border-right: 0.05em solid rgba(41, 40, 35, 0.1764705882);
 }/*# sourceMappingURL=style.css.map */
