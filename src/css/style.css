@@ -148,7 +148,7 @@ nav {
 }
 
 .about {
-  margin-top: 17.5vh;
+  padding-top: 10vh;
   margin-bottom: 20vh;
 }
 
@@ -414,5 +414,28 @@ nav {
   margin-bottom: 0.4em;
 }
 .footer {
+  background-color: yellow;
+}
+.footer__boxes {
+  background-color: orange;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.5vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+.footer__boxes div {
   background-color: red;
+}
+
+.credits {
+  background-color: blue;
+}
+.credits__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.credits__content div {
+  background-color: pink;
 }/*# sourceMappingURL=style.css.map */
