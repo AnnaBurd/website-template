@@ -144,11 +144,12 @@ nav {
 }
 
 .projects {
-  margin-bottom: 12.5vh;
+  margin-bottom: 6.5vh;
 }
 
 .about {
-  margin-bottom: 15vh;
+  margin-top: 17.5vh;
+  margin-bottom: 20vh;
 }
 
 body {
@@ -187,7 +188,7 @@ nav {
 }
 
 .navbar__logo {
-  margin-top: 5px;
+  margin-top: 1px;
 }
 .navbar__links {
   display: flex;
@@ -353,9 +354,6 @@ nav {
   cursor: pointer;
 }
 
-.about {
-  position: relative;
-}
 .about__intro {
   text-align: center;
   padding-bottom: 5vh;
@@ -372,18 +370,22 @@ nav {
 }
 
 .decorative {
-  position: absolute;
+  position: relative;
+}
+.decorative img {
   min-width: 50px;
-  max-width: 7vw;
+  max-width: 10vw;
   max-height: 20vh;
 }
 .decorative--top-left {
-  left: 0%;
-  top: -15%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }
 .decorative--bottom-right {
-  right: 0%;
-  bottom: -30%;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
 .box {
