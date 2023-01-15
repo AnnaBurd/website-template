@@ -255,7 +255,7 @@ nav {
 }
 
 .hero {
-  background: linear-gradient(rgba(107, 57, 37, 0.5), rgba(147, 151, 120, 0.8)), url("../img/hero.jpg");
+  background: url("../img/op1+.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -265,7 +265,7 @@ nav {
   text-align: center;
 }
 .hero__content h1 {
-  padding-top: 24vh;
+  padding-top: 20vh;
 }
 
 .projects__intro {
