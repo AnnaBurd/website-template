@@ -186,6 +186,8 @@ a
 // Page Layout
 *
     box-sizing: border-box // include paddings when calculating width-height
+    padding: 0 // remove default paddings
+    margin: 0  // remove default margins
 .padding
     padding-left: 60px
     padding-right: 60px
@@ -538,3 +540,36 @@ nav
                     border-left: 0.05em solid $nice-credits-lines
                     border-right: 0.05em solid $nice-credits-lines
                 // background-color: pink
+
+
+$grid-gap: 1.9vw // TODO adjust and move variables to beginning
+$row1-height: 50vh
+$row2-height: 25vh
+
+.about-item
+    margin-top: $grid-gap * 0.3
+    margin-bottom: $grid-gap * 1.4
+    &__grid
+        display: grid
+        gap: $grid-gap
+        &--row1
+            grid-template-columns: 1fr 1fr            
+            margin-bottom: $grid-gap * 0.7
+            .column1
+                height: $row1-height
+            .map
+                background-color: blue
+            .photos
+                display: grid
+                grid-template-columns: 1fr 1fr
+                gap: $grid-gap * 0.5
+                .image-box
+                    background-color: blue
+        &--row2
+            grid-template-columns: 2fr 1fr // TODO adjust
+            .column1
+                height: $row2-height
+            .description
+                background-color: blue
+            .parameters
+                background-color: blue

@@ -127,6 +127,8 @@ a {
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .padding {
@@ -518,4 +520,43 @@ nav {
 .credits__links a:not(:first-child):not(:last-child) {
   border-left: 0.05em solid rgba(41, 40, 35, 0.1764705882);
   border-right: 0.05em solid rgba(41, 40, 35, 0.1764705882);
+}
+
+.about-item {
+  margin-top: 0.57vw;
+  margin-bottom: 2.66vw;
+}
+.about-item__grid {
+  display: grid;
+  gap: 1.9vw;
+}
+.about-item__grid--row1 {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.33vw;
+}
+.about-item__grid--row1 .column1 {
+  height: 50vh;
+}
+.about-item__grid--row1 .map {
+  background-color: blue;
+}
+.about-item__grid--row1 .photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.95vw;
+}
+.about-item__grid--row1 .photos .image-box {
+  background-color: blue;
+}
+.about-item__grid--row2 {
+  grid-template-columns: 2fr 1fr;
+}
+.about-item__grid--row2 .column1 {
+  height: 25vh;
+}
+.about-item__grid--row2 .description {
+  background-color: blue;
+}
+.about-item__grid--row2 .parameters {
+  background-color: blue;
 }/*# sourceMappingURL=style.css.map */
