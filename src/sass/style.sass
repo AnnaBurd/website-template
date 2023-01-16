@@ -543,7 +543,7 @@ nav
 
 
 $grid-gap: 1.9vw // TODO adjust and move variables to beginning
-$row1-height: 50vh
+$row1-height: 60vh
 $row2-height: 25vh
 
 .about-item
@@ -557,19 +557,43 @@ $row2-height: 25vh
             margin-bottom: $grid-gap * 0.7
             .column1
                 height: $row1-height
+                border-radius: $border-radius
+            .column2
             .map
                 background-color: blue
+                box-shadow: $nice-shadow
             .photos
                 display: grid
                 grid-template-columns: 1fr 1fr
                 gap: $grid-gap * 0.5
                 .image-box
                     background-color: blue
+                    border-radius: $border-radius
+                    box-shadow: $nice-shadow
+                    background-size: cover
+                    background-repeat: no-repeat
+                    background-position: center center
+                    // TODO clickable images -> opens view mode with all images/videos
+                    &--img1
+                        background-image: url('../img/items/item-1/view_1.jpg')
+                    &--img2
+                        background-image: url('../img/items/item-1/view_2.jpg')
+                    &--img3
+                        background-image: url('../img/items/item-1/view_3.jpg')
+                    &--img4
+                        background-image: url('../img/items/item-1/view_4.jpg')
+
         &--row2
             grid-template-columns: 2fr 1fr // TODO adjust
             .column1
                 height: $row2-height
             .description
                 background-color: blue
+                border-radius: $border-radius
+                background-color: $nice-card-bg
+                box-shadow: $nice-shadow
             .parameters
                 background-color: blue
+                border-radius: $border-radius
+                box-shadow: $nice-shadow
+                background-color: $nice-card-bg

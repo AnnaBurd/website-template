@@ -535,10 +535,12 @@ nav {
   margin-bottom: 1.33vw;
 }
 .about-item__grid--row1 .column1 {
-  height: 50vh;
+  height: 60vh;
+  border-radius: 8px;
 }
 .about-item__grid--row1 .map {
   background-color: blue;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
 .about-item__grid--row1 .photos {
   display: grid;
@@ -547,6 +549,23 @@ nav {
 }
 .about-item__grid--row1 .photos .image-box {
   background-color: blue;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.about-item__grid--row1 .photos .image-box--img1 {
+  background-image: url("../img/items/item-1/view_1.jpg");
+}
+.about-item__grid--row1 .photos .image-box--img2 {
+  background-image: url("../img/items/item-1/view_2.jpg");
+}
+.about-item__grid--row1 .photos .image-box--img3 {
+  background-image: url("../img/items/item-1/view_3.jpg");
+}
+.about-item__grid--row1 .photos .image-box--img4 {
+  background-image: url("../img/items/item-1/view_4.jpg");
 }
 .about-item__grid--row2 {
   grid-template-columns: 2fr 1fr;
@@ -556,7 +575,13 @@ nav {
 }
 .about-item__grid--row2 .description {
   background-color: blue;
+  border-radius: 8px;
+  background-color: #FFFEFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
 .about-item__grid--row2 .parameters {
   background-color: blue;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: #FFFEFF;
 }/*# sourceMappingURL=style.css.map */
