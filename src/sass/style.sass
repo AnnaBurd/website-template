@@ -582,7 +582,6 @@ $row2-height: 25vh
                         background-image: url('../img/items/item-1/view_3.jpg')
                     &--img4
                         background-image: url('../img/items/item-1/view_4.jpg')
-
         &--row2
             grid-template-columns: 2fr 1fr // TODO adjust
             .column1
@@ -592,8 +591,89 @@ $row2-height: 25vh
                 border-radius: $border-radius
                 background-color: $nice-card-bg
                 box-shadow: $nice-shadow
-            .parameters
+            .sidebar
                 background-color: blue
                 border-radius: $border-radius
                 box-shadow: $nice-shadow
                 background-color: $nice-card-bg
+
+
+// Scroll cards with suggestions
+.suggestions
+    background-color: pink
+    // overflow: hidden
+// .scrolling-wrapper // Option 1 -> simple
+//     background-color: yellow
+//     overflow-x: scroll
+//     overflow-y: hidden
+//     white-space: nowrap
+//     .card-test
+//         background-color: green
+//         display: inline-block
+//         width: 50vw
+//         height: 20vh
+
+// .scrolling-wrapper-flex // Option 2 -> flex
+//     background-color: yellow
+//     display: flex
+//     flex-wrap: nowrap
+//     overflow-x: auto
+//     .card-test
+//         background-color: green
+//         // width: 50vw
+//         // height: 20vh
+//         flex: 0 0 auto
+
+// .scrolling-wrapper-grid // Option 3 -> grid
+//     display: grid
+//     overflow-x: scroll
+//     // scroll-snap-type: x
+//     gap: $grid-gap * 0.5
+//     // TODO should it be the same width as parameters?
+//     // The width can be calculated as below
+//     // grid-template-columns: 10px repeat(9, calc(min((1160px - $grid-gap*2), (100% - $grid-gap*2 - 120px))/3)) 10px
+//     &::before
+//         content:"dsdsff" // take first gap 
+//     &::after
+//         content:"dsf" // take last gap 
+//     grid-template-columns: 123px repeat(9, calc(30% - $grid-gap * 2)) 123px
+//     grid-template-rows: minmax(150px, 1fr)
+//     .card-test
+//         background-color: green
+//         &:last-child
+//             background-color: red
+//             // margin-right: 20px
+
+.scrolling-wrapper-grid // Option 4 -> grid
+    padding: 2vw 0 // padding on bottom and on top - todo adjust
+    display: grid
+    // scroll-snap-type: x
+    gap: $grid-gap * 0.5
+    // TODO should it be the same width as parameters?
+    // The width can be calculated as below
+    // grid-template-columns: 10px repeat(9, calc(min((1160px - $grid-gap*2), (100% - $grid-gap*2 - 120px))/3)) 10px
+    &::before
+        content:"" // take first gap
+        // width: 1000px
+    &::after
+        content:"" // take last gap
+        // width: 10px     
+    // grid-template-columns: 100px // compensate for the padding
+    grid-template-columns: calc((max(100% - 1160px, 120px))/2 - $grid-gap * 0.5)
+    grid-auto-flow: column
+    grid-auto-columns: calc(30% - $grid-gap * 2)
+    grid-template-rows: minmax(150px, 1fr)
+    overflow-x: scroll
+    scroll-snap-type: x proximity
+    // scroll-snap-points-x: 123px
+    .card-test
+        background-color: green
+        scroll-snap-align: start
+        &:last-child
+            background-color: red
+            // margin-right: 20px
+
+.test-overflow
+    z-index: 10
+    overflow: visible
+    position: relative

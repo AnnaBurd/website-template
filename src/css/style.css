@@ -579,9 +579,44 @@ nav {
   background-color: #FFFEFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
-.about-item__grid--row2 .parameters {
+.about-item__grid--row2 .sidebar {
   background-color: blue;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   background-color: #FFFEFF;
+}
+
+.suggestions {
+  background-color: pink;
+}
+
+.scrolling-wrapper-grid {
+  padding: 2vw 0;
+  display: grid;
+  gap: 0.95vw;
+  grid-template-columns: calc(max(100% - 1160px, 120px) / 2 - 0.95vw);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(30% - 3.8vw);
+  grid-template-rows: minmax(150px, 1fr);
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+}
+.scrolling-wrapper-grid::before {
+  content: "";
+}
+.scrolling-wrapper-grid::after {
+  content: "";
+}
+.scrolling-wrapper-grid .card-test {
+  background-color: green;
+  scroll-snap-align: start;
+}
+.scrolling-wrapper-grid .card-test:last-child {
+  background-color: red;
+}
+
+.test-overflow {
+  z-index: 10;
+  overflow: visible;
+  position: relative;
 }/*# sourceMappingURL=style.css.map */
