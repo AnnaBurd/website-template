@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/* VARIABLES =====================================================*/
+/* Colors --------------------------------------------------------*/
+/* Fonts---------------------------------------------------------*/
+/* Borders ---------------------------------------------------------*/
+/* Shadows ---------------------------------------------------------*/
+/* Grid ------------------------------------------------------------*/
+/* Section Gaps ----------------------------------------------------*/
+/* Transitions -----------------------------------------------------*/
+/* FONT STYLES =====================================================*/
 .nice-h1 {
   color: rgba(255, 255, 255, 0.9019607843);
   font-family: "Noto Sans Display", "Noto Sans", sans-serif;
@@ -68,6 +77,11 @@
   color: #cf6f49;
 }
 
+/* USER CONTROL ELEMENTS STYLES ====================================*/
+a {
+  text-decoration: none;
+}
+
 .nice-bt {
   background-color: #939778;
   min-height: 44px;
@@ -121,12 +135,31 @@
   outline: #939778 solid 1px;
 }
 
-a {
-  text-decoration: none;
+/* DECORATIVE ELEMENTS ====================================*/
+.decorative {
+  position: relative;
+}
+.decorative img {
+  min-width: 50px;
+  max-width: 10vw;
+  max-height: 20vh;
+}
+.decorative--top-left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.decorative--bottom-right {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
+/* PAGE SPACING ====================================================*/
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 .padding {
@@ -139,24 +172,10 @@ a {
   margin: 0 auto;
 }
 
-.header {
-  display: flex;
-  justify-content: center;
-  padding-top: 7px;
-  padding-bottom: 7px;
-}
-
 nav {
   position: sticky;
   top: 0;
   z-index: 10;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .hero {
@@ -173,15 +192,24 @@ nav {
   margin-bottom: 20vh;
 }
 
+/* STYLES INDEX ======================================================*/
+/* Body ---------------------------------------------------------*/
 body {
   font-family: "Noto Sans", sans-serif;
   background-color: #F6F4F5;
 }
 
+/* Header ---------------------------------------------------------*/
 header {
   background-color: #939778;
+  padding-top: 7px;
+  padding-bottom: 7px;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+}
 .header__text {
   color: rgba(255, 255, 255, 0.7019607843);
   font-size: 14px;
@@ -203,11 +231,18 @@ header {
   fill-opacity: 0.9;
 }
 
+/* Navigation bar ---------------------------------------------------------*/
 nav {
   background-color: #FFFFFF;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
 .navbar__logo {
   margin-top: 1px;
 }
@@ -254,6 +289,7 @@ nav {
   margin-left: 2px;
 }
 
+/* Hero section ---------------------------------------------------------*/
 .hero {
   background: url("../img/op1+.jpg");
   background-size: cover;
@@ -268,6 +304,7 @@ nav {
   padding-top: 20vh;
 }
 
+/* Projects section ---------------------------------------------------------*/
 .projects__intro {
   padding-bottom: 5vh;
 }
@@ -375,6 +412,7 @@ nav {
   cursor: pointer;
 }
 
+/* About company section ---------------------------------------------------------*/
 .about__intro {
   text-align: center;
   padding-bottom: 5vh;
@@ -388,25 +426,6 @@ nav {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 1.5vw;
   row-gap: 1.5vw;
-}
-
-.decorative {
-  position: relative;
-}
-.decorative img {
-  min-width: 50px;
-  max-width: 10vw;
-  max-height: 20vh;
-}
-.decorative--top-left {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-}
-.decorative--bottom-right {
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
 }
 
 .box {
@@ -434,6 +453,7 @@ nav {
 .box__name {
   margin-bottom: 0.4em;
 }
+/* Footer ------------------------------------------------------*/
 .footer {
   background-color: #FFFEFF;
 }
@@ -518,4 +538,115 @@ nav {
 .credits__links a:not(:first-child):not(:last-child) {
   border-left: 0.05em solid rgba(41, 40, 35, 0.1764705882);
   border-right: 0.05em solid rgba(41, 40, 35, 0.1764705882);
+}
+
+/* STYLES ITEM PAGE ======================================================*/
+/* About item section ---------------------------------------------------*/
+.about-item {
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+.about-item__grid {
+  display: grid;
+  gap: 1.9vw;
+}
+.about-item__grid--row1 {
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.33vw;
+}
+.about-item__grid--row1 .column1 {
+  height: 60vh;
+  border-radius: 8px;
+}
+.about-item__grid--row1 .map {
+  background-color: blue;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+.about-item__grid--row1 .photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.95vw;
+}
+.about-item__grid--row1 .photos .image-box {
+  background-color: blue;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.about-item__grid--row1 .photos .image-box--img1 {
+  background-image: url("../img/items/item-1/view_1.jpg");
+}
+.about-item__grid--row1 .photos .image-box--img2 {
+  background-image: url("../img/items/item-1/view_2.jpg");
+}
+.about-item__grid--row1 .photos .image-box--img3 {
+  background-image: url("../img/items/item-1/view_3.jpg");
+}
+.about-item__grid--row1 .photos .image-box--img4 {
+  background-image: url("../img/items/item-1/view_4.jpg");
+}
+.about-item__grid--row2 {
+  grid-template-columns: 2fr 1fr;
+}
+.about-item__grid--row2 .column1 {
+  height: 25vh;
+}
+.about-item__grid--row2 .description {
+  background-color: blue;
+  border-radius: 8px;
+  background-color: #FFFEFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+.about-item__grid--row2 .sidebar {
+  background-color: blue;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  background-color: #FFFEFF;
+}
+
+/* Suggestion cards section ------------------------------------------------*/
+.suggestions {
+  margin-bottom: 5vh;
+}
+.suggestions__cards {
+  overflow: hidden;
+}
+.suggestions__cards .scrolling-wrapper {
+  padding-top: 5vh;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.suggestions__cards .scrolling-wrapper__content .scrolling-wrapper-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc(min(100vw - 120px, 1160px) / 3 - 1.2666666667vw);
+  gap: 1.9vw;
+  overflow: visible;
+}
+.suggestions__cards .scrolling-controls {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-top: 5vh;
+}
+.suggestions__cards .scrolling-controls svg {
+  cursor: pointer;
+}
+.suggestions__cards .scrolling-controls #arrow-right {
+  margin-left: 30px;
+}
+
+.start {
+  margin-left: 0%;
+  width: 100%;
+}
+
+.moveleft {
+  margin-left: calc(0px - min(100vw - 120px, 1160px) - 1.9vw);
+}
+
+.card-test {
+  background-color: yellow;
+  height: 100px;
 }/*# sourceMappingURL=style.css.map */
