@@ -701,18 +701,23 @@ $suggestions-width: min(100vw - 120px, 1160px)
             display: flex
             justify-content: right
             align-items: center
-            margin-top: $between-sections--afterheading // TODO allignment
-            
+            margin-top: $between-sections--afterheading // TODO allignment            
             svg
                 cursor: pointer
+                transition: $nice-card-transition // TODO set transitions
             #arrow-right
                 margin-left: 30px // TODO animate arrows
+
+.blocked
+    // background-color: magenta
 
 .start
     margin-left: 0%
     width: 100%
 .moveleft
     margin-left: calc(0px - $suggestions-width - $grid-gap)
+.moveleft-2
+    margin-left: calc(0px - $suggestions-width * 2 - $grid-gap * 2)
 
 // Temporary cards
 .card-test

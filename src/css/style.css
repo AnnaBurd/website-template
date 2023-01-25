@@ -718,6 +718,7 @@ nav {
 }
 .suggestions__cards .scrolling-controls svg {
   cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .suggestions__cards .scrolling-controls #arrow-right {
   margin-left: 30px;
@@ -730,6 +731,10 @@ nav {
 
 .moveleft {
   margin-left: calc(0px - min(100vw - 120px, 1160px) - 1.9vw);
+}
+
+.moveleft-2 {
+  margin-left: calc(0px - min(100vw - 120px, 1160px) * 2 - 3.8vw);
 }
 
 .card-test {
