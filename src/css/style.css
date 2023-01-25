@@ -740,4 +740,16 @@ nav {
 .card-test {
   background-color: yellow;
   height: 100px;
+}
+
+/* STYLES FOR MAP PAGE ======================================================*/
+.map {
+  margin: 2.5vh;
+}
+.map__content {
+  background-color: rgba(136, 18, 18, 0.1254901961);
+  width: 100%;
+  height: 75vh;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 }/*# sourceMappingURL=style.css.map */
