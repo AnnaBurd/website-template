@@ -51,6 +51,14 @@
   font-weight: 500;
   line-height: 20px;
 }
+.nice-h3-l {
+  color: rgba(41, 40, 35, 0.8);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.2em;
+}
 
 .nice-h4 {
   color: #292823;
@@ -540,7 +548,7 @@ nav {
   border-right: 0.05em solid rgba(41, 40, 35, 0.1764705882);
 }
 
-/* STYLES ITEM PAGE ======================================================*/
+/* STYLES FOR ITEM PAGE ======================================================*/
 /* About item section ---------------------------------------------------*/
 .about-item {
   margin-top: 2vh;
@@ -591,19 +599,97 @@ nav {
   grid-template-columns: 2fr 1fr;
 }
 .about-item__grid--row2 .column1 {
-  height: 25vh;
+  min-height: 25vh;
 }
 .about-item__grid--row2 .description {
-  background-color: blue;
-  border-radius: 8px;
   background-color: #FFFEFF;
+  border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 20px 40px 20px 30px;
+}
+.about-item__grid--row2 .description .heading {
+  margin-bottom: 0.7em;
+}
+.about-item__grid--row2 .description .par {
+  margin-bottom: 0.4em;
+}
+.about-item__grid--row2 .description .list {
+  padding-left: 2em;
+  margin-bottom: 0.4em;
+  list-style-position: outside;
+  text-align: left;
+  list-style-type: disc;
 }
 .about-item__grid--row2 .sidebar {
-  background-color: blue;
+  background-color: #FFFEFF;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-  background-color: #FFFEFF;
+  padding: 35px 40px 20px 50px;
+}
+.about-item__grid--row2 .sidebar .parameters-table {
+  display: flex;
+  flex-direction: column;
+}
+.about-item__grid--row2 .sidebar .parameters-table .row {
+  padding-bottom: 12px;
+  position: relative;
+}
+.about-item__grid--row2 .sidebar .parameters-table svg {
+  position: absolute;
+}
+.about-item__grid--row2 .sidebar .parameters-table svg path {
+  fill: #383a2d;
+  fill-opacity: 0.5;
+}
+.about-item__grid--row2 .sidebar .parameters-table__address svg {
+  left: -1.4em;
+  top: 0.4em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__area svg {
+  left: -1.45em;
+  top: 0.2em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__size .height {
+  display: inline-block;
+  padding-right: 20px;
+}
+.about-item__grid--row2 .sidebar .parameters-table__size .height svg {
+  left: -1.45em;
+  top: 0.2em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__size .width {
+  display: inline-block;
+  position: relative;
+}
+.about-item__grid--row2 .sidebar .parameters-table__size .width svg {
+  left: -1.1em;
+  top: 0.25em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__papers svg {
+  left: -1.45em;
+  top: 0.2em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__direction svg {
+  left: -1.45em;
+  top: 0.2em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__price svg {
+  left: -1.45em;
+  top: 0.2em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__price svg path {
+  fill: #cf6f49;
+}
+.about-item__grid--row2 .sidebar .parameters-table__link {
+  margin-top: 12px;
+}
+.about-item__grid--row2 .sidebar .parameters-table__link svg {
+  left: 6.5em;
+  top: 0.2em;
+}
+.about-item__grid--row2 .sidebar .parameters-table__link svg path {
+  fill: #cf6f49;
+  fill-opacity: 0.8;
 }
 
 /* Suggestion cards section ------------------------------------------------*/

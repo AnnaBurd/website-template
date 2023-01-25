@@ -114,6 +114,14 @@ $nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1)
         font-size: $fs-small
         font-weight: $fw-medium
         line-height: 20px
+    &-l
+        color: $nice-h3-p
+        font-family: $ff-sans-serif
+        font-size: $fs-normal
+        font-weight: $fw-medium
+        letter-spacing: $ls-normal
+        line-height: 1.2em
+
 
 .nice-h4
     color: $nice-h4
@@ -535,7 +543,7 @@ nav
                     border-right: 0.05em solid $nice-credits-lines
 
 
-/* STYLES ITEM PAGE ======================================================*/
+/* STYLES FOR ITEM PAGE ======================================================*/
 
 /* About item section ---------------------------------------------------*/
 $grid-gap: 1.9vw // TODO adjust and move variables to beginning
@@ -582,18 +590,93 @@ $row2-height: 25vh
         &--row2
             grid-template-columns: 2fr 1fr // TODO adjust
             .column1
-                height: $row2-height
+                min-height: $row2-height
+                // max-height: 60vh
             .description
-                background-color: blue
-                border-radius: $border-radius
                 background-color: $nice-card-bg
+                border-radius: $border-radius                
                 box-shadow: $nice-shadow
+                padding: 20px 40px 20px 30px
+                .heading
+                    margin-bottom: 0.7em
+                .par
+                    margin-bottom: 0.4em
+                .list
+                    padding-left: 2em
+                    margin-bottom: 0.4em
+                    list-style-position: outside
+                    text-align: left
+                    list-style-type: disc
             .sidebar
-                background-color: blue
+                background-color: $nice-card-bg
                 border-radius: $border-radius
                 box-shadow: $nice-shadow
-                background-color: $nice-card-bg
-
+                padding: 35px 40px 20px 50px // TODO adjust values -> 
+                .parameters-table
+                    display: flex
+                    flex-direction: column                    
+                    .row
+                        padding-bottom: 12px
+                        position: relative                   
+                    svg
+                        position: absolute
+                        // background-color: orange
+                        path
+                            fill: #383a2d
+                            fill-opacity: 0.5
+                        // left: -7%
+                    &__address // TODO adjust positions of svg icons and fonts
+                        // color: red
+                        svg
+                            left: -1.4em
+                            top: 0.4em
+                    &__area
+                        // color: red
+                        svg
+                            left: -1.45em
+                            top: 0.2em
+                    &__size
+                        .height
+                            // color: red
+                            display: inline-block
+                            padding-right: 20px
+                            svg
+                                left: -1.45em
+                                top: 0.2em
+                        .width
+                            // color: red
+                            display: inline-block
+                            position: relative
+                            svg
+                                left: -1.1em
+                                top: 0.25em                    
+                    &__papers
+                        // color: red
+                        svg
+                            left: -1.45em
+                            top: 0.2em
+                    &__direction
+                        // color: red
+                        svg
+                            left: -1.45em
+                            top: 0.2em
+                    &__price
+                        // color: red
+                        svg
+                            left: -1.45em
+                            top: 0.2em
+                            path
+                                fill: $nice-bt-bg--accent
+                    &__link
+                        // color: red
+                        margin-top: 12px
+                        svg
+                            left: 6.5em
+                            top: 0.2em
+                            path
+                                fill: $nice-bt-bg--accent
+                                fill-opacity: 0.8 // TODO animate arrows on hover- make bigger, change color and move
+                            
 
 /* Suggestion cards section ------------------------------------------------*/
 
