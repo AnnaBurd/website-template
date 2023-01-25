@@ -69,9 +69,20 @@
             </div> 
         </div>
     </nav>
-<body>
     <main>
-        hello there!
+        <div class="decorative">
+            <img class="decorative--top-right" src="src/icons/decorative-element-top-right.svg" alt="Decorative element around company section">
+        </div>   
+        <section class="error padding">
+            <div class="messsage-box">
+                <h2 class="nice-h3 heading">Page Not Found</h2>
+                <div class="nice-h3-p message-text">Đã xảy ra lỗi, không tìm thấy trang bạn yêu cầu. </div>
+                <button id="homeButton" class="nice-bt nice-bt--accent">Trở lại trang chính</button>
+            </div>
+        </section>
+        <div class="decorative">
+            <img class="decorative--bottom-left" src="src/icons/decorative-element-bottom-left.svg" alt="Decorative element around company section">
+        </div>
     </main>
     
     <!-- start of footer---- -->
@@ -125,6 +136,11 @@
             </div>
         </div>
     </footer>
+    <script>
+        document.getElementById('homeButton').onclick = function() {
+            location.href = "index.html";
+        }
+    </script>
     <!-- TODO minify source files, test for different browsers-->
     <!-- <div>MEDIA query JS: <span class="mq-value"></span></div> TODO - relative size tests -->
 </body>

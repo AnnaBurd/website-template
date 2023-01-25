@@ -210,7 +210,14 @@ a
         position: absolute
         right: 0px
         bottom: 0px // TODO allign responsively -> in section margins
-
+    &--top-right
+        position: absolute
+        right: 0px
+        top: 0px // TODO allign responsively -> in section margins
+    &--bottom-left
+        position: absolute
+        left: 0px
+        bottom: 0px // TODO allign responsively -> in section margins
 
 /* PAGE SPACING ====================================================*/
 *   // Remove default paddings and margins and set border-box size calculations
@@ -735,3 +742,20 @@ $suggestions-width: min(100vw - 120px, 1160px)
         height: 75vh
         border-radius: $border-radius
         box-shadow: $nice-shadow
+
+/* STYLES FOR ERROR PAGE ======================================================*/
+.error
+    padding-top: max(30px, 20vh)
+    padding-bottom: max(30px, 20vh)
+    text-align: center    
+    .messsage-box
+        margin: 0 auto
+        background-color: $nice-card-bg
+        border-radius: $border-radius
+        box-shadow: $nice-shadow
+        width: min(35vw, 600px)
+        padding: 50px
+        .heading
+            padding-bottom: 10px
+        .message-text
+            padding-bottom: 24px

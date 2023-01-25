@@ -162,6 +162,16 @@ a {
   right: 0px;
   bottom: 0px;
 }
+.decorative--top-right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.decorative--bottom-left {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
 
 /* PAGE SPACING ====================================================*/
 * {
@@ -752,4 +762,25 @@ nav {
   height: 75vh;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* STYLES FOR ERROR PAGE ======================================================*/
+.error {
+  padding-top: max(30px, 20vh);
+  padding-bottom: max(30px, 20vh);
+  text-align: center;
+}
+.error .messsage-box {
+  margin: 0 auto;
+  background-color: #FFFEFF;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  width: min(35vw, 600px);
+  padding: 50px;
+}
+.error .messsage-box .heading {
+  padding-bottom: 10px;
+}
+.error .messsage-box .message-text {
+  padding-bottom: 24px;
 }/*# sourceMappingURL=style.css.map */
