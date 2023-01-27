@@ -783,4 +783,29 @@ nav {
 }
 .error .messsage-box .message-text {
   padding-bottom: 24px;
+}
+
+.btn:link,
+.btn--hot:link,
+.btn,
+.btn--hot {
+  padding: 10px;
+  margin: 30px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: red;
+  width: 150px;
+}
+
+.btn:link {
+  background-color: red;
+}
+.btn:hover {
+  background-color: #e60000;
+}
+.btn--hot:hover {
+  background-color: #e6e600;
 }/*# sourceMappingURL=style.css.map */

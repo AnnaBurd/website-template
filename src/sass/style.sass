@@ -308,9 +308,9 @@ nav
                 padding: 7px // TODO Size of clickable area
                 margin: 3px
                 // TODO animation on hover? - change color or make like a shadow-button?
-            a:last-child // TODO remove margin for the last child in flex wrapped row
-                margin-right: 0px
-                padding-right: 0px
+                &:last-child // TODO remove margin for the last child in flex wrapped row
+                    margin-right: 0px
+                    padding-right: 0px
         &__buttons
             margin-left: 20px
             .nice-bt--transparent // Position phone icon
@@ -759,3 +759,52 @@ $suggestions-width: min(100vw - 120px, 1160px)
             padding-bottom: 10px
         .message-text
             padding-bottom: 24px
+
+
+// Sassy tests
+
+$width-button: 150px // Variables
+$color-button: red
+
+// Mixins
+@mixin hover-darken
+    &:hover
+        background-color: darken(yellow, 5%)
+// Mixin to remove repeatable code
+@mixin style-link-text($col)
+    text-decoration: none
+    text-transform: uppercase
+    color: $col // Pass variables to mixin
+
+// Functions
+@function division ($a, $b)
+    @return $a / $b
+
+%btn-placeholder // Extents are different from mixins -> the code is not copied to other selector, but the selectors are copied
+    padding: 10px
+    margin: division(60, 2) * 1px // Use of custom functions
+    display: inline-block
+    // color: red
+    text-align: center
+    border-radius: 100px
+    @include style-link-text($color-button)
+    width:$width-button
+
+.btn:link, // Multiple selectors with ","; & - repeat all selectors up to this point
+.btn--hot:link,
+.btn,
+.btn--hot
+    @extend %btn-placeholder
+
+.btn
+    &:link // Nesting
+        background-color: $color-button
+    &:hover
+        background-color: darken($color-button, 5%)
+        // lighten(color, %)
+    &--hot
+        &:link
+            // background-color: yellow
+        @include hover-darken
+        
+
