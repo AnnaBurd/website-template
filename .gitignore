@@ -8,3 +8,6 @@ src/js/splide-init.js
 src/js/test.js
 src/sass/old1-style-new.sass
 src/sass/1.sass
+
+# ignore vs code setup
+.vscode/

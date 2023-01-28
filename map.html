@@ -22,6 +22,9 @@
 
     <!-- Custom CSS stylesheet -->
     <link rel="stylesheet" href="src/css/style.css">
+
+       <!-- Leaflet -->
+       <link rel="stylesheet" href="lib/leaflet/leaflet.css">
 </head>
 <body>
     <header>
@@ -70,9 +73,9 @@
         </div>
     </nav>
     <main>
-        <section class="map">
-            <div class="map__content">
-                here should be map!
+        <section class="map" >
+            <div class="map__content" id="map">
+                
             </div>
         </section>
     </main>
@@ -130,5 +133,12 @@
     </footer>
     <!-- TODO minify source files, test for different browsers-->
     <!-- <div>MEDIA query JS: <span class="mq-value"></span></div> TODO - relative size tests -->
+
+    <!-- Leaflet JS -->
+    <script src="lib/leaflet/leaflet.js"></script>
+    <!-- <script src="https://maps.google.com/maps/api/js?v=3&sensor=false"></script> -->
+    <!-- <script src="lib/leaflet/Google.js"></script> -->
+    <script src="data/countries.geojson"></script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
