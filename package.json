@@ -1,0 +1,22 @@
+{
+  "name": "website-template",
+  "version": "1.0.0",
+  "description": "Website project for real",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnnaBurd/website-template.git"
+  },
+  "author": "Anna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnnaBurd/website-template/issues"
+  },
+  "homepage": "https://github.com/AnnaBurd/website-template#readme",
+  "devDependencies": {
+    "node-sass": "^8.0.0"
+  }
+}
