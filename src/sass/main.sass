@@ -1,67 +1,73 @@
-@import "abstracts/functions"
-@import "abstracts/mixins"
-@import "abstracts/variables"
+@import base/normalize
+@import base/reset
 
-@import "base/animations"
-@import "base/base"
-@import "base/typography"
-@import "base/utilities"
+@import abstracts/functions
+@import abstracts/mixins
+@import abstracts/variables
 
-@import "components/button"
+@import base/animations
+@import base/base
 
-@import "layout/header"
+@import base/typography
+@import base/utilities
 
-@import "pages/home"
-// Sassy tests
+@import components/button
 
-$width-button: 150px // Variables
-$color-button: blue
-$color-primary: green
-$color-primary-light: blue
-$color-primary-dark: black
+@import layout/banner
+@import layout/navbar
 
-// Mixins
-@mixin hover-darken
-    &:hover
-        background-color: darken(orange, 5%)
-// Mixin to remove repeatable code
-@mixin style-link-text($col)
-    text-decoration: none
-    text-transform: uppercase
-    color: $col // Pass variables to mixin
+@import pages/home
 
-// Functions
-@function division ($a, $b)
-    @return $a / $b
+// // Sassy tests
 
-h1
-    color: red
+// $width-button: 150px // Variables
+// $color-button: blue
+// $color-primary: green
+// $color-primary-light: blue
+// $color-primary-dark: black
 
-// %btn-placeholder // Extents are different from mixins -> the code is not copied to other selector, but the selectors are copied
-//     padding: 10px
-//     margin: division(60, 2) * 1px // Use of custom functions
-//     display: inline-block
-//     // color: red
-//     text-align: center
-//     border-radius: 100px
-//     @include style-link-text($color-button)
-//     width:$width-button
+// // Mixins
+// @mixin hover-darken
+//     &:hover
+//         background-color: darken(orange, 5%)
+// // Mixin to remove repeatable code
+// @mixin style-link-text($col)
+//     text-decoration: none
+//     text-transform: uppercase
+//     color: $col // Pass variables to mixin
 
-// .btn:link, // Multiple selectors with ","; & - repeat all selectors up to this point
-// .btn--hot:link,
-// .btn,
-// .btn--hot
-//     @extend %btn-placeholder
+// // Functions
+// @function division ($a, $b)
+//     @return $a / $b
 
-.btn
-    &:link // Nesting
-        background-color: $color-button
-    &:hover
-        background-color: darken($color-button, 5%)
-        // lighten(color, %)
-    &--hot
-        &:link
-            // background-color: yellow
-        @include hover-darken
+// h1
+//     color: red
+
+// // %btn-placeholder // Extents are different from mixins -> the code is not copied to other selector, but the selectors are copied
+// //     padding: 10px
+// //     margin: division(60, 2) * 1px // Use of custom functions
+// //     display: inline-block
+// //     // color: red
+// //     text-align: center
+// //     border-radius: 100px
+// //     @include style-link-text($color-button)
+// //     width:$width-button
+
+// // .btn:link, // Multiple selectors with ","; & - repeat all selectors up to this point
+// // .btn--hot:link,
+// // .btn,
+// // .btn--hot
+// //     @extend %btn-placeholder
+
+// .btn
+//     &:link // Nesting
+//         background-color: $color-button
+//     &:hover
+//         background-color: darken($color-button, 5%)
+//         // lighten(color, %)
+//     &--hot
+//         &:link
+//             // background-color: yellow
+//         @include hover-darken
         
 
