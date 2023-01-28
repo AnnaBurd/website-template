@@ -1,2 +1,35 @@
-button
-    background-color: orange
+.nice-btn   
+    min-height: 4.4rem
+    padding-left: .6rem
+    padding-right: .6rem
+    border: $border-none
+    border-radius: $border-radius
+    cursor: pointer
+    font-family: $ff-display
+    font-size: 1.4rem
+    font-weight: 500
+    letter-spacing: -0.03em    
+    background-color: $color-btn-bg
+    color: $color-btn-text
+    // transition: $nice-transition // TODO animation
+    &:hover
+        background-color: darken($color-btn-bg,10%)
+    &--transparent
+        background: none
+        border: $border-solid
+        box-shadow: $nice-shadow
+        color: $color-btn-text--transparent
+        font-weight: 600
+        &:hover
+            background-color: darken($color-navbar-bg,4%) // TODO animation
+    &--accent
+        background-color: $color-btn-bg--accent
+        &:hover
+            background-color: darken($color-btn-bg--accent,10%) // TODO animation
+    &--call
+        position: relative
+        svg
+            position: absolute
+            top: 1rem
+        span
+            margin-left: 2.2rem
