@@ -1,0 +1,33 @@
+.footer
+    background-color: $color-footer-bg
+    padding-top: 1.5vh
+    padding-bottom: 1.5vh
+    &__boxes
+        display: grid
+        grid-template-columns: $grid-x3-template-columns
+        column-gap: $grid-x3-column-gap
+        .box
+            &__content
+                padding: 7% 4% 7% 4%
+            &:first-child
+                .box__content
+                    padding-left: 0
+            &:last-child
+                .box__content
+                    padding-right: 0
+    &__social-icons
+        display: inline-flex
+        justify-content: space-between
+        width: 11rem
+        margin-bottom: 1.4rem // TODO allign vertically
+        svg
+            fill-opacity: 1
+            &:hover
+                fill-opacity: 0.8
+    &__social-icons-text
+        color: $color-footer-text
+        font-family: $ff-sans-serif
+        font-size: 1.2rem
+        font-weight: 400
+        line-height: 1.4em // TODO rem for consistency?
+        width: 85%
