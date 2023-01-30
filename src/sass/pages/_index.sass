@@ -1,0 +1,46 @@
+.hero
+    position: relative
+    margin-bottom: $gap-between-sections
+    &__image
+        height: 70vh
+        // TODO choose image and set up overlays for nice looks
+        // background: url('../img/hero.jpg')
+        // background: url("../img/op1.jpg")
+        // background: linear-gradient(rgba(107, 57, 37, 0.5), rgb(147,151,120,0.8)), url("../img/op1.jpg")
+        // background: linear-gradient(rgba(107, 57, 37, 0.5), rgb(147,151,120,0.8)), url("../img/hero.jpg")
+        background: url("../img/op1++.jpg")
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        text-align: center
+    &__text        // TODO increase and decrease text size for different screens
+        position: absolute
+        bottom: 25vh
+        left: 50%
+        transform: translateX(-50%)
+
+.projects
+    margin-bottom: $gap-between-sections
+    &__intro
+        margin-bottom: $gap-within-sections
+        div
+            max-width: 23rem
+    &__cards
+        display: grid
+        grid-template-columns: $grid-x3-template-columns
+        column-gap: $grid-x3-column-gap
+        row-gap: $grid-x3-row-gap
+
+.about-company
+    padding-top: $gap-between-sections * 1.3 // TODO adjust vertically
+    padding-bottom: $gap-between-sections * 3.5 // TODO adjust vertically
+    &__intro
+        text-align: center
+        margin-bottom: $gap-within-sections
+        div
+            width: 60%
+            margin: 0 auto
+    &__boxes
+        display: grid
+        grid-template-columns: $grid-x3-template-columns
+        column-gap: $grid-x3-column-gap
