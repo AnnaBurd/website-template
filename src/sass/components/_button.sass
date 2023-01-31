@@ -11,21 +11,14 @@
     letter-spacing: -0.03em    
     background-color: $color-btn-bg
     color: $color-btn-text
-    // transition: $nice-transition // TODO animation
-    &:hover
-        background-color: darken($color-btn-bg,10%)
     &--transparent
         background: none
         border: $border-solid
         box-shadow: $nice-shadow
         color: $color-btn-text--transparent
         font-weight: 600
-        &:hover
-            background-color: darken($color-navbar-bg,4%) // TODO animation
     &--accent
         background-color: $color-btn-bg--accent
-        &:hover
-            background-color: darken($color-btn-bg--accent,10%) // TODO animation
     &--call
         position: relative
         svg
@@ -33,3 +26,27 @@
             top: 1rem
         span
             margin-left: 2.2rem
+
+.nice-btn
+    transition: $nice-button-transition
+    &:link
+        background-color: red
+    &:visited
+        background-color: blue
+    &:hover
+        background-color: darken($color-btn-bg, 10%)
+        transform: translateY(-.1rem)
+        box-shadow: 0rem .4rem 1rem rgba(0, 0, 0, .1)
+    &:focus
+        // background-color: black
+    &:active
+        // background-color: pink
+        transform: translateY(-.04rem)
+        box-shadow: 0rem .2rem .5rem rgba(0, 0, 0, .1)
+    &--transparent
+        &:hover
+            background-color: $color-navbar-bg
+            // background-color: darken($color-navbar-bg,1%)
+    &--accent
+        &:hover
+            background-color: darken($color-btn-bg--accent,10%)

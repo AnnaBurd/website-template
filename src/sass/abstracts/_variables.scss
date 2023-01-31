@@ -58,3 +58,6 @@ $gap-within-sections: $gap-between-sections * .6; // TODO adjust
 $nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); // TODO make transitions
 $nice-transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1); // TODO button transitions
 $nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); // TODO make transitions
+
+// $nice-button-transition: all .2s, background-color .2s cubic-bezier(.77, 0, .175, 1)
+$nice-button-transition: all .2s
