@@ -684,6 +684,9 @@ body {
     height: 70%;
     cursor: pointer; }
 
+.search-card {
+  background-color: red; }
+
 .search-form__intro {
   width: 100%; }
 
@@ -1126,3 +1129,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center; }
+
+.search-results {
+  background-color: pink; }
