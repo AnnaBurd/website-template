@@ -515,6 +515,60 @@ body {
     left: 0;
     bottom: 0; }
 
+.dropdown {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: rgba(42, 44, 31, 0.85); }
+  .dropdown__current {
+    position: relative;
+    cursor: pointer; }
+  .dropdown__value__text {
+    display: none;
+    background-color: #ffffffb3;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 1.4rem 1rem; }
+    .dropdown__value__text--default {
+      color: rgba(42, 44, 31, 0.55); }
+  .dropdown__value__radio-input {
+    width: 100px;
+    display: none; }
+    .dropdown__value__radio-input:checked + .dropdown__value__text {
+      display: block; }
+  .dropdown__arrow-icon {
+    position: absolute;
+    top: 30%;
+    left: 80%; }
+    .dropdown__arrow-icon img {
+      width: 2rem;
+      height: 2rem;
+      opacity: 0.7;
+      transition: 0.2s ease; }
+  .dropdown__current:focus + .dropdown__list {
+    opacity: 1 !important; }
+    .dropdown__current:focus + .dropdown__list .dropdown__list__option {
+      cursor: pointer; }
+  .dropdown__current:focus .dropdown__arrow-icon img {
+    transform: rotate(180deg); }
+  .dropdown__list {
+    opacity: 0;
+    cursor: none;
+    margin-top: .2rem;
+    transition: 0.2s ease; }
+    .dropdown__list__option {
+      display: block;
+      background-color: #ffffffb3;
+      padding: 1.4rem 1rem; }
+      .dropdown__list__option:hover, .dropdown__list__option:focus {
+        background-color: rgba(255, 255, 255, 0.3); }
+      .dropdown__list__option--first {
+        border-radius: .8rem .8rem 0 0; }
+      .dropdown__list__option--last {
+        border-radius: 0 0 .8rem .8rem; }
+      .dropdown__list__option--default {
+        color: rgba(42, 44, 31, 0.55); }
+
 .info-box {
   background-color: #FFFEFF;
   border-radius: 8px;
@@ -631,7 +685,16 @@ body {
     cursor: pointer; }
 
 .search-form__intro {
-  width: 70%; }
+  width: 100%; }
+
+.search-form__tag {
+  padding: .35rem .85rem .35rem;
+  background-color: #e7e8e3;
+  border-radius: 3.2rem;
+  display: inline-block; }
+
+.search-form__text {
+  padding-bottom: 8%; }
 
 .search-form__label {
   display: inline-block;
@@ -689,7 +752,14 @@ body {
     content: "\00a0tỷ"; }
 
 .search-form__dropdown {
-  background-color: orange; }
+  position: relative; }
+  .search-form__dropdown .search-form__label {
+    margin-right: 40%; }
+  .search-form__dropdown .dropdown {
+    position: absolute;
+    top: 0;
+    left: 9.5rem;
+    width: 40%; }
 
 .subscription-form {
   color: #292823cc;

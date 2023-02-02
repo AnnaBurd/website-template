@@ -1,11 +1,16 @@
 .search-form
-    // background-color: yellow
     &__intro
-        width: 70% // TODO adjust
+        width: 100% // TODO adjust
     &__tag
         // background-color: red
+        padding: .35rem .85rem .35rem
+        background-color: $color-tag
+        border-radius: 3.2rem
+        display: inline-block
+    &__heading
+    &__text
+        padding-bottom: 8% // TODO adjust
     &__label
-        // background-color: green
         display: inline-block
         width: 10rem // TODO adjust
         font-size: 1.4rem
@@ -63,4 +68,12 @@
             .noUi-tooltip::after
                 content: "\00a0tỷ"
     &__dropdown
-        background-color: orange
+        position: relative
+        .search-form__label
+            margin-right: 40% 
+        .dropdown
+            position: absolute
+            top: 0
+            left: 9.5rem 
+            width: 40% // TODO fix width so everything fits in
+

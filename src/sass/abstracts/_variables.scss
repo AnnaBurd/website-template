@@ -21,8 +21,12 @@ $color-btn-text--transparent:#2a2c1ff2;
 $color-input-text: #2a2c1ff2;
 $color-input-text-placeholder: #2a2c1fbf;
 
+$color-dropdown-bg: #ffffffb3;
+
 $color-slider-label:#2a2c1fd9;
 $color-slider-tooltip:#2a2c1fbf;
+
+$color-tag:#e7e8e3;
 
 $color-project-card-bg: #FFFEFF;
 $color-box-bg: #FFFEFF;
@@ -63,4 +67,5 @@ $nice-transition: border-color 200ms ease, background-color 200ms cubic-bezier(.
 $nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); // TODO make transitions
 
 // $nice-button-transition: all .2s, background-color .2s cubic-bezier(.77, 0, .175, 1)
-$nice-button-transition: all .2s
+$nice-button-transition: all .2s;
+$nice-dropdown-transition: .2s ease;
