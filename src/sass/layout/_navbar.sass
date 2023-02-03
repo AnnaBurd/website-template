@@ -1,0 +1,37 @@
+.navbar
+    background-color: $color-navbar-bg
+    box-shadow: $nice-shadow
+    position: sticky // TODO FIX on all pages
+    top: 0
+    z-index: 10
+    &__content
+        display: flex
+        justify-content: space-between
+        padding-top: 1.6rem
+        padding-bottom: 1.6rem
+    .logo
+        margin-top: .1rem // Vertical alignment of logo with navigation
+    .navigation
+        display: flex
+        justify-content: flex-end
+        flex-wrap: wrap
+        text-align: right
+        &__links
+            margin-top: 1.5rem // Vertical alignment of links with buttons
+            a
+                text-decoration: none
+                white-space: nowrap
+                color: $color-navbar-text
+                font-family: $ff-display
+                font-size: 1.4rem
+                font-weight: 500
+                letter-spacing: -.01em
+                padding: .7rem
+                margin: .3rem
+                &:last-child
+                    margin-right: 0
+                    padding-right: 0
+        &__buttons
+            margin-left: 2rem
+            button:last-child
+                margin-left: .5rem

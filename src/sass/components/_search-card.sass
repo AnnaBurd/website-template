@@ -1,0 +1,86 @@
+.search-card
+    background-color: $color-project-card-bg    
+    // overflow: hidden
+    padding: .8rem // TODO consistent paddings on all cards
+    border-radius: $border-radius
+    box-shadow: $nice-shadow
+    margin-bottom: $gap-within-sections * .5
+    display: grid
+    grid-template-columns: 49% 49%
+    grid-template-rows: 30rem // TODO minmax(35vh, 30rem)
+    gap: 2% // TODO adjust spacings -> calc here for 1160 and lesser
+    &__info
+        // background-color: yellow
+        position: relative
+        padding-top: 1rem
+        padding-bottom: 1rem
+    &__name
+        // background-color: pink // TODO adjust card formats
+        margin-bottom: 0.8rem
+        width: 90%
+    &__description
+        // background-color: green
+        width: 85%
+        margin-bottom: 0.8rem
+    &__address
+        width: 60%
+        // TODO refactor parameters with values into a separate component (used on search-card and item info pages)
+    &__price
+        position: absolute
+        right: 0
+        bottom: 1rem
+    &__photo-carousel
+        // background-color: blue
+        display: flex
+        justify-content: space-between
+        .main-splide
+            width: 78%
+            // background-color: red
+        .thumbnail-splide
+            width: 20%
+
+
+.main-splide
+    border-radius: $border-radius
+    overflow: hidden
+    .splide__arrows
+        .splide__arrow
+            display: none
+            width: 3rem
+            min-height: 3rem
+            border-radius: $border-radius
+            background-color: #E8E8E4 // TODO
+            &:hover:disabled
+                cursor: default
+    .splide__track
+        .splide__list
+            .splide__slide
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: $border-radius
+                video
+                    background-color: black
+    &:hover
+        .splide__arrows
+            .splide__arrow
+                // background-color: red
+                display: block
+
+.thumbnail-splide
+    .splide__track
+        .splide__list
+            .splide__slide
+                padding: .1rem
+                border: .2rem solid transparent
+                opacity: 0.85
+                img
+                    width: 100%
+                    height: 100%
+                    object-fit: cover
+                    border-radius: $border-radius * 0.5
+            .is-active
+                border: .2rem solid $color-banner-bg
+                border-radius: $border-radius * 0.5
+                opacity: 1

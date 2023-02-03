@@ -1,0 +1,75 @@
+.project-card
+    background-color: yellow
+    border-radius: $border-radius
+    box-shadow: $nice-shadow
+    height: 40vh // TODO
+    overflow: hidden
+    position: relative
+    // -webkit-font-smoothing: antialiased // TODO check about antialiasing
+    &__image
+        position: absolute
+        top: 0
+        width: 100%
+        height: 70%
+        background-image: url('../img/items/item-1/view_1.jpg') // TODO remove
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+        transition: $nice-card-transition
+        &--item1 // TODO dynamically provide images
+            background-image: url('../img/items/item-1/view_1.jpg')
+        &--item2
+            background-image: url('../img/items/item-2/view_1.jpg')
+        &--item3
+            background-image: url('../img/items/item-3/view_1.jpg')
+        &--item4
+            background-image: url('../img/items/item-4/view_1.jpg')
+        &--item5
+            background-image: url('../img/items/item-5/view_1.jpg')
+        &--item6
+            background-image: url('../img/items/item-6/view_1.jpg')
+    &__description
+        position: absolute
+        bottom: 0
+        height: 30%
+        transition: $nice-card-transition
+        background-color: $color-project-card-bg
+        padding: $card-padding
+    &__name // TODO visually allign all values
+        margin-bottom: .8rem
+        margin-left: -.1rem
+    &__note
+        margin-bottom: .8rem
+    &__address
+        margin-bottom: .8rem
+        margin-left: 1.8rem
+        position: relative
+        svg
+            position: absolute
+            top: -.1rem
+            left: -1.5rem
+    &__area
+        margin-bottom: .8rem
+        margin-left: 1.8rem
+        position: relative
+        svg
+            position: absolute
+            top: .3rem
+            left: -1.6rem
+        &:after
+            content: "\00a0\00a0m2" // TODO add JS superscript text m^2
+    &__price
+        margin-left: 1.8rem
+        position: relative
+        svg
+            position: absolute
+            top: -.1rem
+            left: -1.4rem
+        &:after
+            content: "\00a0\00a0tỷ" // TODO
+    &:hover .project-card__image
+        height: 40%
+    &:hover .project-card__description
+        // background-color: pink
+        height: 70%
+        cursor: pointer
