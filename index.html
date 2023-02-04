@@ -67,7 +67,7 @@
                 <div class="hero__text container">
                     <h1 class="nice-h1">Nơi Hạnh Phúc Ngập Tràn</h1>
                     <!-- TODO animate words like on vinhome page -->
-                    <div class="nice-h1-p">Hạnh phúc là có người đồng hành gửi trao tin cậy.</div>
+                    <div class="nice-h1-p" id="hero-text">Hạnh phúc là có người đồng hành gửi trao tin cậy.</div>
                 </div>
             </div>
         </div>
@@ -77,7 +77,7 @@
         <section class="projects container__padding">
             <div class="projects__intro container">
                 <h2 class="nice-h2">Dự án hiện tại đang bán</h2>                
-                <div class="nice-h2-p">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. -></div>
+                <div class="nice-h2-p">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow arrow--right">&rarr;</span></div>
             </div>
             <div class="projects__cards container">
                 <div class="project-card" id="item1">
@@ -329,7 +329,10 @@
         document.getElementById('item6').onclick = function() {
             location.href = "item.html";
         }
+
+        
     </script>
+    <script src="src/js/text-line-animation.js"></script>
     <!-- TODO minify source files, test for different browsers-->
     <!-- <div>MEDIA query JS: <span class="mq-value"></span></div> TODO - relative size tests -->
 </body>
