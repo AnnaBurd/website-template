@@ -54,8 +54,12 @@ $card-padding: 7% 4% 7% 4%; // % relative to size of element's parent
 
 /* Grids -----------------------------------------------------------*/
 $grid-x3-template-columns: repeat(3, 1fr);
-$grid-x3-column-gap: 1.5vw; // TODO adjust
-$grid-x3-row-gap: 1.5vw; // TODO adjust
+$grid-x3-column-gap: 1.5vw; // TODO adjust -> remove
+$grid-x3-row-gap: 1.5vw; // TODO adjust -> remove
+
+$gutter-columns-large: 3rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns-medium: 2rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns-small: 1.2rem; // TODO adjust depending on 1160 or smaller -> calc relative
 
 /* Section gaps ----------------------------------------------------*/
 $gap-between-sections: 5vh; // TODO adjust

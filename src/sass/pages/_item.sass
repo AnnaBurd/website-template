@@ -1,55 +1,30 @@
-$grid-x2-column-gap: $grid-x3-column-gap * 2/3
-$grid-x2-row-gap: $grid-x3-row-gap * 2/3
-$grid-x4-column-gap: $grid-x2-column-gap / 2
-$grid-x4-row-gap: $grid-x2-row-gap / 2
-
 .item
-    margin-top: $grid-x3-row-gap    // TODO adjust gaps and positioning of boxes
-    margin-bottom: $gap-between-sections // TODO adjust gaps and positioning of boxes
-    &__grid // TODO redo grid as grid-4-1 separate component
-        display: grid
-        gap: $grid-x2-column-gap   // TODO adjust gaps and positioning of boxes
-        &--row1
-            grid-template-columns: 1fr 1fr
-            margin-bottom: $grid-x2-row-gap
-            &--cell1
-                height: 60vh               // TODO adjust gaps and positioning of boxes
-                border-radius: $border-radius
-                box-shadow: $nice-shadow
-            &--cell2
-        &--row2
-            grid-template-columns: 2fr 1fr // TODO adjust gaps and positioning of boxes
-            &--cell1
-                min-height: 25vh           // TODO adjust gaps and positioning of boxes
-                border-radius: $border-radius
-                box-shadow: $nice-shadow
-            &--cell2
-                border-radius: $border-radius
-                box-shadow: $nice-shadow
+    margin-top: $gutter-columns-medium   
+    margin-bottom: $gap-between-sections 
     &__mini-map
-        background-color: yellow // TODO add map
+        background-color: #c27996ad // TODO add map
+        border-radius: $border-radius
+        box-shadow: $nice-shadow
     &__photos
+    &__photo-wrapper
+        border-radius: $border-radius
+        box-shadow: $nice-shadow
+        overflow: hidden
+        img 
+            width: 100%
+            height: 100%
+            object-fit: cover
+        // TODO clickable images -> opens view mode with all images/videos
+    &__info
         display: grid
-        grid-template-columns: 1fr 1fr
-        gap: $grid-x4-column-gap            // TODO adjust gaps and positioning of boxes
-        .photo-box
-            background-size: cover
-            background-repeat: no-repeat
-            background-position: center center
-            border-radius: $border-radius
-            box-shadow: $nice-shadow
-            // TODO clickable images -> opens view mode with all images/videos
-            // TODO dynamically provide links for images
-            &--img1
-                background-image: url('../img/items/item-1/view_1.jpg')
-            &--img2
-                background-image: url('../img/items/item-1/view_2.jpg')
-            &--img3
-                background-image: url('../img/items/item-1/view_3.jpg')
-            &--img4
-                background-image: url('../img/items/item-1/view_4.jpg')
+        grid-template-columns: 2fr 1fr
+        gap: $gutter-columns-medium
+        margin-top: $gutter-columns-medium
+
     &__description
         background-color: $color-box-bg
+        border-radius: $border-radius
+        box-shadow: $nice-shadow
         .description-box
             padding: 2rem 4rem 2rem 3rem // TODO adjust text paddings and positions
             &__heading
@@ -62,6 +37,8 @@ $grid-x4-row-gap: $grid-x2-row-gap / 2
                 list-style-type: disc
     &__sidebar
         background-color: $color-box-bg
+        border-radius: $border-radius
+        box-shadow: $nice-shadow
         .sidebar
             padding: 3.5rem 4rem 2rem 5rem // TODO adjust text paddings and positions
             // background-color: red
@@ -130,8 +107,8 @@ $grid-x4-row-gap: $grid-x2-row-gap / 2
             &__grid
                 display: grid
                 grid-auto-flow: column
-                grid-auto-columns: unquote('calc(min(100vw - 120px, 1160px) / 3 - 1.5vw * 2/3 * 2/3)')
-                gap: 1.5vw * 2/3
+                grid-auto-columns: calc((min(100vw - 120px, 1160px) - #{$gutter-columns-medium} * 2)/3)
+                gap: $gutter-columns-medium
                 overflow: visible
         .scrolling-controls
             display: flex
@@ -145,9 +122,9 @@ $grid-x4-row-gap: $grid-x2-row-gap / 2
                 margin-left: 3rem // TODO animate arrows
 
 .moveleft
-    transform: unquote('translateX(calc(min(100vw - 120px, 1160px) * (-1) - 1.5vw * 2/3))')
+    transform: translateX(calc(-1 * (min(100vw, 1160px) + #{$gutter-columns-medium})))
 .moveleft-2
-    transform: unquote('translateX(calc(min(100vw - 120px, 1160px) * (-2) - 1.5vw * 2/3 * 2))')
+    transform: translateX(calc(-2 * (min(100vw, 1160px) + #{$gutter-columns-medium})))
 
 .blocked
     // background-color: orange
