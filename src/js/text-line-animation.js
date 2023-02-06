@@ -17,7 +17,10 @@ function sleep(ms) {
 
 async function typeWriter(newTextLine){
 
-  pause = (newTextLine.length + oldTextLine.length) * speed + pauseMiddle * 2; // Adjust timeput pause before next call
+  console.log("Wait a little bit before start");
+  await sleep(pauseMiddle); // Wait a little bit
+
+  pause = (newTextLine.length + oldTextLine.length) * speed + pauseMiddle; // Adjust timeput pause before next call
 
   // Remove old text
   // console.log("Remove old text");
@@ -49,6 +52,9 @@ async function typeWriter(newTextLine){
   
   }, pause);
 }
+
+
+// sleep(pauseMiddle * 20); // Wait a little bit before start
 
 setTimeout(function() {
 

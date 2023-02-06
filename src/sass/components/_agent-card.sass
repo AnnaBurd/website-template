@@ -1,0 +1,26 @@
+.agent-card
+    background-color: $color-box-bg
+    border: $border-solid
+    border-radius: $border-radius
+    box-shadow: $nice-shadow
+    display: flex
+    overflow: hidden
+    height: 30rem
+    &__photo
+        width: 50%
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+    &__info
+        width: 50%
+        padding: 8% 6%
+    &__name
+        padding-bottom: 1.4rem
+    &__title
+        padding-bottom: 0.4rem
+        font-size: 1.2rem
+    &__text
+        width: 95%
+        &:not(:last-child)
+            padding-bottom: 0.4rem

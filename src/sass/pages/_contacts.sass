@@ -1,0 +1,47 @@
+.contacts
+    // background-color: red
+    margin-top: $gap-between-sections
+    margin-bottom: $gap-between-sections
+    &__boxes
+        display: grid
+        grid-template-columns: $grid-x3-template-columns
+        column-gap: $grid-x3-column-gap
+
+.agents
+    background-color: $color-navbar-bg
+    padding-top: $gap-between-sections
+    padding-bottom: $gap-between-sections
+    // height: 20vh
+    &__intro
+        margin-bottom: $gap-within-sections
+    &__cards
+        // height: 40vh
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 1fr 1fr
+        column-gap: $grid-x3-column-gap
+        row-gap: $grid-x3-column-gap
+        // background-color: red
+
+.values
+    margin-top: $gap-between-sections
+    margin-bottom: $gap-between-sections * 2
+    &__intro
+        margin-bottom: $gap-within-sections
+    &__image
+        border-radius: $border-radius
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+    &__boxes // Animation of boxes on hover
+        [class^="right-area__"]
+            transition: transform .2s
+        .right-area__top-left:hover
+            transform: scale(1.04) translate(-.1rem, .1rem) 
+        .right-area__top-right:hover
+            transform: scale(1.04) translate(.1rem, .1rem) 
+        .right-area__bottom-left:hover
+            transform: scale(1.04) translate(-.1rem, -.1rem) 
+        .right-area__bottom-right:hover
+            transform: scale(1.04) translate(.1rem, -.1rem) 

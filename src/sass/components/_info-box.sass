@@ -4,6 +4,7 @@
     box-shadow: $nice-shadow
     // height: 30vh // TODO set up max-min size for different medias
     text-align: center
+    transition: transform .2s
     &__content
         padding: $card-padding
     &__icon
@@ -23,3 +24,11 @@
         margin-bottom: 0.4em
     &__description
         // background-color: pink
+    &__contact
+        // background-color: red
+        // font-size: 1.2rem
+        text-decoration: underline
+        &--address
+            text-decoration: none
+    &:hover
+        transform: scale(1.04) translate(0, -.4rem)
