@@ -679,8 +679,63 @@ body {
     visibility: hidden;
     top: 45%; }
 
+.land-parameters > div:not(:last-child) {
+  margin-bottom: 1em; }
+
+.land-parameters [class^="land-"] {
+  position: relative; }
+
+.land-parameters [class^="material-"] {
+  font-size: 1.2em;
+  position: absolute;
+  top: 0;
+  left: -1.35em;
+  display: inline-block; }
+
+.land-parameters .land-location__icon {
+  transform: translate(0em, 0em); }
+
+.land-parameters .land-location__text::before {
+  content: "Địa chỉ: \00a0"; }
+
+.land-parameters .land-area__icon {
+  transform: translate(0.07em, 0em); }
+
+.land-parameters .land-area__text::before {
+  content: "Điện tích: \00a0"; }
+
+.land-parameters .land-height {
+  display: inline-block; }
+  .land-parameters .land-height__icon {
+    transform: rotate(90deg) translate(-0.05em, 0.05em); }
+  .land-parameters .land-height__text::before {
+    content: "Chiều dài: \00a0"; }
+
+.land-parameters .land-width {
+  display: inline-block;
+  margin-left: 3em; }
+  .land-parameters .land-width__icon {
+    transform: translate(-0.05em, 0.05em); }
+  .land-parameters .land-width__text::before {
+    content: "Chiều ngang: \00a0"; }
+
+.land-parameters .land-papers__text::before {
+  content: "Giấy tờ pháp lý: \00a0"; }
+
+.land-parameters .land-direction__icon {
+  transform: translate(0em, 0.01em); }
+
+.land-parameters .land-direction__text::before {
+  content: "Hướng cửa chính: \00a0"; }
+
+.land-parameters .land-price {
+  color: #cf6f49; }
+  .land-parameters .land-price__icon {
+    transform: translate(0em, 0.05em); }
+  .land-parameters .land-price__text::before {
+    content: "Giá: \00a0"; }
+
 .project-card {
-  background-color: yellow;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   height: 40vh;
@@ -695,7 +750,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
     .project-card__image--item1 {
       background-image: url("../img/items/item-1/view_1.jpg"); }
     .project-card__image--item2 {
@@ -712,7 +767,7 @@ body {
     position: absolute;
     bottom: 0;
     height: 30%;
-    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     background-color: #FFFEFF;
     padding: 7% 4% 7% 4%; }
   .project-card__name {
@@ -720,38 +775,26 @@ body {
     margin-left: -.1rem; }
   .project-card__note {
     margin-bottom: .8rem; }
-  .project-card__address {
-    margin-bottom: .8rem;
-    margin-left: 1.8rem;
-    position: relative; }
-    .project-card__address svg {
+  .project-card .land-parameters {
+    width: 80%;
+    margin-left: 2rem; }
+    .project-card .land-parameters > div:not(:last-child) {
+      margin-bottom: 0.3em; }
+    .project-card .land-parameters .land-price {
+      font-size: 1.3em;
       position: absolute;
-      top: -.1rem;
-      left: -1.5rem; }
-  .project-card__area {
-    margin-bottom: .8rem;
-    margin-left: 1.8rem;
-    position: relative; }
-    .project-card__area svg {
-      position: absolute;
-      top: .3rem;
-      left: -1.6rem; }
-    .project-card__area:after {
-      content: "\00a0\00a0m2"; }
-  .project-card__price {
-    margin-left: 1.8rem;
-    position: relative; }
-    .project-card__price svg {
-      position: absolute;
-      top: -.1rem;
-      left: -1.4rem; }
-    .project-card__price:after {
-      content: "\00a0\00a0tỷ"; }
+      left: 50%;
+      bottom: 8%;
+      transform: translateX(-50%);
+      opacity: 0;
+      transition: opacity .2s .3s; }
   .project-card:hover .project-card__image {
     height: 40%; }
   .project-card:hover .project-card__description {
     height: 70%;
     cursor: pointer; }
+  .project-card:hover .land-parameters .land-price {
+    opacity: 1; }
 
 .search-card {
   background-color: #FFFEFF;
@@ -773,12 +816,15 @@ body {
   .search-card__description {
     width: 85%;
     margin-bottom: 0.8rem; }
-  .search-card__address {
-    width: 60%; }
-  .search-card__price {
-    position: absolute;
-    right: 0;
-    bottom: 1rem; }
+  .search-card .land-parameters {
+    width: 60%;
+    margin-left: 2rem; }
+    .search-card .land-parameters > div:not(:last-child) {
+      margin-bottom: 0.5em; }
+    .search-card .land-parameters .land-price {
+      position: absolute;
+      left: 68%;
+      bottom: 8%; }
   .search-card__photo-carousel {
     display: flex;
     justify-content: space-between; }
@@ -1177,69 +1223,21 @@ body {
   .item__description {
     background-color: #FFFEFF;
     border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); }
-    .item__description .description-box {
-      padding: 2rem 4rem 2rem 3rem; }
-      .item__description .description-box__heading {
-        margin-bottom: 1rem; }
-      .item__description .description-box__p {
-        margin-bottom: .7rem; }
-      .item__description .description-box__l {
-        margin-bottom: .7rem;
-        padding-left: 2.4rem;
-        list-style-type: disc; }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 2rem 4rem 2rem 3rem; }
+    .item__description .description-box__heading {
+      margin-bottom: 1rem; }
+    .item__description .description-box__p {
+      margin-bottom: .7rem; }
+    .item__description .description-box__l {
+      margin-bottom: .7rem;
+      padding-left: 2.4rem;
+      list-style-type: disc; }
   .item__sidebar {
     background-color: #FFFEFF;
     border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); }
-    .item__sidebar .sidebar {
-      padding: 3.5rem 4rem 2rem 5rem; }
-      .item__sidebar .sidebar__row {
-        padding-bottom: 1.2rem;
-        position: relative; }
-      .item__sidebar .sidebar svg {
-        position: absolute; }
-        .item__sidebar .sidebar svg path {
-          fill: #383a2d;
-          fill-opacity: .5; }
-      .item__sidebar .sidebar__address svg {
-        left: -1.4em;
-        top: .4em; }
-      .item__sidebar .sidebar__area svg {
-        left: -1.45em;
-        top: .2em; }
-      .item__sidebar .sidebar__height {
-        display: inline-block;
-        padding-right: 4rem; }
-        .item__sidebar .sidebar__height svg {
-          left: -1.45em;
-          top: 0em; }
-      .item__sidebar .sidebar__width {
-        display: inline-block;
-        position: relative; }
-        .item__sidebar .sidebar__width svg {
-          left: -1.3em;
-          top: .3em; }
-      .item__sidebar .sidebar__papers svg {
-        left: -1.45em;
-        top: 0em; }
-      .item__sidebar .sidebar__direction svg {
-        left: -1.45em;
-        top: 0.0em; }
-      .item__sidebar .sidebar__price svg {
-        left: -1.45em;
-        top: -0.1em; }
-        .item__sidebar .sidebar__price svg path {
-          fill: #cf6f49; }
-      .item__sidebar .sidebar__link {
-        margin-top: 1.2rem;
-        position: relative; }
-        .item__sidebar .sidebar__link svg {
-          left: 6.5em;
-          top: 0.2em; }
-          .item__sidebar .sidebar__link svg path {
-            fill: #cf6f49;
-            fill-opacity: 0.8; }
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem 4rem 2rem 4.2rem; }
 
 .suggestions {
   margin-bottom: 5vh; }
@@ -1261,7 +1259,7 @@ body {
       margin-top: 3vh; }
       .suggestions__cards .scrolling-controls svg {
         cursor: pointer;
-        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); }
+        transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s; }
       .suggestions__cards .scrolling-controls #arrow-right {
         margin-left: 3rem; }
 
@@ -1272,7 +1270,7 @@ body {
   transform: translateX(calc(-2 * (min(100vw - 60px * 2,  1160px) + 2rem))); }
 
 .card-test {
-  background-color: orange; }
+  background-color: orangered; }
 
 .map {
   margin: 3vh; }

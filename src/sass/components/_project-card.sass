@@ -1,8 +1,7 @@
 .project-card
-    background-color: yellow
     border-radius: $border-radius
     box-shadow: $nice-shadow
-    height: 40vh // TODO
+    height: 40vh // TODO fix height of cards and set medias for different screen sizes
     overflow: hidden
     position: relative
     // -webkit-font-smoothing: antialiased // TODO check about antialiasing
@@ -40,36 +39,26 @@
         margin-left: -.1rem
     &__note
         margin-bottom: .8rem
-    &__address
-        margin-bottom: .8rem
-        margin-left: 1.8rem
-        position: relative
-        svg
+    .land-parameters
+        width: 80%
+        margin-left: 2rem
+        & > div:not(:last-child) // margins between rows
+            margin-bottom: 0.3em
+        .land-price
+            font-size: 1.3em
             position: absolute
-            top: -.1rem
-            left: -1.5rem
-    &__area
-        margin-bottom: .8rem
-        margin-left: 1.8rem
-        position: relative
-        svg
-            position: absolute
-            top: .3rem
-            left: -1.6rem
-        &:after
-            content: "\00a0\00a0m2" // TODO add JS superscript text m^2
-    &__price
-        margin-left: 1.8rem
-        position: relative
-        svg
-            position: absolute
-            top: -.1rem
-            left: -1.4rem
-        &:after
-            content: "\00a0\00a0tỷ" // TODO
+            left: 50%
+            bottom: 8% // TODO adjust
+            transform: translateX(-50%)
+            opacity: 0
+            transition: opacity .2s .3s // TODO fix transition
+
     &:hover .project-card__image
         height: 40%
     &:hover .project-card__description
         // background-color: pink
         height: 70%
         cursor: pointer
+    &:hover .land-parameters
+        .land-price
+            opacity: 1

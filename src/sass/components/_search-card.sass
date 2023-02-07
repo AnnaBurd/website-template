@@ -1,6 +1,5 @@
 .search-card
     background-color: $color-project-card-bg    
-    // overflow: hidden
     padding: .8rem // TODO consistent paddings on all cards
     border-radius: $border-radius
     box-shadow: $nice-shadow
@@ -10,25 +9,25 @@
     grid-template-rows: 30rem // TODO minmax(35vh, 30rem)
     gap: 2% // TODO adjust spacings -> calc here for 1160 and lesser
     &__info
-        // background-color: yellow
         position: relative
         padding-top: 1rem
         padding-bottom: 1rem
     &__name
-        // background-color: pink // TODO adjust card formats
         margin-bottom: 0.8rem
         width: 90%
     &__description
-        // background-color: green
         width: 85%
         margin-bottom: 0.8rem
-    &__address
+    .land-parameters
         width: 60%
-        // TODO refactor parameters with values into a separate component (used on search-card and item info pages)
-    &__price
-        position: absolute
-        right: 0
-        bottom: 1rem
+        margin-left: 2rem
+        & > div:not(:last-child) // margins between rows
+            margin-bottom: 0.5em 
+        .land-price
+            position: absolute
+            left: 68%
+            bottom: 8% // TODO adjust
+
     &__photo-carousel
         // background-color: blue
         display: flex
