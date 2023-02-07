@@ -1,5 +1,26 @@
 .arrow
+    cursor: pointer
+    &__icon
+        opacity: .75
+        font-size: 1.7em
+        position: relative
+        transition: transform .2s
+        &--right
+            float: right
+            top: -0.12em
+            right: .9em
+    &:hover
+        // color: red
+        .arrow__icon
+            // color: green
+            transform: translate(0.8em, 0em) scale(1.1)
+
+.middle-arrow
     // color: red
-    // background-color: yellow
-    // weight: 600
-    // font-size: 1.2em
+    &__icon
+        opacity: .75
+        font-size: 1.6em
+        transform: translateY(.24em)
+        margin-left: -.2em
+        margin-right: -.2em
+        

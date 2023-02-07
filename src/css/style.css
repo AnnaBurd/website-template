@@ -492,6 +492,27 @@ body {
     .agent-card__text:not(:last-child) {
       padding-bottom: 0.4rem; }
 
+.arrow {
+  cursor: pointer; }
+  .arrow__icon {
+    opacity: .75;
+    font-size: 1.7em;
+    position: relative;
+    transition: transform .2s; }
+    .arrow__icon--right {
+      float: right;
+      top: -0.12em;
+      right: .9em; }
+  .arrow:hover .arrow__icon {
+    transform: translate(0.8em, 0em) scale(1.1); }
+
+.middle-arrow__icon {
+  opacity: .75;
+  font-size: 1.6em;
+  transform: translateY(0.24em);
+  margin-left: -.2em;
+  margin-right: -.2em; }
+
 .nice-btn {
   min-height: 4.4rem;
   padding-left: .6rem;
@@ -1169,6 +1190,8 @@ body {
   margin-bottom: 5vh; }
   .projects__intro {
     margin-bottom: 3vh; }
+    .projects__intro a {
+      text-decoration: none; }
     .projects__intro div {
       max-width: 23rem; }
   .projects__cards {
