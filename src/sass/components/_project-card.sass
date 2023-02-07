@@ -10,23 +10,12 @@
         top: 0
         width: 100%
         height: 70%
-        background-image: url('../img/items/item-1/view_1.jpg') // TODO remove
-        background-size: cover
-        background-repeat: no-repeat
-        background-position: center center
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center 40%
         transition: $nice-card-transition
-        &--item1 // TODO dynamically provide images
-            background-image: url('../img/items/item-1/view_1.jpg')
-        &--item2
-            background-image: url('../img/items/item-2/view_1.jpg')
-        &--item3
-            background-image: url('../img/items/item-3/view_1.jpg')
-        &--item4
-            background-image: url('../img/items/item-4/view_1.jpg')
-        &--item5
-            background-image: url('../img/items/item-5/view_1.jpg')
-        &--item6
-            background-image: url('../img/items/item-6/view_1.jpg')
     &__description
         position: absolute
         bottom: 0
