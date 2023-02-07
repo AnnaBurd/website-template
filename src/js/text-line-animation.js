@@ -17,7 +17,7 @@ function sleep(ms) {
 
 async function typeWriter(newTextLine){
 
-  console.log("Wait a little bit before start");
+  // console.log("Wait a little bit before start");
   await sleep(pauseMiddle); // Wait a little bit
 
   pause = (newTextLine.length + oldTextLine.length) * speed + pauseMiddle; // Adjust timeput pause before next call
@@ -30,11 +30,11 @@ async function typeWriter(newTextLine){
     await sleep(speed / 2);
   };
 
-  console.log("Wait a little bit");
+  // console.log("Wait a little bit");
   await sleep(pauseMiddle); // Wait a little bit
 
   // Print the new text
-  console.log("Print new text");
+  // console.log("Print new text");
   for (let j = 0; j <= newTextLine.length; j++){
     animatedTextElement.innerHTML = newTextLine.slice(0,j)+ '︳';
     await sleep(speed);

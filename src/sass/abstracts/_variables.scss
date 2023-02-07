@@ -42,9 +42,12 @@ $color-accent:#cf6f49;
 $ff-sans-serif: 'Noto Sans', sans-serif;
 $ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif;
 
-/* Gutter ----------------------------------------------------------*/
+/* Gutter and sizes  -----------------------------------------------*/
 $main-container-width: 1160px;
 $main-container-padding: 60px;
+
+$banner-height: 3rem;
+$navbar-height: 6.5rem;
 
 /* Shadows ---------------------------------------------------------*/
 $nice-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
