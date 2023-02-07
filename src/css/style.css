@@ -769,7 +769,8 @@ body {
     height: 30%;
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
     background-color: #FFFEFF;
-    padding: 7% 4% 7% 4%; }
+    padding: 7% 4% 7% 4%;
+    cursor: pointer; }
   .project-card__name {
     margin-bottom: .8rem;
     margin-left: -.1rem; }
@@ -809,7 +810,8 @@ body {
   .search-card__info {
     position: relative;
     padding-top: 1rem;
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    cursor: pointer; }
   .search-card__name {
     margin-bottom: 0.8rem;
     width: 90%; }

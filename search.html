@@ -185,7 +185,7 @@
                 </svg> Sắp xếp theo tên</div> <!--TODO fix arrow style and animation, change text according to dropdown choice, and add links -->
             </div>
             <div class="search-results__cards container">
-                <div class="search-card">
+                <div class="search-card" id="item1">
                     <div class="search-card__photo-carousel">
                         <div id="main-carousel-item-1" class="splide main-splide" aria-label="Land photos">
                             <div class="splide__track">
@@ -282,7 +282,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="search-card">
+                <div class="search-card" id="item2">
                     <div class="search-card__photo-carousel">
                         <div id="main-carousel-item-2" class="splide main-splide" aria-label="Land photos">
                             <div class="splide__track">
@@ -379,7 +379,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="search-card">
+                <div class="search-card" id="item3">
                     <div class="search-card__photo-carousel">
                         <div id="main-carousel-item-3" class="splide main-splide" aria-label="Land photos">
                             <div class="splide__track">
@@ -529,6 +529,19 @@
     <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="src/js/splide-init.js"></script>
     <!-- TODO hide all scripts in public folder not to reveal project's inner structure-->
+
+    <script>
+        // TODO remove this and assign links in loop when backend is ready
+        document.getElementById('item1').querySelector('.search-card__info').onclick = function() {
+            location.href = "item.html";
+        }
+        document.getElementById('item2').querySelector('.search-card__info').onclick = function() {
+            location.href = "item.html";
+        }
+        document.getElementById('item3').querySelector('.search-card__info').onclick = function() {
+            location.href = "item.html";
+        }
+    </script>
 </body>
 
 </html>
