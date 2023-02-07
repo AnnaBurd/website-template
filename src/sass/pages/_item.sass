@@ -107,7 +107,7 @@
             &__grid
                 display: grid
                 grid-auto-flow: column
-                grid-auto-columns: calc((min(100vw - 120px, 1160px) - #{$gutter-columns-medium} * 2)/3)
+                grid-auto-columns: calc((min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) - #{$gutter-columns-medium} * 2)/3)
                 gap: $gutter-columns-medium
                 overflow: visible
         .scrolling-controls
@@ -122,9 +122,9 @@
                 margin-left: 3rem // TODO animate arrows
 
 .moveleft
-    transform: translateX(calc(-1 * (min(100vw, 1160px) + #{$gutter-columns-medium})))
+    transform: translateX(calc(-1 * (min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) + #{$gutter-columns-medium})))
 .moveleft-2
-    transform: translateX(calc(-2 * (min(100vw, 1160px) + #{$gutter-columns-medium})))
+    transform: translateX(calc(-2 * (min(100vw - #{$main-container-padding} * 2,  #{$main-container-width}) + #{$gutter-columns-medium})))
 
 .blocked
     // background-color: orange

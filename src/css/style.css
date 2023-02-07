@@ -353,6 +353,7 @@ table {
 
 /* Colors ---------------------------------------------------------*/
 /* Fonts -----------------------------------------------------------*/
+/* Gutter ----------------------------------------------------------*/
 /* Shadows ---------------------------------------------------------*/
 /* Borders ---------------------------------------------------------*/
 /* Grids -----------------------------------------------------------*/
@@ -1235,7 +1236,7 @@ body {
       .suggestions__cards .scrolling-wrapper__grid {
         display: grid;
         grid-auto-flow: column;
-        grid-auto-columns: calc((min(100vw - 120px, 1160px) - 2rem * 2)/3);
+        grid-auto-columns: calc((min(100vw - 60px * 2, 1160px) - 2rem * 2)/3);
         gap: 2rem;
         overflow: visible; }
     .suggestions__cards .scrolling-controls {
@@ -1250,10 +1251,10 @@ body {
         margin-left: 3rem; }
 
 .moveleft {
-  transform: translateX(calc(-1 * (min(100vw, 1160px) + 2rem))); }
+  transform: translateX(calc(-1 * (min(100vw - 60px * 2, 1160px) + 2rem))); }
 
 .moveleft-2 {
-  transform: translateX(calc(-2 * (min(100vw, 1160px) + 2rem))); }
+  transform: translateX(calc(-2 * (min(100vw - 60px * 2,  1160px) + 2rem))); }
 
 .card-test {
   background-color: orange; }
