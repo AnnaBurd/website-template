@@ -26,6 +26,21 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
+    <div class="navigation-small">
+        <input type="checkbox" class="navigation-small__checkbox" id="navigation-toggle">
+
+        <label for="navigation-toggle" class="navigation-small__button">MENU</label>
+        <div class="navigation-small__background">&nbsp;</div>
+
+        <nav class="navigation-small__nav">
+            <ul class="navigation-small__list">
+                <li class="navigation-small__item"><a href="#" class="navigation-small__link">1</a></li>
+                <li class="navigation-small__item"><a href="#" class="navigation-small__link">2</a></li>
+                <li class="navigation-small__item"><a href="#" class="navigation-small__link">3</a></li>
+                <li class="navigation-small__item"><a href="#" class="navigation-small__link">4</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="banner">
         <div class="container__padding">
             <div class="banner__content container">
@@ -87,7 +102,7 @@
                 <a href="search.html"><div class="nice-h2-p arrow">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow__icon arrow__icon--right material-symbols-outlined">trending_flat</span></div></a>
                 <!-- <div class="nice-h2-p arrow">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow__icon arrow__icon--right material-symbols-outlined">trending_flat</span></div> -->
             </div>
-            <div class="projects__cards container">
+            <div class="projects__cards container grid">
                 <div class="project-card" id="item1">
                     <div class="project-card__image">
                         <img src="src/img/items/item-1/view_1.jpg" alt="">
