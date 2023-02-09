@@ -1,41 +1,59 @@
 .navbar
-    background-color: $color-navbar-bg
-    box-shadow: $nice-shadow
+    height: $navbar-height
     position: sticky // TODO FIX on all pages
     top: 0
-    z-index: 10
-    height: $navbar-height
-    display: flex
-    flex-direction: column
-    justify-content: center
+    z-index: 100    
+    @include flexbox-vertical-center
+    background-color: $white
+    box-shadow: $nice-shadow
     &__content
         display: flex
         justify-content: space-between
-        padding-top: 1.6rem
-        padding-bottom: 1.6rem
-    .logo
-        margin-top: .1rem // Vertical alignment of logo with navigation
-    .navigation
+        allign-items: center
+    &__logo
+        @include flexbox-vertical-center
+        margin-top: -.2rem // Optionally move vertically
+        transition: all .2s
+        &:hover
+            transform: scale(1.02) translateY(-0.15rem)
+            // TODO optionally logo animations
+    &__nav
         display: flex
         justify-content: flex-end
+        align-items: center
         flex-wrap: wrap
         text-align: right
-        &__links
-            margin-top: 1.5rem // Vertical alignment of links with buttons
-            a
-                text-decoration: none
-                white-space: nowrap
-                color: $color-navbar-text
-                font-family: $ff-display
-                font-size: 1.4rem
-                font-weight: 500
-                letter-spacing: -.01em
-                padding: .7rem
-                margin: .3rem
-                &:last-child
-                    margin-right: 0
-                    padding-right: 0
-        &__buttons
-            margin-left: 2rem
-            button:last-child
-                margin-left: .5rem
+    &__list
+        &:hover > .navbar__item:not(:hover)
+            opacity: 0.95
+    &__item
+        display: inline-block
+        &:not(:last-child)
+            margin-right: .2rem
+
+    &__link
+        transition: all .2s
+        &:link,
+        &:visited
+            display: inline-block
+            padding: .4rem .7rem
+            text-decoration: none
+            white-space: nowrap
+            color: rgba($black-green, 0.949)
+            font-family: $ff-display
+            font-size: 1.4rem
+            font-weight: 500
+            letter-spacing: -.01em
+        &:hover,
+        &:active
+            color: darken($orange, 10%)
+            // TODO optionally fill gradient animation
+            // background-image: linear-gradient(to right top, rgba($black-green, 0.949),$orange)
+            // -webkit-background-clip: text
+            // color: transparent
+            transform: scale(1.03) translateY(-0.08rem)
+
+    &__buttons
+        margin-left: 1.8rem
+        button:not(:first-child)
+            margin-left: .5rem

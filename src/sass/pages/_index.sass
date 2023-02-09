@@ -1,6 +1,8 @@
+$hero-height: calc(80vh - #{$banner-height} - #{$navbar-height})
+
 .hero
     position: relative
-    height: calc(70vh - #{$banner-height} - #{$navbar-height})
+    height: $hero-height // TODO adjust after fixing card sizes
     &__image
         height: 100%
         // TODO choose image and set up overlays for nice looks
@@ -13,39 +15,39 @@
         background-repeat: no-repeat
         background-position: center center
         text-align: center
-    &__text        // TODO increase and decrease text size for different screens
-        position: absolute
-        bottom: 50%
-        left: 50%
-        transform: translate(-50%, 40%)
+    &__text        
+        @include position-center
+        transform: translate(-50%, -65%)
 
 .projects
-    margin-top: $gap-between-sections
-    margin-bottom: $gap-between-sections
+    // background-color: pink
+    &__intro-wrapper
+        height: calc(100vh - #{$banner-height} - #{$navbar-height} - #{$hero-height})
+        position: relative
     &__intro
-        margin-bottom: $gap-within-sections
+        position: absolute
+        bottom: 0
+        left: 0
+        padding-bottom: $gutter-within-sections
         a
             text-decoration: none
         div
             max-width: 23rem
-            
     &__cards
-        display: grid
-        grid-template-columns: $grid-x3-template-columns
-        column-gap: $grid-x3-column-gap
-        row-gap: $grid-x3-row-gap
+        height: 70vh
+        padding-bottom: $gutter-within-sections
+        margin-bottom: 5vh
 
 .about-company
-    padding-top: $gap-between-sections * 1.3 // TODO adjust vertically
-    padding-bottom: $gap-between-sections * 3.5 // TODO adjust vertically
+    // background-color: pink
+    height: calc(100vh - #{$navbar-height})
+    @include flexbox-vertical-center
+    &__content
     &__intro
         text-align: center
-        margin-bottom: $gap-within-sections
+        margin-bottom: $gutter-within-sections--large
         div
             width: 60%
             margin: 0 auto
     &__boxes
-        display: grid
-        grid-template-columns: $grid-x3-template-columns
-        column-gap: $grid-x3-column-gap
-    
+        margin-bottom: $gutter-within-sections--large * 2 // Push boxes to top

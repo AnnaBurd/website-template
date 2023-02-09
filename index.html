@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <div class="navigation-small">
+    <!-- <div class="navigation-small">
         <input type="checkbox" class="navigation-small__checkbox" id="navigation-toggle">
 
         <label for="navigation-toggle" class="navigation-small__button">MENU</label>
@@ -40,7 +40,7 @@
                 <li class="navigation-small__item"><a href="#" class="navigation-small__link">4</a></li>
             </ul>
         </nav>
-    </div>
+    </div> -->
     <div class="banner">
         <div class="container__padding">
             <div class="banner__content container">
@@ -61,34 +61,36 @@
             </div>
         </div>
     </div>
-    <nav class="navbar">
+    <div class="navbar">
         <div class="container__padding">
-            <div class="navbar__content container" >
-                <div class="logo">
+            <div class="container navbar__content" >
+                <div class="navbar__logo">
                     <a href="index.html">
                         <img src="src/icons/logo.svg">
                     </a>
                 </div>
-                <div class="navigation">
-                    <div class="navigation__links">
-                        <a href="index.html">Trang chủ</a>
-                        <a href="search.html">Tìm kiếm đất</a>
-                        <a href="map.html">Xem trên bản đồ</a>
-                        <a href="contacts.html">Liên hệ</a>
+                <nav class="navbar__nav">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a class="navbar__link" href="index.html">Trang chủ</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="search.html">Tìm kiếm đất</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="map.html">Xem trên bản đồ</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="contacts.html">Liên hệ</a></li>
+                    </ul>
+                    <div class="navbar__buttons">
+                        <button id="todoid1" class="nice-btn nice-btn--transparent nice-btn--call">
+                            <span class="nice-btn__icon--call"><svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z"/></svg></span>
+                            <span class="nice-btn__text--call">+84 (09) 0160-6982</span>
+                        </button><button id="todoid2" class="nice-btn nice-btn--accent">Gọi lại cho tôi</button>
                     </div>
-                    <div class="navigation__buttons">
-                        <button id="todoid1" class="nice-btn nice-btn--transparent nice-btn--call"><svg width="20" height="21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z" fill="#2A2C1F" fill-opacity=".85"/></svg><span>+84 (09) 0160-6982</span></button><button id="todoid2" class="nice-btn nice-btn--accent">Gọi lại cho tôi</button>
-                    </div>
-                </div>
+                </nav>
             </div>
         </div>
-    </nav>
+    </div>
     <header class="hero">
         <div class="hero__image">
             <div class="container__padding">
                 <div class="hero__text container">
                     <h1 class="nice-h1">Nơi Hạnh Phúc Ngập Tràn</h1>
-                    <!-- TODO animate words like on vinhome page -->
                     <div class="nice-h1-p" id="hero-text">Noi Hạnh Phúc</div>
                 </div>
             </div>
@@ -97,11 +99,14 @@
     <main>
         <!-- TODO arrow icon -> -->
         <section class="projects container__padding">
-            <div class="projects__intro container">
-                <h2 class="nice-h2">Dự án hiện tại đang bán</h2>
-                <a href="search.html"><div class="nice-h2-p arrow">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow__icon arrow__icon--right material-symbols-outlined">trending_flat</span></div></a>
-                <!-- <div class="nice-h2-p arrow">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow__icon arrow__icon--right material-symbols-outlined">trending_flat</span></div> -->
+            <div class="projects__intro-wrapper container">
+                <div class="projects__intro">
+                    <h2 class="nice-h2">Dự án hiện tại đang bán</h2>
+                    <a href="search.html"><div class="nice-h2-p arrow">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow__icon arrow__icon--right material-symbols-outlined">trending_flat</span></div></a>
+                    <!-- <div class="nice-h2-p arrow">Công ty giới thiệu mấy dự án đất đang bán với tỷ giá và diện tích các loại. <span class="arrow__icon arrow__icon--right material-symbols-outlined">trending_flat</span></div> -->
+                </div>
             </div>
+
             <div class="projects__cards container grid">
                 <div class="project-card" id="item1">
                     <div class="project-card__image">
@@ -249,40 +254,43 @@
             <img class="decorative__top-left" src="src/icons/decorative-element-top-left.svg" alt="Decorative element around company section">
         </div>
         <section class="about-company container__padding">
-            <div class="about-company__intro container">
-                <h2 class="nice-h2">Tại sao mua đất từ ​​chúng tôi</h2>                
-                <div class="nice-h2-p">Chúng tôi cung cấp các lô đất có giấy tờ chứng minh đầy đủ thuộc quyền sở hữu của chúng tôi, vì vậy bạn không cần phải mất thời gian tìm kiếm và tốn tiền hoa hồng từ môi giới và đại lý.</div>
-            </div>
-            <div class="about-company__boxes container">
-                <div class="info-box">
-                    <div class="info-box__content">
-                        <div class="info-box__icon">
-                            <span class="material-icons">house</span>
-                        </div>
-                        <h3 class="info-box__name nice-h3">Tìm đất tốt</h3>
-                        <div class="info-box__description nice-h3-p">Tất cả các lô đất đã được các chuyên gia của chúng tôi kiểm tra đầy đủ về mức độ tuân thủ pháp luật và cũng được bác sĩ chuyên khoa tâm thần kiểm tra với những khuyến nghị tích cực.</div>
-                    </div>                
+            <div class="about-company__content container">
+                <div class="about-company__intro">
+                    <h2 class="nice-h2">Tại sao mua đất từ ​​chúng tôi</h2>                
+                    <div class="nice-h2-p">Chúng tôi cung cấp các lô đất có giấy tờ chứng minh đầy đủ thuộc quyền sở hữu của chúng tôi, vì vậy bạn không cần phải mất thời gian tìm kiếm và tốn tiền hoa hồng từ môi giới và đại lý.</div>
                 </div>
-                <div class="info-box">
-                    <div class="info-box__content">
-                        <div class="info-box__icon">
-                            <span class="material-icons">face_6</span>
+                <div class="about-company__boxes grid">
+                    <div class="info-box">
+                        <div class="info-box__content">
+                            <div class="info-box__icon">
+                                <span class="material-icons">house</span>
+                            </div>
+                            <h3 class="info-box__name nice-h3">Tìm đất tốt</h3>
+                            <div class="info-box__description nice-h3-p">Tất cả các lô đất đã được các chuyên gia của chúng tôi kiểm tra đầy đủ về mức độ tuân thủ pháp luật và cũng được bác sĩ chuyên khoa tâm thần kiểm tra với những khuyến nghị tích cực.</div>
+                        </div>                
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box__content">
+                            <div class="info-box__icon">
+                                <span class="material-icons">face_6</span>
+                            </div>
+                            <h3 class="info-box__name nice-h3">Mua ngay của chủ</h3>
+                            <div class="info-box__description nice-h3-p">Các lô đất thuộc quyền sở hữu hoàn toàn của chúng tôi và sẵn sàng giao dịch ngay hôm nay.</div>
+                    
                         </div>
-                        <h3 class="info-box__name nice-h3">Mua ngay của chủ</h3>
-                        <div class="info-box__description nice-h3-p">Các lô đất thuộc quyền sở hữu hoàn toàn của chúng tôi và sẵn sàng giao dịch ngay hôm nay.</div>
-                
+                    </div>
+                    <div class="info-box">
+                        <div class="info-box__content">
+                            <div class="info-box__icon">
+                                <span class="material-icons">description</span>
+                            </div>
+                            <h3 class="info-box__name nice-h3">Hồ sơ chuẩn bị đầy đủ</h3>
+                            <div class="info-box__description nice-h3-p">Chúng tôi cung cấp tài liệu đầy đủ trên trang web để xem xét trước khi giao dịch, cũng như bất kỳ thông tin bổ sung nào theo yêu cầu.</div>
+                        </div>
                     </div>
                 </div>
-                <div class="info-box">
-                    <div class="info-box__content">
-                        <div class="info-box__icon">
-                            <span class="material-icons">description</span>
-                        </div>
-                        <h3 class="info-box__name nice-h3">Hồ sơ chuẩn bị đầy đủ</h3>
-                        <div class="info-box__description nice-h3-p">Chúng tôi cung cấp tài liệu đầy đủ trên trang web để xem xét trước khi giao dịch, cũng như bất kỳ thông tin bổ sung nào theo yêu cầu.</div>
-                    </div>
-                </div>
             </div>
+
         </section>
         <div class="decorative">
             <img class="decorative__bottom-right" src="src/icons/decorative-element-bottom-right.svg" alt="Decorative element around company section">
@@ -291,7 +299,7 @@
     <footer>
         <div class="footer">
             <div class="container__padding">
-                <div class="footer__boxes container">
+                <div class="footer__boxes grid container">
                     <!-- TODO -> svg animation -> transformation from company logo into social icons -->
                     <div class="box">
                         <div class="box__content">

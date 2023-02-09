@@ -3,7 +3,19 @@
     position: absolute
     top: 50%
     left: 50%
-    transform: translate(50%, 50%)
+    transform: translate(-50%, -50%)
+
+// Center children elements vertically and horizontally
+@mixin flexbox-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+// Center child element vertically
+@mixin flexbox-vertical-center
+    display: flex
+    flex-direction: column
+    justify-content: center
 
 // Media query manager
 @mixin respond($breakpoint)                     // 1em = 16px (default browser font size)
