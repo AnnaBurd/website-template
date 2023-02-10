@@ -80,13 +80,13 @@
                         <button id="todoid1" class="nice-btn nice-btn--transparent nice-btn--call">
                             <span class="nice-btn__icon--call"><svg preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z"/></svg></span>
                             <span class="nice-btn__text--call">+84 (09) 0160-6982</span>
-                        </button><button id="todoid2" class="nice-btn nice-btn--accent">Gọi lại cho tôi</button>
+                        </button><button id="popup-button" class="nice-btn nice-btn--accent" type="button">Gọi lại cho tôi</button>
                     </div>
                 </nav>
             </div>
         </div>
     </div>
-    <header class="hero">
+    <header class="hero" id="hero">
         <div class="hero__image">
             <div class="container__padding">
                 <div class="hero__text container">
@@ -355,6 +355,11 @@
             </div>
         </div>
     </footer>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            POPUP
+        </div>
+    </div>
     <script>
 
         // TODO remove this and assign links in loop when backend is ready
@@ -376,6 +381,18 @@
         document.getElementById('item6').querySelector('.project-card__description').onclick = function() {
             location.href = "item.html";
         }
+
+        // Open and close popup form ------------//
+        document.getElementById('popup-button').onclick = function() {
+            document.getElementById('popup').classList.add("popup--open");
+        }
+
+        window.onclick = e => {
+            if(e.target === popup){
+                popup.classList.remove("popup--open");
+            }
+        }
+        //------------------------------------//
 
     </script>
     <script src="src/js/text-line-animation.js"></script>
