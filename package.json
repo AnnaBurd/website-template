@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "github:splidejs/splide",
+    "leaflet": "^1.9.3",
     "nouislider": "^15.6.1"
   }
 }
