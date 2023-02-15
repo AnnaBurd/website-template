@@ -1,7 +1,7 @@
 .land-parameters
 
     & > div:not(:last-child) // Margins between rows
-        margin-bottom: 1em 
+        margin-bottom: 1em
 
     [class^="land-"]
         position: relative
@@ -28,11 +28,13 @@
         &__text
             &::before
                 content: "Điện tích: \00a0"
+            &::after
+                content: " m\00B2" // "m\00B2" => "m²";
     .land-size
     .land-height
         display: inline-block
         &__icon
-            transform: rotate(90deg) translate(-0.05em, 0.05em)           
+            transform: rotate(90deg) translate(-0.05em, 0.05em)
         &__text
             &::before
                 content: "Chiều dài: \00a0"
@@ -63,6 +65,8 @@
         &__text
             &::before
                 content: "Giá: \00a0"
+            &::after
+                content: " tỷ"
     .land-link
         &__icon
         &__text

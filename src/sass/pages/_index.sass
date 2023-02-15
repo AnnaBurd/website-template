@@ -1,11 +1,13 @@
+// Height of the sections
 $hero-height: calc(80vh - #{$banner-height} - #{$navbar-height})
+$projects-height: calc(100vh - #{$banner-height} - #{$navbar-height} - #{$hero-height})
 
 .hero
     position: relative
-    height: $hero-height // TODO adjust after fixing card sizes
+    height: $hero-height
     &__image
         height: 100%
-        // TODO choose image and set up overlays for nice looks
+        // TODO choose image and set up gradient overlays for nice looks
         // background: url('../img/hero.jpg')
         // background: url("../img/op1.jpg")
         // background: linear-gradient(rgba(107, 57, 37, 0.5), rgb(147,151,120,0.8)), url("../img/op1.jpg")
@@ -15,28 +17,28 @@ $hero-height: calc(80vh - #{$banner-height} - #{$navbar-height})
         background-repeat: no-repeat
         background-position: center center
         text-align: center
-    &__text        
+    &__text
         @include position-center
         transform: translate(-50%, -65%)
 
 .projects
     // background-color: pink
     &__intro-wrapper
-        height: calc(100vh - #{$banner-height} - #{$navbar-height} - #{$hero-height})
+        height: $projects-height
         position: relative
     &__intro
         position: absolute
         bottom: 0
         left: 0
-        padding-bottom: $gutter-within-sections
+        padding-bottom: $gutter-vertical--medium
         a
             text-decoration: none
         div
             max-width: 23rem
     &__cards
         height: 70vh
-        padding-bottom: $gutter-within-sections
-        margin-bottom: 5vh
+        padding-bottom: $gutter-vertical--medium
+        margin-bottom: $gutter-vertical--large
 
 .about-company
     // background-color: pink
@@ -44,10 +46,11 @@ $hero-height: calc(80vh - #{$banner-height} - #{$navbar-height})
     @include flexbox-vertical-center
     &__content
     &__intro
+        // margin-top: 5vh  // Optionally vertically align intro + boxes
         text-align: center
-        margin-bottom: $gutter-within-sections--large
+        margin-bottom: $gutter-vertical--large
         div
             width: 60%
             margin: 0 auto
     &__boxes
-        margin-bottom: $gutter-within-sections--large * 2 // Push boxes to top
+        margin-bottom: $gutter-vertical--large * 2 // Push boxes to top

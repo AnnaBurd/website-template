@@ -1,55 +1,42 @@
 /* Colors ---------------------------------------------------------*/
-$orange:#cf6f49;
+$orange: #cf6f49;
 $green: #939778;
 
 $white: #FFFFFF;
 $white-darker-1: #FFFEFF;
 $white-darker-2: #F6F4F5;
 
-$grey-1:#e7e8e3;
-$grey-2:#fae8e1;
+$grey-1: #e7e8e3;
+$grey-2: #fae8e1;
 
 $black: #292823;
 $black-green: #2a2c1f;
-$green-black: #383a2d;  // TODO adjust
+$green-black: #383a2d;
 
 /* Colors assignments by components and sections ----------------------------*/
-
 $color-body-bg: $white-darker-2;
-
 $color-banner-bg: $green;
 // $color-banner-text: rgba($white, 0.7);
-
 $color-navbar-bg: $white;
 // $color-navbar-text:rgba($black-green, 0.949);
-
 // $color-footer-bg: $white-darker-1;
 $color-footer-text: rgba($black, 0.8);
-
 $color-credits-text: rgba($black, 0.6);
 $color-credits-bars: rgba($black, 0.176);
-
 $color-project-card-bg: $white-darker-1;
 $color-box-bg: $white-darker-1;
-
-$color-btn-bg:$green;
+$color-btn-bg: $green;
 // $color-btn-bg--accent:$orange;
 // $color-btn-text:rgba($white, 0.9);
 // $color-btn-text--transparent:rgba($black-green, 0.949);
-
 $color-input-text: rgba($black-green, 0.949);
 $color-input-text-placeholder: rgba($black-green, 0.749);
-
 $color-dropdown-bg: rgba($white, 0.7);
-
-$color-slider-label:rgba($black-green, 0.851);
-$color-slider-tooltip:rgba($black-green, 0.749);
-
+$color-slider-label: rgba($black-green, 0.851);
+$color-slider-tooltip: rgba($black-green, 0.749);
 $color-material-icon: $orange;
 $color-material-icon-bg: $grey-2;
-
 $color-svg-icon: $green-black; // TODO rename
-
 $color-tag: $grey-1;
 $color-accent: $orange;
 
@@ -67,8 +54,8 @@ $navbar-height: 6.5rem;
 $gap-between-sections: 5vh; // TODO adjust
 $gap-within-sections: $gap-between-sections * .6; // TODO adjust
 
-$gutter-within-sections: 3vh;
-$gutter-within-sections--large: 6vh;
+$gutter-vertical--medium: 3vh;
+$gutter-vertical--large: 6vh;
 
 /* Grids -----------------------------------------------------------*/
 $grid-x3-template-columns: repeat(3, 1fr); // TODO adjust -> remove

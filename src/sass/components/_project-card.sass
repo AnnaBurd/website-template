@@ -1,8 +1,6 @@
 .project-card
     border-radius: $border-radius
     box-shadow: $nice-shadow
-    // height: 100%
-    // height: 40vh // TODO fix height of cards and set medias for different screen sizes
     overflow: hidden
     position: relative
     // -webkit-font-smoothing: antialiased // TODO check about antialiasing
@@ -10,46 +8,36 @@
         position: absolute
         top: 0
         width: 100%
-        height: 70%
+        height: 90%
+        transition: $nice-card-transition
         img
             width: 100%
             height: 100%
             object-fit: cover
             object-position: center 40%
-        transition: $nice-card-transition
+
     &__description
         position: absolute
         bottom: 0
-        height: 30%
+        height: 5.6rem
         transition: $nice-card-transition
-        background-color: $color-project-card-bg
-        padding: $card-padding
+        background-color: $white-darker-1
+        padding: 2.2rem 2.7rem
         cursor: pointer
-    &__name // TODO visually allign all values
-        margin-bottom: .8rem
+    &__name
+        margin-bottom: 1.2rem
         margin-left: -.1rem
     &__note
         margin-bottom: .8rem
-    .land-parameters
-        width: 80%
-        margin-left: 2rem
-        & > div:not(:last-child) // margins between rows
-            margin-bottom: 0.3em
-        .land-price
-            font-size: 1.3em
-            position: absolute
-            left: 50%
-            bottom: 8% // TODO adjust
-            transform: translateX(-50%)
-            opacity: 0
-            transition: opacity .2s .3s // TODO fix transition
+    &__parameters
+        margin-left: 1.9rem
+        & > div:not(:last-child) // Margins between rows
+            margin-bottom: .4rem
+    &__price
 
+    // Effects on card hover
     &:hover .project-card__image
-        height: 40%
+        height: 60% // Decrease image size
     &:hover .project-card__description
-        // background-color: pink
-        height: 70%
+        height: 16rem // Show text description
         cursor: pointer
-    &:hover .land-parameters
-        .land-price
-            opacity: 1
