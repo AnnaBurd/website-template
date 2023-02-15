@@ -13,7 +13,7 @@ $black: #292823;
 $black-green: #2a2c1f;
 $green-black: #383a2d;
 
-/* Colors assignments by components and sections ----------------------------*/
+/* Colors assignments by components and sections  REMOVE----------------------------*/
 $color-body-bg: $white-darker-2;
 $color-banner-bg: $green;
 // $color-banner-text: rgba($white, 0.7);
@@ -44,41 +44,38 @@ $color-accent: $orange;
 $ff-sans-serif: 'Noto Sans', sans-serif;
 $ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif;
 
-/* Gutter and sizes  -----------------------------------------------*/
+/* Gutters and sizes  -----------------------------------------------*/
 $main-container-width: 1160px;
 $main-container-padding: 60px;
 
 $banner-height: 3rem;
 $navbar-height: 6.5rem;
 
-$gap-between-sections: 5vh; // TODO adjust
-$gap-within-sections: $gap-between-sections * .6; // TODO adjust
-
+$gutter-vertical--small: 1vh;
 $gutter-vertical--medium: 3vh;
 $gutter-vertical--large: 6vh;
-
-/* Grids -----------------------------------------------------------*/
-$grid-x3-template-columns: repeat(3, 1fr); // TODO adjust -> remove
-$grid-x3-column-gap: 1.5vw; // TODO adjust -> remove
-$grid-x3-row-gap: 1.5vw; // TODO adjust -> remove
 
 $gutter-columns-large: 3rem; // TODO adjust depending on 1160 or smaller -> calc relative
 $gutter-columns-medium: 2rem; // TODO adjust depending on 1160 or smaller -> calc relative
 $gutter-columns-small: 1.2rem; // TODO adjust depending on 1160 or smaller -> calc relative
 
+/* REMOVE: -----------------------------------------------------------*/
+$gap-between-sections: 5vh; // TODO  remove
+$gap-within-sections: $gap-between-sections * .6; // TODO  remove
+
+$grid-x3-template-columns: repeat(3, 1fr); // TODO adjust -> remove
+$grid-x3-column-gap: 1.5vw; // TODO adjust -> remove
 
 /* Shadows ---------------------------------------------------------*/
 $nice-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
 $small-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+
 /* Borders ---------------------------------------------------------*/
 $border-radius: 8px;
 $border-solid: 1px solid #E7E8E3;
 $border-none: 1px solid transparent;
 
-$card-padding: 7% 4% 7% 4%; // % relative to size of element's parent
-
-/* Section gaps ----------------------------------------------------*/
-
+$card-padding: 7% 4% 7% 4%; // %  TODO remove relative to size of element's parent
 
 /* Transitions -----------------------------------------------------*/
 $nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) .0s; // TODO make transitions

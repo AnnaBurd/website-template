@@ -1,6 +1,11 @@
 .item
-    margin-top: $gutter-columns-medium   
-    margin-bottom: $gap-between-sections 
+    &__intro // Breadcrumps line
+        margin-top: $gutter-vertical--medium
+        margin-bottom: $gutter-vertical--medium * 0.7 // TODO adjust
+
+    // First row
+    &__visual-info
+        margin-bottom: $gutter-vertical--large * 0.7 // TODO adjust
     &__mini-map
         background-color: #c27996ad // TODO add map
         border-radius: $border-radius
@@ -10,23 +15,30 @@
         border-radius: $border-radius
         box-shadow: $nice-shadow
         overflow: hidden
-        img 
+        cursor: pointer
+        img
             width: 100%
             height: 100%
             object-fit: cover
         // TODO clickable images -> opens view mode with all images/videos
-    &__info
+
+    // Second row
+    // 2x 1x columns widths:
+    $col-width-1x: calc((100% - #{$gutter-columns-medium} * 2) / 3)
+    $col-width-2x: calc(100% - #{$col-width-1x} - #{$gutter-columns-medium})
+
+    &__text-info
         display: grid
-        grid-template-columns: 2fr 1fr
+        grid-template-columns: $col-width-2x $col-width-1x
         gap: $gutter-columns-medium
-        margin-top: $gutter-columns-medium
+        margin-bottom: $gutter-vertical--large
 
     &__description
         background-color: $color-box-bg
         border-radius: $border-radius
         box-shadow: $nice-shadow
         padding: 2rem 4rem 2rem 3rem // TODO adjust text paddings and positions
-        .description-box            
+        .description-box
             &__heading
                 margin-bottom: 1rem
             &__p
@@ -41,30 +53,19 @@
         box-shadow: $nice-shadow
         padding: 2.5rem 4rem 2rem 4.2rem // TODO adjust text paddings and positions
 
-        // .sidebar // TODO Link
-        //     &__link
-        //         margin-top: 1.2rem
-        //         position: relative
-        //         svg
-        //             left: 6.5em
-        //             top: 0.2em
-        //             path
-        //                 fill: $color-accent
-        //                 fill-opacity: 0.8 // TODO animate arrows on hover- make bigger, change color and move
-
-
 .suggestions
-    margin-bottom: $gap-between-sections
+    margin-bottom: $gutter-vertical--large
     &__cards
         overflow: hidden
         .scrolling-wrapper
-            padding-top: $gap-within-sections
+            padding-top: $gutter-vertical--medium
             transition: $nice-suggestions-transition
             &__content
             &__grid
                 display: grid
                 grid-auto-flow: column
                 grid-auto-columns: calc((min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) - #{$gutter-columns-medium} * 2)/3)
+                grid-template-rows: 25rem // TODO adjust height
                 gap: $gutter-columns-medium
                 overflow: visible
         .scrolling-controls
@@ -80,10 +81,9 @@
 
 .moveleft
     transform: translateX(calc(-1 * (min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) + #{$gutter-columns-medium})))
-.moveleft-2
-    transform: translateX(calc(-2 * (min(100vw - #{$main-container-padding} * 2,  #{$main-container-width}) + #{$gutter-columns-medium})))
 
-.blocked
+.moveleft-2 // TODO remove hardcoded values
+    transform: translateX(calc(-2 * (min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) + #{$gutter-columns-medium})))
+
+// .blocked
     // background-color: orange
-.card-test
-    background-color: orangered

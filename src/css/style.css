@@ -352,13 +352,12 @@ table {
   border-spacing: 0; }
 
 /* Colors ---------------------------------------------------------*/
-/* Colors assignments by components and sections ----------------------------*/
+/* Colors assignments by components and sections  REMOVE----------------------------*/
 /* Fonts -----------------------------------------------------------*/
-/* Gutter and sizes  -----------------------------------------------*/
-/* Grids -----------------------------------------------------------*/
+/* Gutters and sizes  -----------------------------------------------*/
+/* REMOVE: -----------------------------------------------------------*/
 /* Shadows ---------------------------------------------------------*/
 /* Borders ---------------------------------------------------------*/
-/* Section gaps ----------------------------------------------------*/
 /* Transitions -----------------------------------------------------*/
 *,
 *::after,
@@ -1325,47 +1324,56 @@ body {
   .about-company__boxes {
     margin-bottom: 12vh; }
 
-.item {
-  margin-top: 2rem;
-  margin-bottom: 5vh; }
-  .item__mini-map {
-    background-color: #c27996ad;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); }
-  .item__photo-wrapper {
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-    overflow: hidden; }
-    .item__photo-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover; }
-  .item__info {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    margin-top: 2rem; }
-  .item__description {
-    background-color: #FFFEFF;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-    padding: 2rem 4rem 2rem 3rem; }
-    .item__description .description-box__heading {
-      margin-bottom: 1rem; }
-    .item__description .description-box__p {
-      margin-bottom: .7rem; }
-    .item__description .description-box__l {
-      margin-bottom: .7rem;
-      padding-left: 2.4rem;
-      list-style-type: disc; }
-  .item__sidebar {
-    background-color: #FFFEFF;
-    border-radius: 8px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-    padding: 2.5rem 4rem 2rem 4.2rem; }
+.item__intro {
+  margin-top: 3vh;
+  margin-bottom: 2.1vh; }
+
+.item__visual-info {
+  margin-bottom: 4.2vh; }
+
+.item__mini-map {
+  background-color: #c27996ad;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); }
+
+.item__photo-wrapper {
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer; }
+  .item__photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.item__text-info {
+  display: grid;
+  grid-template-columns: calc(100% - calc((100% - 2rem * 2) / 3) - 2rem) calc((100% - 2rem * 2) / 3);
+  gap: 2rem;
+  margin-bottom: 6vh; }
+
+.item__description {
+  background-color: #FFFEFF;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 2rem 4rem 2rem 3rem; }
+  .item__description .description-box__heading {
+    margin-bottom: 1rem; }
+  .item__description .description-box__p {
+    margin-bottom: .7rem; }
+  .item__description .description-box__l {
+    margin-bottom: .7rem;
+    padding-left: 2.4rem;
+    list-style-type: disc; }
+
+.item__sidebar {
+  background-color: #FFFEFF;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 4rem 2rem 4.2rem; }
 
 .suggestions {
-  margin-bottom: 5vh; }
+  margin-bottom: 6vh; }
   .suggestions__cards {
     overflow: hidden; }
     .suggestions__cards .scrolling-wrapper {
@@ -1375,6 +1383,7 @@ body {
         display: grid;
         grid-auto-flow: column;
         grid-auto-columns: calc((min(100vw - 60px * 2, 1160px) - 2rem * 2)/3);
+        grid-template-rows: 25rem;
         gap: 2rem;
         overflow: visible; }
     .suggestions__cards .scrolling-controls {
@@ -1392,10 +1401,7 @@ body {
   transform: translateX(calc(-1 * (min(100vw - 60px * 2, 1160px) + 2rem))); }
 
 .moveleft-2 {
-  transform: translateX(calc(-2 * (min(100vw - 60px * 2,  1160px) + 2rem))); }
-
-.card-test {
-  background-color: orangered; }
+  transform: translateX(calc(-2 * (min(100vw - 60px * 2, 1160px) + 2rem))); }
 
 .map {
   margin: 3vh; }
