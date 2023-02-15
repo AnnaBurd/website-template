@@ -384,7 +384,41 @@
     </footer>
     <div class="popup" id="popup">
         <div class="popup__content">
-            POPUP
+            <div class="popup__close" id="popup-button-close"><span class="material-symbols-outlined popup__close-icon">
+                    close
+                </span>
+            </div>
+            <div class="call-form">
+                <div class="call-form__left">
+                    <div class="call-form__intro">
+                        <!-- <div class="search-form__tag nice-h2-p">Đất đai là nền tảng cho gia đình</div> -->
+                        <h2 class="call-form__heading nice-h2">Chúng tôi rất mong nhận được hồi âm từ bạn</h2>
+                        <div class="call-form__text nice-h2-p">Vui lòng để lại tin nhắn và chúng tôi sẽ gọi lại sớm
+                        </div>
+                    </div>
+                    <form class="call-form__input">
+                        <div class="nice-input">
+                            <input class="nice-input__input" type="text" placeholder="Full name" id="cf-name-input">
+                            <label class="nice-input__label" for="cf-name-input">Full name</label>
+                        </div>
+                        <div class="nice-input">
+                            <input class="nice-input__input" type="tel" placeholder="Phone number" id="cf-phone-input"
+                                pattern="(\+?84|0[3|5|7|8|9])+([0-9]{8})" required>
+                            <label class="nice-input__label" for="cf-phone-input">Phone number</label>
+                        </div>
+                        <div class="nice-input">
+                            <!-- <input class="nice-input__input" type="text" placeholder="Message" id="cf-message-input"> -->
+                            <textarea id="cf-message-input" name="field" maxlength="5000" data-name="field"
+                                placeholder="Message" required="" class="nice-input__input"></textarea>
+                            <label class="nice-input__label" for="cf-message-input">Message</label>
+                        </div>
+                        <button class="nice-btn nice-btn--accent">Nhập thông tin</button>
+                    </form>
+                </div>
+                <div class="call-form__right">
+                    <img src="src/img/op0.jpg" loading="lazy" alt="" class="call-form__image">
+                </div>
+            </div>
         </div>
     </div>
     <script>
@@ -412,6 +446,10 @@
         // Open and close popup form ------------//
         document.getElementById('popup-button').onclick = function () {
             document.getElementById('popup').classList.add("popup--open");
+        }
+
+        document.getElementById('popup-button-close').onclick = function () {
+            document.getElementById('popup').classList.remove("popup--open");
         }
 
         window.onclick = e => {

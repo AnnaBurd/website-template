@@ -20,15 +20,18 @@
         &:focus:invalid
             outline: $color-accent solid 1px
 
+    // Text hint about input field content
     &__label
         position: absolute
-        top: 115%
+        bottom: -1.5rem
         left: 1%
         display: block
         padding-left: 1em
         transition: all .3s
 
-    &__input:placeholder-shown + &__label
+    // Hide label with hint when input field holds only placeholder or is not focused
+    &__input:placeholder-shown + &__label,
+    &__input:not(:focus) + &__label
+        bottom: 40%
         opacity: 0
         visibility: hidden
-        top: 45%
