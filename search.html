@@ -10,6 +10,9 @@
     <title>Mua Bán Đất Vũng Tàu</title>
     <link rel="icon" href="src/icons/logo_notext.svg">
 
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/normalize.css">
+
     <!-- TODO - Fonts references - optimize unused fonts and test local vs google fonts hosting -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,144 +29,168 @@
     <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css" />
 
     <!-- Material icons instead of vectors -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
     <!-- Custom CSS stylesheet (compiled from SASS files) -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
-    <header>
-        <div class="banner">
-            <div class="container__padding">
-                <div class="banner__content container">
-                    <div class="banner__text">
-                        Quý khách vui lòng liên hệ với chúng tôi qua mạng xã hội
-                    </div>
-                    <div class="banner__icons">
-                        <a href="ex.com">
-                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M20 10c0-5.522-4.478-10-10-10S0 4.478 0 10c0 4.991 3.656 9.128 8.438 9.88v-6.988h-2.54V10h2.54V7.797c0-2.506 1.493-3.891 3.777-3.891 1.094 0 2.239.195 2.239.195v2.462h-1.262c-1.242 0-1.63.77-1.63 1.562V10h2.773l-.443 2.892h-2.33v6.988C16.345 19.13 20 14.993 20 10z" />
-                            </svg>
-                        </a>
-                        <a href="ex.com">
-                            <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0 10.25C0 15.91 4.59 20.5 10.25 20.5S20.5 15.91 20.5 10.25 15.91 0 10.25 0 0 4.59 0 10.25zm8.37 4.698.175-2.613 4.753-4.29c.209-.184-.046-.275-.322-.107L7.11 11.64l-2.534-.79c-.547-.168-.551-.544.123-.815l9.873-3.807c.451-.204.886.109.714.799l-1.681 7.923c-.118.563-.458.698-.93.438l-2.56-1.893-1.232 1.198-.011.01c-.138.135-.252.246-.501.246z" />
-                            </svg>
-                        </a>
-                        <a href="ex.com">
-                            <svg width="22" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.233 9.853a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zM10.985.3C4.928.3.005 4.762.005 10.267a9.46 9.46 0 0 0 2.853 6.67l.169.153a.935.935 0 0 1 0 1.089 4.876 4.876 0 0 1-1.78 1.64.152.152 0 0 0-.062.22.154.154 0 0 0 .063.056 6.656 6.656 0 0 0 3.067-.199 4.017 4.017 0 0 1 2.974-.276c1.18.382 2.41.579 3.65.583 6.133 0 10.994-4.462 10.994-9.967C21.933 4.731 17.072.3 10.985.3zM6.814 13.333H3.379a.859.859 0 0 1-.812-.368.92.92 0 0 1 .168-1.012l2.469-3.358a.66.66 0 0 0 .2-.398H3.578a1.733 1.733 0 0 1-.491 0 .567.567 0 0 1-.521-.644.567.567 0 0 1 .567-.629h3.665a.66.66 0 0 1 .536.997c-.16.319-.35.622-.567.904L4.345 12h2.377c.353 0 .69 0 .782.506.092.506-.138.828-.69.828zm5.443-.828c0 .353 0 .66-.399.828a.674.674 0 0 1-.889-.214s-.107-.092-.214 0a2.009 2.009 0 0 1-3.067-1.227 2.852 2.852 0 0 1 .46-2.714 1.901 1.901 0 0 1 2.79-.291c.246-.276.506-.522.92-.353.415.169.476.537.476.935l-.077 3.036zm2.024.108c0 .506-.26.812-.705.812-.445 0-.69-.306-.69-.828V7.185c0-.537.245-.813.675-.828.429-.016.705.291.72.843v5.413zm4.048.598a2.239 2.239 0 0 1-2.407 0 2.76 2.76 0 0 1-.767-3.68 2.361 2.361 0 0 1 3.236-.798 2.453 2.453 0 0 1 1.165 2.254 2.408 2.408 0 0 1-1.227 2.24v-.016zm-.675-3.328a.859.859 0 0 0-1.165.184 1.533 1.533 0 0 0 0 1.748.89.89 0 0 0 1.18.184 1.181 1.181 0 0 0 .491-1.058 1.195 1.195 0 0 0-.506-1.042v-.016zm-7.42-.03a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104z" />
-                            </svg>
-                        </a>
-                    </div>
+    <div class="banner">
+        <div class="container__padding">
+            <div class="banner__content container">
+                <div class="banner__text">
+                    Quý khách vui lòng liên hệ với chúng tôi qua mạng xã hội
+                </div>
+                <div class="banner__icons">
+                    <a href="ex.com">
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20 10c0-5.522-4.478-10-10-10S0 4.478 0 10c0 4.991 3.656 9.128 8.438 9.88v-6.988h-2.54V10h2.54V7.797c0-2.506 1.493-3.891 3.777-3.891 1.094 0 2.239.195 2.239.195v2.462h-1.262c-1.242 0-1.63.77-1.63 1.562V10h2.773l-.443 2.892h-2.33v6.988C16.345 19.13 20 14.993 20 10z" />
+                        </svg>
+                    </a>
+                    <a href="ex.com">
+                        <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 10.25C0 15.91 4.59 20.5 10.25 20.5S20.5 15.91 20.5 10.25 15.91 0 10.25 0 0 4.59 0 10.25zm8.37 4.698.175-2.613 4.753-4.29c.209-.184-.046-.275-.322-.107L7.11 11.64l-2.534-.79c-.547-.168-.551-.544.123-.815l9.873-3.807c.451-.204.886.109.714.799l-1.681 7.923c-.118.563-.458.698-.93.438l-2.56-1.893-1.232 1.198-.011.01c-.138.135-.252.246-.501.246z" />
+                        </svg>
+                    </a>
+                    <a href="ex.com">
+                        <svg width="22" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.233 9.853a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zM10.985.3C4.928.3.005 4.762.005 10.267a9.46 9.46 0 0 0 2.853 6.67l.169.153a.935.935 0 0 1 0 1.089 4.876 4.876 0 0 1-1.78 1.64.152.152 0 0 0-.062.22.154.154 0 0 0 .063.056 6.656 6.656 0 0 0 3.067-.199 4.017 4.017 0 0 1 2.974-.276c1.18.382 2.41.579 3.65.583 6.133 0 10.994-4.462 10.994-9.967C21.933 4.731 17.072.3 10.985.3zM6.814 13.333H3.379a.859.859 0 0 1-.812-.368.92.92 0 0 1 .168-1.012l2.469-3.358a.66.66 0 0 0 .2-.398H3.578a1.733 1.733 0 0 1-.491 0 .567.567 0 0 1-.521-.644.567.567 0 0 1 .567-.629h3.665a.66.66 0 0 1 .536.997c-.16.319-.35.622-.567.904L4.345 12h2.377c.353 0 .69 0 .782.506.092.506-.138.828-.69.828zm5.443-.828c0 .353 0 .66-.399.828a.674.674 0 0 1-.889-.214s-.107-.092-.214 0a2.009 2.009 0 0 1-3.067-1.227 2.852 2.852 0 0 1 .46-2.714 1.901 1.901 0 0 1 2.79-.291c.246-.276.506-.522.92-.353.415.169.476.537.476.935l-.077 3.036zm2.024.108c0 .506-.26.812-.705.812-.445 0-.69-.306-.69-.828V7.185c0-.537.245-.813.675-.828.429-.016.705.291.72.843v5.413zm4.048.598a2.239 2.239 0 0 1-2.407 0 2.76 2.76 0 0 1-.767-3.68 2.361 2.361 0 0 1 3.236-.798 2.453 2.453 0 0 1 1.165 2.254 2.408 2.408 0 0 1-1.227 2.24v-.016zm-.675-3.328a.859.859 0 0 0-1.165.184 1.533 1.533 0 0 0 0 1.748.89.89 0 0 0 1.18.184 1.181 1.181 0 0 0 .491-1.058 1.195 1.195 0 0 0-.506-1.042v-.016zm-7.42-.03a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
-        <nav class="navbar">
-            <div class="container__padding">
-                <div class="navbar__content container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="src/icons/logo.svg">
-                        </a>
-                    </div>
-                    <div class="navigation">
-                        <div class="navigation__links">
-                            <a href="index.html">Trang chủ</a>
-                            <a href="search.html">Tìm kiếm đất</a>
-                            <a href="map.html">Xem trên bản đồ</a>
-                            <a href="contacts.html">Liên hệ</a>
-                        </div>
-                        <div class="navigation__buttons">
-                            <button id="todoid1" class="nice-btn nice-btn--transparent nice-btn--call"><svg width="20"
-                                    height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z"
-                                        fill="#2A2C1F" fill-opacity=".85" />
-                                </svg><span>+84 (09) 0160-6982</span></button><button id="todoid2"
-                                class="nice-btn nice-btn--accent">Gọi lại cho tôi</button>
-                        </div>
-                    </div>
+    </div>
+    <div class="navbar">
+        <div class="container__padding">
+            <div class="container navbar__content">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <img src="src/icons/logo.svg">
+                    </a>
                 </div>
+                <nav class="navbar__nav">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a class="navbar__link" href="index.html">Trang chủ</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="search.html">Tìm kiếm đất</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="map.html">Xem trên bản đồ</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="contacts.html">Liên hệ</a></li>
+                    </ul>
+                    <div class="navbar__buttons">
+                        <button id="call-button" onclick="location.href='tel:+840901606982'"
+                            class="nice-btn nice-btn--transparent nice-btn--call">
+                            <span class="nice-btn__icon--call"><svg preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z" />
+                                </svg></span>
+                            <span class="nice-btn__text--call">+84 (09) 0160-6982</span>
+                        </button><button id="popup-button" class="nice-btn nice-btn--accent" type="button">Gọi lại cho
+                            tôi</button>
+                    </div>
+                </nav>
             </div>
-        </nav>
+        </div>
+    </div>
+    <header>
     </header>
     <main>
         <section class="search-hero">
             <!-- <img class="decorative__top-left" src="src/icons/decorative-element-top-left.svg" alt="Decorative element around form section">
             <img class="decorative__bottom-right" src="src/icons/decorative-element-bottom-right.svg" alt="Decorative element around form section"> -->
-            <div class="search-hero__form">
+            <div class="search-hero__form-wrapper">
                 <div class="decorative">
-                    <img class="decorative__top-left" src="src/icons/decorative-element-top-left.svg" alt="Decorative element around form section">
+                    <img class="decorative__top-left" src="src/icons/decorative-element-top-left.svg"
+                        alt="Decorative element around form section">
                 </div>
                 <div class="decorative">
-                    <img class="decorative__bottom-right" src="src/icons/decorative-element-bottom-right.svg" alt="Decorative element around form section">
+                    <img class="decorative__bottom-right" src="src/icons/decorative-element-bottom-right.svg"
+                        alt="Decorative element around form section">
                 </div>
-                <div class="search-form">
-                    <div class="search-form__intro">
-                        <div class="search-form__tag nice-h2-p">Đất đai là nền tảng cho gia đình</div>
-                        <h2 class="search-form__heading nice-h2">Tìm đất trong một phút</h2>                
-                        <div class="search-form__text nice-h2-p">Hãy là người đầu tiên tìm được ưu đãi tốt nhất không qua trung gian, với tài liệu rõ ràng và khả năng thương lượng giá:</div>
-                    </div>
-                    <div class="search-form__slider">
-                        <div class="search-form__label">Giá mỗi lô:</div>
-                        <div id="slider-price" class="slider"></div>
-                    </div>
-                    <div class="search-form__slider">
-                        <div class="search-form__label">Diện tích đất:</div>
-                        <div id="slider-area" class="slider"></div>
-                    </div>
-                    <div class="search-form__dropdown">
-                        <div class="search-form__label">Sắp xếp theo:</div>
-                        <div class="dropdown">
-                            <div class="dropdown__current" tabindex="1">
-                                <div class="dropdown__value">
-                                    <input class="dropdown__value__radio-input" type="radio" id="0" value="1" name="button_group" checked="checked"/>
-                                    <div class="dropdown__value__text dropdown__value__text--default">Chọn cách sắp xếp</div>
-                                </div>
-                                <div class="dropdown__value">
-                                    <input class="dropdown__value__radio-input" type="radio" id="1" value="2" name="button_group"/>
-                                    <div class="dropdown__value__text">Giá tăng dần</div> 
-                                </div>
-                                <div class="dropdown__value">
-                                    <input class="dropdown__value__radio-input" type="radio" id="2" value="3" name="button_group"/>
-                                    <div class="dropdown__value__text">Giá giảm dần</div>
-                                </div>
-                                <div class="dropdown__value">
-                                    <input class="dropdown__value__radio-input" type="radio" id="3" value="4" name="button_group"/>
-                                    <div class="dropdown__value__text">Diện tích tăng dần</div> 
-                                </div>
-                                <div class="dropdown__value">
-                                    <input class="dropdown__value__radio-input" type="radio" id="4" value="5" name="button_group"/>
-                                    <div class="dropdown__value__text">Diện tích giảm dần</div>
-                                </div>
-                                <div class="dropdown__arrow-icon">
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg" alt="Arrow Down Icon" aria-hidden="true">
-                                </div>
-                            </div>
-                            <ul class="dropdown__list">
-                                <li>
-                                    <label for="0" class="dropdown__list__option dropdown__list__option--first dropdown__list__option--default">Chọn cách sắp xếp</label>
-                                </li>
-                                <li>
-                                    <label for="1" class="dropdown__list__option">Giá tăng dần</label>
-                                </li>
-                                <li>
-                                    <label for="2" class="dropdown__list__option">Giá giảm dần</label>
-                                </li>
-                                <li>
-                                    <label for="3" class="dropdown__list__option">Diện tích tăng dần</label>
-                                </li>
-                                <li>
-                                    <label for="4" class="dropdown__list__option dropdown__list__option--last">Diện tích giảm dần</label>
-                                </li>
-                            </ul>
+                <div class="search-hero__form">
+
+                    <div class="search-form">
+                        <div class="search-form__intro">
+                            <div class="search-form__tag nice-h2-p">Đất đai là nền tảng cho gia đình</div>
+                            <h2 class="search-form__heading nice-h2">Tìm đất trong một phút</h2>
+                            <div class="search-form__text nice-h2-p">Hãy là người đầu tiên tìm được ưu đãi tốt nhất
+                                không
+                                qua trung gian, với tài liệu rõ ràng và khả năng thương lượng giá:</div>
                         </div>
-                        <button class="nice-btn">Tìm nhanh</button>
+                        <div class="search-form__slider">
+                            <div class="search-form__label">Giá mỗi lô:</div>
+                            <div id="slider-price" class="slider"></div>
+                        </div>
+                        <div class="search-form__slider">
+                            <div class="search-form__label">Diện tích đất:</div>
+                            <div id="slider-area" class="slider"></div>
+                        </div>
+                        <div class="search-form__dropdown">
+                            <div class="search-form__label">Sắp xếp theo:</div>
+                            <div class="dropdown">
+                                <div class="dropdown__current" tabindex="1">
+                                    <div class="dropdown__value">
+                                        <input class="dropdown__value__radio-input" type="radio" id="0" value="1"
+                                            name="button_group" checked="checked" />
+                                        <div class="dropdown__value__text dropdown__value__text--default">Chọn cách sắp
+                                            xếp
+                                        </div>
+                                    </div>
+                                    <div class="dropdown__value">
+                                        <input class="dropdown__value__radio-input" type="radio" id="1" value="2"
+                                            name="button_group" />
+                                        <div class="dropdown__value__text">Giá tăng dần</div>
+                                    </div>
+                                    <div class="dropdown__value">
+                                        <input class="dropdown__value__radio-input" type="radio" id="2" value="3"
+                                            name="button_group" />
+                                        <div class="dropdown__value__text">Giá giảm dần</div>
+                                    </div>
+                                    <div class="dropdown__value">
+                                        <input class="dropdown__value__radio-input" type="radio" id="3" value="4"
+                                            name="button_group" />
+                                        <div class="dropdown__value__text">Diện tích tăng dần</div>
+                                    </div>
+                                    <div class="dropdown__value">
+                                        <input class="dropdown__value__radio-input" type="radio" id="4" value="5"
+                                            name="button_group" />
+                                        <div class="dropdown__value__text">Diện tích giảm dần</div>
+                                    </div>
+                                    <div class="dropdown__arrow-icon">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Arrow-down.svg"
+                                            alt="Arrow Down Icon" aria-hidden="true">
+                                    </div>
+                                </div>
+                                <ul class="dropdown__list">
+                                    <li>
+                                        <label for="0"
+                                            class="dropdown__list__option dropdown__list__option--first dropdown__list__option--default">Chọn
+                                            cách sắp xếp</label>
+                                    </li>
+                                    <li>
+                                        <label for="1" class="dropdown__list__option">Giá tăng dần</label>
+                                    </li>
+                                    <li>
+                                        <label for="2" class="dropdown__list__option">Giá giảm dần</label>
+                                    </li>
+                                    <li>
+                                        <label for="3" class="dropdown__list__option">Diện tích tăng dần</label>
+                                    </li>
+                                    <li>
+                                        <label for="4" class="dropdown__list__option dropdown__list__option--last">Diện
+                                            tích
+                                            giảm dần</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button class="nice-btn">Tìm nhanh</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -179,7 +206,7 @@
                     <span class="filter-by">Xem tất cả</span>
                     <span class="material-symbols-outlined middle-arrow__icon">keyboard_arrow_right</span>
                     <span class="sort-by">Sắp xếp theo tên</span>
-                </div> 
+                </div>
                 <!--TODO fix arrow style and animation, change text according to dropdown choice, and add links -->
             </div>
             <div class="search-results__cards container">
@@ -207,15 +234,16 @@
                                         <img data-splide-lazy="src/img/items/item-1/view_6.jpg" alt="">
                                     </li>
                                     <li class="splide__slide">
-                                            <video width="100%" height="100%" preload="none" muted controls>
-                                                <source src="src/img/items/item-1/view_7.mp4" type="video/mp4">
-                                                Sorry, your browser doesn't support embedded videos.
-                                            </video>
+                                        <video width="100%" height="100%" preload="none" muted controls>
+                                            <source src="src/img/items/item-1/view_7.mp4" type="video/mp4">
+                                            Sorry, your browser doesn't support embedded videos.
+                                        </video>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="thumbnail-carousel-item-1" class="splide thumbnail-splide" aria-label="Thumbnail buttons for the property item carousel">
+                        <div id="thumbnail-carousel-item-1" class="splide thumbnail-splide"
+                            aria-label="Thumbnail buttons for the property item carousel">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
@@ -244,12 +272,16 @@
                         </div>
                     </div>
                     <div class="search-card__info">
-                        <div class="search-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường Và Khu Công Nghiệp Becamex</div>
-                        <div class="search-card__description nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ</div>
+                        <div class="search-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần
+                            Trường Và Khu Công Nghiệp Becamex</div>
+                        <div class="search-card__description nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối
+                            Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ
+                            Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ</div>
                         <div class="land-parameters nice-h4-l">
                             <div class="land-location">
                                 <span class="material-symbols-outlined land-location__icon">location_on</span>
-                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu</span>
+                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa -
+                                    Vũng Tàu</span>
                             </div>
                             <div class="land-area">
                                 <span class="material-symbols-outlined land-area__icon">square_foot</span>
@@ -304,15 +336,16 @@
                                         <img data-splide-lazy="src/img/items/item-2/view_6.jpg" alt="">
                                     </li>
                                     <li class="splide__slide">
-                                            <video width="100%" height="100%" preload="none" muted controls>
-                                                <source src="src/img/items/item-2/view_7.mp4" type="video/mp4">
-                                                Sorry, your browser doesn't support embedded videos.
-                                            </video>
+                                        <video width="100%" height="100%" preload="none" muted controls>
+                                            <source src="src/img/items/item-2/view_7.mp4" type="video/mp4">
+                                            Sorry, your browser doesn't support embedded videos.
+                                        </video>
                                     </li>
                                 </ul>
                             </div>
                         </div>
-                        <div id="thumbnail-carousel-item-2" class="splide thumbnail-splide" aria-label="Thumbnail buttons for the property item carousel">
+                        <div id="thumbnail-carousel-item-2" class="splide thumbnail-splide"
+                            aria-label="Thumbnail buttons for the property item carousel">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
@@ -341,12 +374,16 @@
                         </div>
                     </div>
                     <div class="search-card__info">
-                        <div class="search-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường Và Khu Công Nghiệp Becamex</div>
-                        <div class="search-card__description nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ</div>
+                        <div class="search-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần
+                            Trường Và Khu Công Nghiệp Becamex</div>
+                        <div class="search-card__description nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối
+                            Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ
+                            Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ</div>
                         <div class="land-parameters nice-h4-l">
                             <div class="land-location">
                                 <span class="material-symbols-outlined land-location__icon">location_on</span>
-                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu</span>
+                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa -
+                                    Vũng Tàu</span>
                             </div>
                             <div class="land-area">
                                 <span class="material-symbols-outlined land-area__icon">square_foot</span>
@@ -394,7 +431,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="thumbnail-carousel-item-3" class="splide thumbnail-splide" aria-label="Thumbnail buttons for the property item carousel">
+                        <div id="thumbnail-carousel-item-3" class="splide thumbnail-splide"
+                            aria-label="Thumbnail buttons for the property item carousel">
                             <div class="splide__track">
                                 <ul class="splide__list">
                                     <li class="splide__slide">
@@ -411,12 +449,16 @@
                         </div>
                     </div>
                     <div class="search-card__info">
-                        <div class="search-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường Và Khu Công Nghiệp Becamex</div>
-                        <div class="search-card__description nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ</div>
+                        <div class="search-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần
+                            Trường Và Khu Công Nghiệp Becamex</div>
+                        <div class="search-card__description nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối
+                            Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ
+                            Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ</div>
                         <div class="land-parameters nice-h4-l">
                             <div class="land-location">
                                 <span class="material-symbols-outlined land-location__icon">location_on</span>
-                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu</span>
+                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa -
+                                    Vũng Tàu</span>
                             </div>
                             <div class="land-area">
                                 <span class="material-symbols-outlined land-area__icon">square_foot</span>
@@ -444,7 +486,7 @@
                                 <span class="material-symbols-outlined land-price__icon">payments</span>
                                 <span class="land-price__text">10 ty (200 trieu/m2)</span>
                             </div>
-                        </div>                        
+                        </div>
                     </div>
                 </div>
             </div>
@@ -453,7 +495,7 @@
     <footer>
         <div class="footer">
             <div class="container__padding">
-                <div class="footer__boxes container">
+                <div class="footer__boxes grid container">
                     <!-- TODO -> svg animation -> transformation from company logo into social icons -->
                     <div class="box">
                         <div class="box__content">
@@ -495,7 +537,11 @@
                                 <div class="subscription-form__description">Nhận ưu đãi mới nhất về đất nền bán và chiết
                                     khấu cũng như tin tức về quy hoạch đất nền Bà Rịa Vũng Tàu:</div>
                                 <form class="subscription-form__input">
-                                    <input class="nice-input" type="email" placeholder="Email">
+                                    <div class="nice-input">
+                                        <input class="nice-input__input" type="email" placeholder="Email address"
+                                            id="email-input">
+                                        <label class="nice-input__label" for="email-input">Email address</label>
+                                    </div>
                                     <button class="nice-btn">Đăng ký</button>
                                 </form>
                             </div>
@@ -511,7 +557,8 @@
                         © Mua Bán Đất Vũng Tàu, 2022
                     </div>
                     <div class="credits__links">
-                        <a href="#">Hỗ trợ</a><a href="#">Thông tin về công ty</a><a href="#">Liên hệ</a>
+                        <a href="error.html">Hỗ trợ</a><a href="error.html">Thông tin về công ty</a><a
+                            href="error.html">Liên hệ</a>
                     </div>
                 </div>
             </div>
@@ -529,15 +576,16 @@
 
     <script>
         // TODO remove this and assign links in loop when backend is ready
-        document.getElementById('item1').querySelector('.search-card__info').onclick = function() {
+        document.getElementById('item1').querySelector('.search-card__info').onclick = function () {
             location.href = "item.html";
         }
-        document.getElementById('item2').querySelector('.search-card__info').onclick = function() {
+        document.getElementById('item2').querySelector('.search-card__info').onclick = function () {
             location.href = "item.html";
         }
-        document.getElementById('item3').querySelector('.search-card__info').onclick = function() {
+        document.getElementById('item3').querySelector('.search-card__info').onclick = function () {
             location.href = "item.html";
         }
     </script>
 </body>
+
 </html>

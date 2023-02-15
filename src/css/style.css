@@ -1066,11 +1066,16 @@ body {
 
 .search-hero {
   display: flex;
-  height: 60vh; }
-  .search-hero__form {
+  height: calc(100vh - 3rem - 6.5rem); }
+  .search-hero__form-wrapper {
     width: 50%;
-    padding: 5% 10% 10% 10%;
+    padding: 15% 7% 20% 13%;
     position: relative; }
+  .search-hero__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
   .search-hero .decorative {
     position: static; }
   .search-hero__right {
