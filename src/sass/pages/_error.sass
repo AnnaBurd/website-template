@@ -1,15 +1,12 @@
 .error-message
-    height: 60vh
+    height: calc(100vh - #{$banner-height} - #{$navbar-height})
     text-align: center
     position: relative
     &__box
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translateX(-50%) translateY(-50%)
+        @include position-center
         min-width: 40%
         max-width: 60%
-        background-color: $color-box-bg
+        background-color: $white-darker-1
         border-radius: $border-radius
         box-shadow: $nice-shadow
         padding: 5rem
@@ -17,4 +14,3 @@
         padding-bottom: 1rem
     &__description
         padding-bottom: 2.4rem
-

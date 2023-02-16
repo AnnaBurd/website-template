@@ -120,7 +120,7 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
   display: flex;
   overflow: hidden;
-  height: 30rem; }
+  height: 28vh; }
   .agent-card__photo {
     width: 50%; }
     .agent-card__photo img {
@@ -129,16 +129,34 @@ body {
       object-fit: cover; }
   .agent-card__info {
     width: 50%;
-    padding: 8% 6%; }
+    padding: 5% 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
   .agent-card__name {
-    padding-bottom: 1.4rem; }
+    padding-bottom: .4rem;
+    margin-left: -.1rem; }
   .agent-card__title {
-    padding-bottom: 0.4rem;
-    font-size: 1.2rem; }
+    padding-bottom: .8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: .03em; }
   .agent-card__text {
     width: 95%; }
     .agent-card__text:not(:last-child) {
       padding-bottom: 0.4rem; }
+  .agent-card__icons-block {
+    display: inline-flex; }
+    .agent-card__icons-block a {
+      width: 2.4rem;
+      margin-right: .8rem; }
+    .agent-card__icons-block svg {
+      width: 100%;
+      height: 100%;
+      fill: #939778;
+      fill-opacity: 1; }
+      .agent-card__icons-block svg:hover {
+        fill-opacity: 0.7; }
 
 .arrow {
   cursor: pointer; }
@@ -864,29 +882,41 @@ body {
       transform: translate(-50%, -50%) scale(1); }
 
 .contacts {
-  margin-top: 5vh;
-  margin-bottom: 5vh; }
-  .contacts__boxes {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 1.5vw; }
+  background-color: #FFFFFF;
+  padding: 12vh 0; }
+  .contacts__boxes > div {
+    border: 1px solid #fae8e1;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08); }
 
 .agents {
-  background-color: #FFFFFF;
-  padding-top: 5vh;
-  padding-bottom: 5vh; }
+  height: calc(100vh - 3rem - 6.5rem);
+  position: relative; }
+  .agents__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
+    width: calc(min(100vw - 60px * 2, 1160px)); }
   .agents__intro {
     margin-bottom: 3vh; }
   .agents__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    column-gap: 1.5vw;
-    row-gap: 1.5vw; }
+    gap: 2rem; }
 
 .values {
-  margin-top: 5vh;
-  margin-bottom: 10vh; }
+  height: calc(100vh - 6.5rem);
+  position: relative; }
+  .values__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
+    width: calc(min(100vw - 60px * 2, 1160px)); }
   .values__intro {
     margin-bottom: 3vh; }
   .values__image {
@@ -895,26 +925,26 @@ body {
     .values__image img {
       width: 100%;
       height: 100%; }
-  .values__boxes [class^="right-area__"] {
+  .values__boxes {
     transition: transform .2s; }
-  .values__boxes .right-area__top-left:hover {
-    transform: scale(1.04) translate(-0.1rem, 0.1rem); }
-  .values__boxes .right-area__top-right:hover {
-    transform: scale(1.04) translate(0.1rem, 0.1rem); }
-  .values__boxes .right-area__bottom-left:hover {
-    transform: scale(1.04) translate(-0.1rem, -0.1rem); }
-  .values__boxes .right-area__bottom-right:hover {
-    transform: scale(1.04) translate(0.1rem, -0.1rem); }
+    .values__boxes .right-area__top-left:hover {
+      transform: scale(1.04) translate(-0.1rem, 0.1rem); }
+    .values__boxes .right-area__top-right:hover {
+      transform: scale(1.04) translate(0.1rem, 0.1rem); }
+    .values__boxes .right-area__bottom-left:hover {
+      transform: scale(1.04) translate(-0.1rem, -0.1rem); }
+    .values__boxes .right-area__bottom-right:hover {
+      transform: scale(1.04) translate(0.1rem, -0.1rem); }
 
 .error-message {
-  height: 60vh;
+  height: calc(100vh - 3rem - 6.5rem);
   text-align: center;
   position: relative; }
   .error-message__box {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translate(-50%, -50%);
     min-width: 40%;
     max-width: 60%;
     background-color: #FFFEFF;
@@ -1056,11 +1086,12 @@ body {
   transform: translateX(calc(-2 * (min(100vw - 60px * 2, 1160px) + 2rem))); }
 
 .map {
-  margin: 3vh; }
+  padding: 3vh;
+  height: calc(100vh - 3rem - 6.5rem); }
   .map__content {
-    background-color: #88121220;
     width: 100%;
-    height: 75vh;
+    height: 100%;
+    background-color: #88121220;
     border-radius: 8px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08); }
 

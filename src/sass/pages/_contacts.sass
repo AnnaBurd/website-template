@@ -1,33 +1,36 @@
 .contacts
-    // background-color: red
-    margin-top: $gap-between-sections
-    margin-bottom: $gap-between-sections
+    background-color: $white
+    padding: $gutter-vertical--huge 0
     &__boxes
-        display: grid
-        grid-template-columns: $grid-x3-template-columns
-        column-gap: $grid-x3-column-gap
+        & > div
+            border: 1px solid $grey-2
+            border-radius: $border-radius
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
 
 .agents
-    background-color: $color-navbar-bg
-    padding-top: $gap-between-sections
-    padding-bottom: $gap-between-sections
-    // height: 20vh
+    height: calc(100vh - #{$banner-height} - #{$navbar-height})
+    position: relative
+    &__content
+        @include position-center
+        transform: translate(-50%, -55%)
+        width: calc(min(100vw - #{$main-container-padding} * 2, #{$main-container-width}))
     &__intro
-        margin-bottom: $gap-within-sections
+        margin-bottom: $gutter-vertical--medium
     &__cards
-        // height: 40vh
         display: grid
         grid-template-columns: 1fr 1fr
         grid-template-rows: 1fr 1fr
-        column-gap: $grid-x3-column-gap
-        row-gap: $grid-x3-column-gap
-        // background-color: red
+        gap: $gutter-columns-medium
 
 .values
-    margin-top: $gap-between-sections
-    margin-bottom: $gap-between-sections * 2
+    height: calc(100vh - #{$navbar-height})
+    position: relative
+    &__content
+        @include position-center
+        transform: translate(-50%, -55%)
+        width: calc(min(100vw - #{$main-container-padding} * 2, #{$main-container-width}))
     &__intro
-        margin-bottom: $gap-within-sections
+        margin-bottom: $gutter-vertical--medium
     &__image
         border-radius: $border-radius
         overflow: hidden
@@ -36,12 +39,12 @@
             height: 100%
     &__boxes // Animation of boxes on hover
         [class^="right-area__"]
-            transition: transform .2s
+        transition: transform .2s
         .right-area__top-left:hover
-            transform: scale(1.04) translate(-.1rem, .1rem) 
+            transform: scale(1.04) translate(-.1rem, .1rem)
         .right-area__top-right:hover
-            transform: scale(1.04) translate(.1rem, .1rem) 
+            transform: scale(1.04) translate(.1rem, .1rem)
         .right-area__bottom-left:hover
-            transform: scale(1.04) translate(-.1rem, -.1rem) 
+            transform: scale(1.04) translate(-.1rem, -.1rem)
         .right-area__bottom-right:hover
-            transform: scale(1.04) translate(.1rem, -.1rem) 
+            transform: scale(1.04) translate(.1rem, -.1rem)
