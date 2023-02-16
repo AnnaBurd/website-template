@@ -5,7 +5,7 @@
     z-index: 100
     @include flexbox-vertical-center
     background-color: $white
-    box-shadow: $nice-shadow
+    box-shadow: $shadow--default
     &__content
         display: flex
         justify-content: space-between
@@ -46,9 +46,9 @@
             letter-spacing: -.01em
         &:hover,
         &:active
-            color: darken($orange, 10%)
+            color: darken($color-primary, 10%)
             // TODO optionally fill gradient animation
-            // background-image: linear-gradient(to right top, rgba($black-green, 0.949),$orange)
+            // background-image: linear-gradient(to right top, rgba($black-green, 0.949),$color-primary)
             // -webkit-background-clip: text
             // color: transparent
             transform: scale(1.03) translateY(-0.08rem)

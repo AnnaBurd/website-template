@@ -1,6 +1,6 @@
 /* Colors ---------------------------------------------------------*/
-$orange: #cf6f49;
-$green: #939778;
+$color-primary: #cf6f49;
+$color-secondary: #939778;
 
 $white: #FFFFFF;
 $white-darker-1: #FFFEFF;
@@ -11,40 +11,13 @@ $grey-2: #fae8e1;
 
 $black: #292823;
 $black-green: #2a2c1f;
-$green-black: #383a2d;
-
-/* Colors assignments by components and sections  REMOVE----------------------------*/
-$color-body-bg: $white-darker-2;
-$color-banner-bg: $green;
-// $color-banner-text: rgba($white, 0.7);
-$color-navbar-bg: $white;
-// $color-navbar-text:rgba($black-green, 0.949);
-// $color-footer-bg: $white-darker-1;
-$color-footer-text: rgba($black, 0.8);
-$color-credits-text: rgba($black, 0.6);
-$color-credits-bars: rgba($black, 0.176);
-$color-project-card-bg: $white-darker-1;
-$color-box-bg: $white-darker-1;
-$color-btn-bg: $green;
-// $color-btn-bg--accent:$orange;
-// $color-btn-text:rgba($white, 0.9);
-// $color-btn-text--transparent:rgba($black-green, 0.949);
-$color-input-text: rgba($black-green, 0.949);
-$color-input-text-placeholder: rgba($black-green, 0.749);
-$color-dropdown-bg: rgba($white, 0.7);
-$color-slider-label: rgba($black-green, 0.851);
-$color-slider-tooltip: rgba($black-green, 0.749);
-$color-material-icon: $orange;
-$color-material-icon-bg: $grey-2;
-$color-svg-icon: $green-black; // TODO rename
-$color-tag: $grey-1;
-$color-accent: $orange;
+$color-secondary-black: #383a2d;
 
 /* Fonts -----------------------------------------------------------*/
 $ff-sans-serif: 'Noto Sans', sans-serif;
 $ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif;
 
-/* Gutters and sizes  -----------------------------------------------*/
+/* Sized and gutters  ----------------------------------------------*/
 $main-container-width: 1160px;
 $main-container-padding: 60px;
 
@@ -56,33 +29,23 @@ $gutter-vertical--medium: 3vh;
 $gutter-vertical--large: 6vh;
 $gutter-vertical--huge: 12vh;
 
-$gutter-columns-large: 3rem; // TODO adjust depending on 1160 or smaller -> calc relative
-$gutter-columns-medium: 2rem; // TODO adjust depending on 1160 or smaller -> calc relative
-$gutter-columns-small: 1.2rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns--large: 3rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns--medium: 2rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns--small: 1.2rem; // TODO adjust depending on 1160 or smaller -> calc relative
 
-/* REMOVE: -----------------------------------------------------------*/
-$gap-between-sections: 5vh; // TODO  remove
-$gap-within-sections: $gap-between-sections * .6; // TODO  remove
+/* Style of boxes ------------------------------------------------*/
+$border-radius: .8rem;
 
-$grid-x3-template-columns: repeat(3, 1fr); // TODO adjust -> remove
-$grid-x3-column-gap: 1.5vw; // TODO adjust -> remove
+$border--solid: 1px solid $grey-1;
+$border--none: 1px solid transparent;
 
-/* Shadows ---------------------------------------------------------*/
-$nice-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
-$small-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08);
+$shadow--default: 0px 2px 4px rgba(0, 0, 0, 0.08);
+$shadow--small: 0px 1px 2px rgba(0, 0, 0, 0.08);
 
-/* Borders ---------------------------------------------------------*/
-$border-radius: 8px;
-$border-solid: 1px solid #E7E8E3;
-$border-none: 1px solid transparent;
 
-$card-padding: 7% 4% 7% 4%; // %  TODO remove relative to size of element's parent
-
+// TODO make and refactor transitions
 /* Transitions -----------------------------------------------------*/
-$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) .0s; // TODO make transitions
-$nice-transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1); // TODO button transitions
-$nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); // TODO make transitions
-
-// $nice-button-transition: all .2s, background-color .2s cubic-bezier(.77, 0, .175, 1)
+$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) .0s;
+$nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 $nice-button-transition: all .2s;
-$nice-dropdown-transition: .2s ease;
+$nice-dropdown-transition: all .2s ease;

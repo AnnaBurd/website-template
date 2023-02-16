@@ -10,9 +10,9 @@
         &__text
             display: none
             // height: 4.4rem
-            background-color: $color-dropdown-bg
+            background-color: rgba($white, 0.7)
             border-radius: $border-radius
-            box-shadow: $nice-shadow
+            box-shadow: $shadow--default
             // width: 100%
             padding: 1.4rem 1rem
             &--default
@@ -24,7 +24,7 @@
                 display: block
     &__arrow-icon
         position: absolute
-        top: 30%   // TODO adjust
+        top: 30% // TODO adjust
         left: 80% // TODO adjust
         img
             width: 2rem
@@ -46,14 +46,14 @@
         transition: $nice-dropdown-transition
         &__option
             display: block
-            background-color: $color-dropdown-bg
+            background-color: rgba($white, 0.7)
             // height: 4.4rem
             padding: 1.4rem 1rem
             &:hover,
             &:focus
                 background-color: rgba(255, 255, 255, 0.3) // TODO color to variables and fix formatting
             &--first
-                border-radius: .8rem .8rem 0 0 
+                border-radius: .8rem .8rem 0 0
             &--last
                 border-radius: 0 0 .8rem .8rem
             &--default

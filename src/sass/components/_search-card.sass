@@ -1,12 +1,12 @@
 .search-card
-    background-color: $color-project-card-bg    
+    background-color: $white-darker-1
     padding: .8rem // TODO consistent paddings on all cards
     border-radius: $border-radius
-    box-shadow: $nice-shadow
-    margin-bottom: $gap-within-sections * .5
+    box-shadow: $shadow--default
+    margin-bottom: $gutter-vertical--medium
     display: grid
     grid-template-columns: 49% 49%
-    grid-template-rows: 30rem // TODO minmax(35vh, 30rem)
+    grid-template-rows: 30rem // TODO adjust card height!!! minmax(35vh, 30rem)
     gap: 2% // TODO adjust spacings -> calc here for 1160 and lesser
     &__info
         position: relative
@@ -19,27 +19,24 @@
     &__description
         width: 85%
         margin-bottom: 0.8rem
-        
+
     .land-parameters
         width: 60%
         margin-left: 2rem
         & > div:not(:last-child) // margins between rows
-            margin-bottom: 0.5em 
+            margin-bottom: 0.5em
         .land-price
             position: absolute
             left: 68%
             bottom: 8% // TODO adjust
 
     &__photo-carousel
-        // background-color: blue
         display: flex
         justify-content: space-between
         .main-splide
             width: 78%
-            // background-color: red
         .thumbnail-splide
             width: 20%
-
 
 .main-splide
     border-radius: $border-radius
@@ -50,7 +47,7 @@
             width: 3rem
             min-height: 3rem
             border-radius: $border-radius
-            background-color: #E8E8E4 // TODO
+            background-color: $grey-1
             &:hover:disabled
                 cursor: default
     .splide__track
@@ -66,7 +63,6 @@
     &:hover
         .splide__arrows
             .splide__arrow
-                // background-color: red
                 display: block
 
 .thumbnail-splide
@@ -82,6 +78,6 @@
                     object-fit: cover
                     border-radius: $border-radius * 0.5
             .is-active
-                border: .2rem solid $color-banner-bg
+                border: .2rem solid $color-secondary
                 border-radius: $border-radius * 0.5
                 opacity: 1

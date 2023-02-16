@@ -3,22 +3,22 @@
     &__input
         background: none
         min-height: 4.4rem
-        border: $border-solid
+        border: $border--solid
         border-radius: $border-radius
-        box-shadow: $nice-shadow
+        box-shadow: $shadow--default
         font-family: $ff-display
         font-size: 1.4rem
         font-weight: 500
         letter-spacing: 0.03em
-        color: $color-input-text
+        color: rgba($black-green, 0.949)
         padding-left: 1em
         padding-right: 1em
         &::placeholder
-            color: $color-input-text-placeholder
+            color: rgba($black-green, 0.749)
         &:focus
-            outline: $color-btn-bg solid 1px
+            outline: $color-secondary solid 1px
         &:focus:invalid
-            outline: $color-accent solid 1px
+            outline: $color-primary solid 1px
 
     // Text hint about input field content
     &__label

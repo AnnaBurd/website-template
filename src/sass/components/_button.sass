@@ -1,24 +1,24 @@
-.nice-btn   
+.nice-btn
     height: 4.4rem
     padding: 0 .8rem
-    border: $border-none
+    border: $border--none
     border-radius: $border-radius
     cursor: pointer
     font-family: $ff-display
     font-size: 1.4rem
     font-weight: 500
-    letter-spacing: -0.03em    
-    background-color: $green
+    letter-spacing: -0.03em
+    background-color: $color-secondary
     color: rgba($white, 0.9)
     transition: $nice-button-transition
     &--transparent
         background: none
-        border: $border-solid
-        box-shadow: $nice-shadow
+        border: $border--solid
+        box-shadow: $shadow--default
         color: rgba($black-green, 0.949)
         font-weight: 600
     &--accent
-        background-color: $orange
+        background-color: $color-primary
     &--call
         position: relative
     &--call &__icon--call
@@ -38,7 +38,7 @@
     &:link
     &:visited
     &:hover
-        background-color: darken($green, 10%)
+        background-color: darken($color-secondary, 10%)
         transform: translateY(-.1rem)
         box-shadow: 0rem .4rem 1rem rgba(0, 0, 0, .1)
     &:focus
@@ -50,4 +50,4 @@
             background: none
     &--accent
         &:hover
-            background-color: darken($orange,8%)
+            background-color: darken($color-primary,8%)
