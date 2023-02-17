@@ -26,6 +26,8 @@
 
     <!-- Custom CSS stylesheet -->
     <link rel="stylesheet" href="src/css/style.css">
+    <!-- Leaflet CSS stylesheet -->
+    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css">
 </head>
 
 <body>
@@ -91,8 +93,7 @@
     </div>
     <main>
         <section class="map">
-            <div class="map__content">
-                here should be map!
+            <div class="map__content" id="custom__map">
             </div>
         </section>
     </main>
@@ -169,5 +170,9 @@
         </div>
     </footer>
 </body>
-
+    <!--Custom Leaflet MAP -->
+    <script src="/node_modules/leaflet/dist/leaflet.js"></script>
+    <script src="src/js/countries.geojson"></script>
+    <script src="src/js/custom-map.js"></script>
+    <!--END Custom Leaflet MAP -->
 </html>
