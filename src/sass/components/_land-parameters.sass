@@ -1,0 +1,72 @@
+.land-parameters
+
+    & > div:not(:last-child) // Margins between rows
+        margin-bottom: 1em
+
+    [class^="land-"]
+        position: relative
+
+    [class^="material-"]    // Icons styles and positioning
+        font-size: 1.2em
+        position: absolute
+        top: 0
+        left: -1.35em
+        display: inline-block
+
+    .land-location
+        // margin-left: 3.5em    TODO optionally - allign lines from second one
+        // text-indent: -3.5em
+        &__icon
+            transform: translate(0em, 0.0em)
+        &__text
+
+            &::before
+                content: "Địa chỉ: \00a0"
+    .land-area // TODO add JS superscript text m^2, m, ty etc.
+        &__icon
+            transform: translate(0.07em, 0.0em)
+        &__text
+            &::before
+                content: "Điện tích: \00a0"
+            &::after
+                content: " m\00B2" // "m\00B2" => "m²";
+    .land-size
+    .land-height
+        display: inline-block
+        &__icon
+            transform: rotate(90deg) translate(-0.05em, 0.05em)
+        &__text
+            &::before
+                content: "Chiều dài: \00a0"
+    .land-width
+        display: inline-block
+        margin-left: 3em
+        &__icon
+            transform: translate(-0.05em, 0.05em)
+        &__text
+            &::before
+                content: "Chiều ngang: \00a0"
+    .land-papers
+        &__icon
+            // transform: translate(0.05em, -0.05em)
+        &__text
+            &::before
+                content: "Giấy tờ pháp lý: \00a0"
+    .land-direction
+        &__icon
+            transform: translate(0.0em, 0.01em)
+        &__text
+            &::before
+                content: "Hướng cửa chính: \00a0"
+    .land-price
+        color: $color-primary
+        &__icon
+            transform: translate(0.00em, 0.05em)
+        &__text
+            &::before
+                content: "Giá: \00a0"
+            &::after
+                content: " tỷ"
+    .land-link
+        &__icon
+        &__text

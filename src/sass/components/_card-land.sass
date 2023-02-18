@@ -1,0 +1,43 @@
+.card-land
+    border-radius: $border-radius
+    box-shadow: $shadow--default
+    overflow: hidden
+    position: relative
+    // -webkit-font-smoothing: antialiased // TODO check about antialiasing
+    &__image
+        position: absolute
+        top: 0
+        width: 100%
+        height: 90%
+        transition: $nice-card-transition
+        img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            object-position: center 40%
+
+    &__description
+        position: absolute
+        bottom: 0
+        height: 5.6rem
+        transition: $nice-card-transition
+        background-color: $white-darker-1
+        padding: 2.2rem 2.7rem
+        cursor: pointer
+    &__name
+        margin-bottom: 1.2rem
+        margin-left: -.1rem
+    &__note
+        margin-bottom: .8rem
+    &__parameters
+        margin-left: 1.9rem
+        & > div:not(:last-child) // Margins between rows
+            margin-bottom: .4rem
+    &__price
+
+    // Effects on card hover
+    &:hover .card-land__image
+        height: 60% // Decrease image size
+    &:hover .card-land__description
+        height: 16rem // Show text description
+        cursor: pointer

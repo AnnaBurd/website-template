@@ -1,19 +1,18 @@
 .banner
-    background-color: $color-banner-bg
+    background-color: $color-secondary
+    height: $banner-height
+    @include flexbox-center
     &__content
-        padding-top: 0.7rem
-        padding-bottom: 0.7rem
-        display: flex
-        justify-content: center
+        @include flexbox-center
     &__text
-        color: $color-banner-text
+        color: rgba($white, 0.7)
         font-size: 1.4rem
         font-weight: 400
         letter-spacing: -0.05em
-        line-height: 2rem
         margin-right: 1rem
+        // margin-top: -1.05rem // Optionally - move text vertically
     &__icons
-        width: 8rem
+        width: 7.8em
         display: inline-flex
         justify-content: space-between
         svg

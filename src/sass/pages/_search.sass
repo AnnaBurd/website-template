@@ -1,15 +1,18 @@
 .search-hero
     // background-color: yellow
     display: flex
-    height: 60vh
-    &__form
+    height: calc(100vh - #{$banner-height} - #{$navbar-height})
+    &__form-wrapper
         // background-color: green
-        width: 50%        
-        padding: 5% 10% 10% 10% // TODO calculate form paddings
+        width: 50%
+        padding: 15% 7% 20% 13% // TODO calculate form paddings
+
         position: relative
+    &__form
+        @include position-center
     .decorative
         position: static
-    // .search-form
+    // .form-search
         // height: 30vh
         // display: flex
         // flex-direction: column
@@ -25,9 +28,9 @@
 
 .search-results
     // background-color: pink
-    margin-bottom: $gap-between-sections
+    margin-bottom: $gutter-vertical--large
     &__intro
         // background-color: orange
-        margin-bottom: $gap-within-sections
+        margin-bottom: $gutter-vertical--medium
     &__cards
         // background-color: yellow

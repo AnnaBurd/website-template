@@ -1,0 +1,38 @@
+.form-callback
+    max-width: 116rem
+    min-width: 70vw
+    display: grid
+    grid-template-columns: 1fr 1fr
+    &__left
+        margin: 4rem 5rem
+        // padding: 100px
+    &__intro
+        padding-left: .3rem
+    &__heading
+        line-height: 1.3em
+        margin-bottom: 1rem
+        font-size: 2.5em
+    &__text
+        margin-bottom: .8rem
+    &__input
+        width: 100%
+        div
+            margin-bottom: 2.3rem
+            input
+                // background-color: pink
+                width: 100%
+                box-shadow: $shadow--small
+            textarea
+                width: 100%
+                height: 6em
+                padding-top: 1.2rem
+                box-shadow: $shadow--small
+        button
+            box-shadow: $shadow--small
+    &__right
+    &__image
+        border-radius: 0 8px 8px 0
+        overflow: hidden
+        width: 100%
+        height: 100%
+        object-fit: cover

@@ -1,17 +1,37 @@
 .nice-input
-    background: none
-    min-height: 4.4rem
-    border: $border-solid
-    border-radius: $border-radius
-    box-shadow: $nice-shadow
-    font-family: $ff-display
-    font-size: 1.4rem
-    font-weight: 500
-    letter-spacing: 0.03em
-    color: $color-input-text
-    padding-left: 1em
-    padding-right: 1em
-    &::placeholder
-        color: $color-input-text-placeholder
-    &:focus
-        outline: $color-btn-bg solid 1px
+    position: relative
+    &__input
+        background: none
+        min-height: 4.4rem
+        border: $border--solid
+        border-radius: $border-radius
+        box-shadow: $shadow--default
+        font-family: $ff-display
+        font-size: 1.4rem
+        font-weight: 500
+        letter-spacing: 0.03em
+        color: rgba($black-green, 0.949)
+        padding-left: 1em
+        padding-right: 1em
+        &::placeholder
+            color: rgba($black-green, 0.749)
+        &:focus
+            outline: $color-secondary solid 1px
+        &:focus:invalid
+            outline: $color-primary solid 1px
+
+    // Text hint about input field content
+    &__label
+        position: absolute
+        bottom: -1.5rem
+        left: 1%
+        display: block
+        padding-left: 1em
+        transition: all .3s
+
+    // Hide label with hint when input field holds only placeholder or is not focused
+    &__input:placeholder-shown + &__label,
+    &__input:not(:focus) + &__label
+        bottom: 40%
+        opacity: 0
+        visibility: hidden

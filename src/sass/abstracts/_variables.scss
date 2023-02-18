@@ -1,71 +1,51 @@
 /* Colors ---------------------------------------------------------*/
-$color-body-bg:#F6F4F5;
+$color-primary: #cf6f49;
+$color-secondary: #939778;
 
-$color-banner-bg:#939778;
-$color-banner-text:#ffffffb3;
+$white: #FFFFFF;
+$white-darker-1: #FFFEFF;
+$white-darker-2: #F6F4F5;
 
-$color-navbar-bg:#FFFFFF;
-$color-navbar-text:#2a2c1ff2;
+$grey-1: #e7e8e3;
+$grey-2: #fae8e1;
 
-$color-footer-bg: #FFFEFF;
-$color-footer-text: #292823cc;
-
-$color-credits-text: #29282399;
-$color-credits-bars: #2928232d;
-
-$color-btn-bg:#939778;
-$color-btn-bg--accent:#cf6f49;
-$color-btn-text:#ffffffe6;
-$color-btn-text--transparent:#2a2c1ff2;
-
-$color-input-text: #2a2c1ff2;
-$color-input-text-placeholder: #2a2c1fbf;
-
-$color-dropdown-bg: #ffffffb3;
-
-$color-slider-label:#2a2c1fd9;
-$color-slider-tooltip:#2a2c1fbf;
-
-$color-tag:#e7e8e3;
-
-$color-project-card-bg: #FFFEFF;
-$color-box-bg: #FFFEFF;
-
-$color-material-icon: #cf6f49;
-$color-material-icon-bg: #fae8e1;
-
-$color-svg-icon: #383a2d; // TODO adjust
-
-$color-accent:#cf6f49;
+$black: #292823;
+$black-green: #2a2c1f;
+$color-secondary-black: #383a2d;
 
 /* Fonts -----------------------------------------------------------*/
 $ff-sans-serif: 'Noto Sans', sans-serif;
 $ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif;
 
-/* Shadows ---------------------------------------------------------*/
-$nice-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+/* Sized and gutters  ----------------------------------------------*/
+$main-container-width: 1160px;
+$main-container-padding: 60px;
 
-/* Borders ---------------------------------------------------------*/
-$border-radius: 8px;
-$border-solid: 1px solid #E7E8E3;
-$border-none: 1px solid transparent;
+$banner-height: 3rem;
+$navbar-height: 6.5rem;
 
-$card-padding: 7% 4% 7% 4%; // % relative to size of element's parent
+$gutter-vertical--small: 1vh;
+$gutter-vertical--medium: 3vh;
+$gutter-vertical--large: 6vh;
+$gutter-vertical--huge: 12vh;
 
-/* Grids -----------------------------------------------------------*/
-$grid-x3-template-columns: repeat(3, 1fr);
-$grid-x3-column-gap: 1.5vw; // TODO adjust
-$grid-x3-row-gap: 1.5vw; // TODO adjust
+$gutter-columns--large: 3rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns--medium: 2rem; // TODO adjust depending on 1160 or smaller -> calc relative
+$gutter-columns--small: 1.2rem; // TODO adjust depending on 1160 or smaller -> calc relative
 
-/* Section gaps ----------------------------------------------------*/
-$gap-between-sections: 5vh; // TODO adjust
-$gap-within-sections: $gap-between-sections * .6; // TODO adjust
+/* Style of boxes ------------------------------------------------*/
+$border-radius: .8rem;
 
+$border--solid: 1px solid $grey-1;
+$border--none: 1px solid transparent;
+
+$shadow--default: 0px 2px 4px rgba(0, 0, 0, 0.08);
+$shadow--small: 0px 1px 2px rgba(0, 0, 0, 0.08);
+
+
+// TODO make and refactor transitions
 /* Transitions -----------------------------------------------------*/
-$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); // TODO make transitions
-$nice-transition: border-color 200ms ease, background-color 200ms cubic-bezier(.77, 0, .175, 1); // TODO button transitions
-$nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1); // TODO make transitions
-
-// $nice-button-transition: all .2s, background-color .2s cubic-bezier(.77, 0, .175, 1)
+$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) .0s;
+$nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
 $nice-button-transition: all .2s;
-$nice-dropdown-transition: .2s ease;
+$nice-dropdown-transition: all .2s ease;

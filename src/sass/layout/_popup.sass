@@ -1,0 +1,40 @@
+.popup // Popup window is hidden unless button is clicked (set up in JS)
+    height: 100vh
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 9999
+    background-color: rgba($black, .9)
+    opacity: 0
+    visibility: hidden
+    transition: all .3s
+
+    &__content // Placeholder for popup content, actual size depends on boxes inside
+        @include position-center
+
+        background-color: $white-darker-1
+        box-shadow: $shadow--default
+        border-radius: $border-radius
+
+        transform: translate(-50%, -50%) scale(.5) // Reduced size in hidden state created growing pop-up animation
+        transition: transform .3s .1s // TODO set up transitions
+
+    &__close // Close icon in the top right corner
+        position: absolute
+        padding: .8rem
+        right: 0
+        top: 0
+        opacity: 0.1
+        transition: opacity .2s
+        &:hover
+            cursor: pointer
+            opacity: 1
+    &__close-icon
+        font-size: 2rem
+
+    &--open  // Popup in visible state
+        opacity: 1
+        visibility: visible
+        & > * // .popup__content
+            transform: translate(-50%, -50%) scale(1)

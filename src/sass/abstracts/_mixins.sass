@@ -1,0 +1,36 @@
+// Center element vertically and horizontally relative to parent with position: relative
+@mixin position-center  // TODO check if correct and apply
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+// Center children elements vertically and horizontally
+@mixin flexbox-center
+    display: flex
+    align-items: center
+    justify-content: center
+
+// Center child element vertically
+@mixin flexbox-vertical-center
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+// Media query manager
+@mixin respond($breakpoint)                     // 1em = 16px (default browser font size)
+    @if $breakpoint == phone
+        @media (max-width: 37.5em) {@content}   // 600px
+    @if $breakpoint == tab-port
+        @media (max-width: 56.25em) {@content}  // 900px
+    @if $breakpoint == tab-land
+        @media (max-width: 75em) {@content}     // 1200px
+    @if $breakpoint == big-desktop
+        @media (min-width: 112.5em) {@content}  // 1800px
+
+// Clearfix -- TODO when to use
+@mixin clearfix
+    &::after
+        content: ""
+        display: table
+        clear: both

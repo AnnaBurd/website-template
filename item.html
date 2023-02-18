@@ -18,151 +18,190 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- Material design icon font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> -->
+
+    <!-- Material icons instead of vectors -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Required reference to splide slider CSS -->
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css" />
+
     <!-- Custom CSS stylesheet (compiled from SASS files) -->
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="banner">
-            <div class="container__padding">
-                <div class="banner__content container">
-                    <div class="banner__text">
-                        Quý khách vui lòng liên hệ với chúng tôi qua mạng xã hội
-                    </div>
-                    <div class="banner__icons">
-                        <a href="ex.com">
-                            <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M20 10c0-5.522-4.478-10-10-10S0 4.478 0 10c0 4.991 3.656 9.128 8.438 9.88v-6.988h-2.54V10h2.54V7.797c0-2.506 1.493-3.891 3.777-3.891 1.094 0 2.239.195 2.239.195v2.462h-1.262c-1.242 0-1.63.77-1.63 1.562V10h2.773l-.443 2.892h-2.33v6.988C16.345 19.13 20 14.993 20 10z" />
-                            </svg>
-                        </a>
-                        <a href="ex.com">
-                            <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M0 10.25C0 15.91 4.59 20.5 10.25 20.5S20.5 15.91 20.5 10.25 15.91 0 10.25 0 0 4.59 0 10.25zm8.37 4.698.175-2.613 4.753-4.29c.209-.184-.046-.275-.322-.107L7.11 11.64l-2.534-.79c-.547-.168-.551-.544.123-.815l9.873-3.807c.451-.204.886.109.714.799l-1.681 7.923c-.118.563-.458.698-.93.438l-2.56-1.893-1.232 1.198-.011.01c-.138.135-.252.246-.501.246z" />
-                            </svg>
-                        </a>
-                        <a href="ex.com">
-                            <svg width="22" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M10.233 9.853a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zM10.985.3C4.928.3.005 4.762.005 10.267a9.46 9.46 0 0 0 2.853 6.67l.169.153a.935.935 0 0 1 0 1.089 4.876 4.876 0 0 1-1.78 1.64.152.152 0 0 0-.062.22.154.154 0 0 0 .063.056 6.656 6.656 0 0 0 3.067-.199 4.017 4.017 0 0 1 2.974-.276c1.18.382 2.41.579 3.65.583 6.133 0 10.994-4.462 10.994-9.967C21.933 4.731 17.072.3 10.985.3zM6.814 13.333H3.379a.859.859 0 0 1-.812-.368.92.92 0 0 1 .168-1.012l2.469-3.358a.66.66 0 0 0 .2-.398H3.578a1.733 1.733 0 0 1-.491 0 .567.567 0 0 1-.521-.644.567.567 0 0 1 .567-.629h3.665a.66.66 0 0 1 .536.997c-.16.319-.35.622-.567.904L4.345 12h2.377c.353 0 .69 0 .782.506.092.506-.138.828-.69.828zm5.443-.828c0 .353 0 .66-.399.828a.674.674 0 0 1-.889-.214s-.107-.092-.214 0a2.009 2.009 0 0 1-3.067-1.227 2.852 2.852 0 0 1 .46-2.714 1.901 1.901 0 0 1 2.79-.291c.246-.276.506-.522.92-.353.415.169.476.537.476.935l-.077 3.036zm2.024.108c0 .506-.26.812-.705.812-.445 0-.69-.306-.69-.828V7.185c0-.537.245-.813.675-.828.429-.016.705.291.72.843v5.413zm4.048.598a2.239 2.239 0 0 1-2.407 0 2.76 2.76 0 0 1-.767-3.68 2.361 2.361 0 0 1 3.236-.798 2.453 2.453 0 0 1 1.165 2.254 2.408 2.408 0 0 1-1.227 2.24v-.016zm-.675-3.328a.859.859 0 0 0-1.165.184 1.533 1.533 0 0 0 0 1.748.89.89 0 0 0 1.18.184 1.181 1.181 0 0 0 .491-1.058 1.195 1.195 0 0 0-.506-1.042v-.016zm-7.42-.03a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104z" />
-                            </svg>
-                        </a>
-                    </div>
+    <div class="banner">
+        <div class="container__padding">
+            <div class="banner__content container">
+                <div class="banner__text">
+                    Quý khách vui lòng liên hệ với chúng tôi qua mạng xã hội
+                </div>
+                <div class="banner__icons">
+                    <a href="ex.com">
+                        <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M20 10c0-5.522-4.478-10-10-10S0 4.478 0 10c0 4.991 3.656 9.128 8.438 9.88v-6.988h-2.54V10h2.54V7.797c0-2.506 1.493-3.891 3.777-3.891 1.094 0 2.239.195 2.239.195v2.462h-1.262c-1.242 0-1.63.77-1.63 1.562V10h2.773l-.443 2.892h-2.33v6.988C16.345 19.13 20 14.993 20 10z" />
+                        </svg>
+                    </a>
+                    <a href="ex.com">
+                        <svg width="21" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0 10.25C0 15.91 4.59 20.5 10.25 20.5S20.5 15.91 20.5 10.25 15.91 0 10.25 0 0 4.59 0 10.25zm8.37 4.698.175-2.613 4.753-4.29c.209-.184-.046-.275-.322-.107L7.11 11.64l-2.534-.79c-.547-.168-.551-.544.123-.815l9.873-3.807c.451-.204.886.109.714.799l-1.681 7.923c-.118.563-.458.698-.93.438l-2.56-1.893-1.232 1.198-.011.01c-.138.135-.252.246-.501.246z" />
+                        </svg>
+                    </a>
+                    <a href="ex.com">
+                        <svg width="22" height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10.233 9.853a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.088.214 1.533 1.533 0 0 0 .03 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zM10.985.3C4.928.3.005 4.762.005 10.267a9.46 9.46 0 0 0 2.853 6.67l.169.153a.935.935 0 0 1 0 1.089 4.876 4.876 0 0 1-1.78 1.64.152.152 0 0 0-.062.22.154.154 0 0 0 .063.056 6.656 6.656 0 0 0 3.067-.199 4.017 4.017 0 0 1 2.974-.276c1.18.382 2.41.579 3.65.583 6.133 0 10.994-4.462 10.994-9.967C21.933 4.731 17.072.3 10.985.3zM6.814 13.333H3.379a.859.859 0 0 1-.812-.368.92.92 0 0 1 .168-1.012l2.469-3.358a.66.66 0 0 0 .2-.398H3.578a1.733 1.733 0 0 1-.491 0 .567.567 0 0 1-.521-.644.567.567 0 0 1 .567-.629h3.665a.66.66 0 0 1 .536.997c-.16.319-.35.622-.567.904L4.345 12h2.377c.353 0 .69 0 .782.506.092.506-.138.828-.69.828zm5.443-.828c0 .353 0 .66-.399.828a.674.674 0 0 1-.889-.214s-.107-.092-.214 0a2.009 2.009 0 0 1-3.067-1.227 2.852 2.852 0 0 1 .46-2.714 1.901 1.901 0 0 1 2.79-.291c.246-.276.506-.522.92-.353.415.169.476.537.476.935l-.077 3.036zm2.024.108c0 .506-.26.812-.705.812-.445 0-.69-.306-.69-.828V7.185c0-.537.245-.813.675-.828.429-.016.705.291.72.843v5.413zm4.048.598a2.239 2.239 0 0 1-2.407 0 2.76 2.76 0 0 1-.767-3.68 2.361 2.361 0 0 1 3.236-.798 2.453 2.453 0 0 1 1.165 2.254 2.408 2.408 0 0 1-1.227 2.24v-.016zm-.675-3.328a.859.859 0 0 0-1.165.184 1.533 1.533 0 0 0 0 1.748.89.89 0 0 0 1.18.184 1.181 1.181 0 0 0 .491-1.058 1.195 1.195 0 0 0-.506-1.042v-.016zm-7.42-.03a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104zm0 0a.874.874 0 0 0-1.09.214 1.533 1.533 0 0 0 .031 1.733.844.844 0 0 0 1.058.26 1.165 1.165 0 0 0 .583-1.103 1.212 1.212 0 0 0-.583-1.104z" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
-        <nav class="navbar">
-            <div class="container__padding">
-                <div class="navbar__content container">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="src/icons/logo.svg">
-                        </a>
-                    </div>
-                    <div class="navigation">
-                        <div class="navigation__links">
-                            <a href="index.html">Trang chủ</a>
-                            <a href="search.html">Tìm kiếm đất</a>
-                            <a href="map.html">Xem trên bản đồ</a>
-                            <a href="contacts.html">Liên hệ</a>
-                        </div>
-                        <div class="navigation__buttons">
-                            <button id="todoid1" class="nice-btn nice-btn--transparent nice-btn--call"><svg width="20"
-                                    height="21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z"
-                                        fill="#2A2C1F" fill-opacity=".85" />
-                                </svg><span>+84 (09) 0160-6982</span></button><button id="todoid2"
-                                class="nice-btn nice-btn--accent">Gọi lại cho tôi</button>
-                        </div>
-                    </div>
+    </div>
+    <div class="navbar">
+        <div class="container__padding">
+            <div class="container navbar__content">
+                <div class="navbar__logo">
+                    <a href="index.html">
+                        <img src="src/icons/logo.svg">
+                    </a>
                 </div>
+                <nav class="navbar__nav">
+                    <ul class="navbar__list">
+                        <li class="navbar__item"><a class="navbar__link" href="index.html">Trang chủ</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="search.html">Tìm kiếm đất</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="map.html">Xem trên bản đồ</a></li>
+                        <li class="navbar__item"><a class="navbar__link" href="contacts.html">Liên hệ</a></li>
+                    </ul>
+                    <div class="navbar__buttons">
+                        <button id="call-button" onclick="location.href='tel:+840901606982'"
+                            class="nice-btn nice-btn--transparent nice-btn--call">
+                            <span class="nice-btn__icon--call"><svg preserveAspectRatio="xMidYMid meet"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.859 9.818c.593 1.069 1.276 2.096 2.164 3.033.89.943 1.996 1.8 3.43 2.531a.358.358 0 0 0 .298.017c.136-.053.275-.165.412-.302.106-.106.237-.275.376-.46.55-.727 1.234-1.626 2.197-1.176.021.01.037.02.059.03l3.214 1.849c.009.005.021.016.03.02.425.293.599.742.604 1.251 0 .519-.191 1.101-.471 1.594-.37.65-.916 1.08-1.545 1.366-.599.275-1.265.423-1.905.518-1.006.148-1.948.053-2.911-.243-.943-.292-1.89-.773-2.928-1.413l-.077-.049c-.475-.296-.988-.614-1.492-.99-1.847-1.393-3.726-3.403-4.95-5.617C.338 9.919-.223 7.913.084 6c.169-1.048.619-2.002 1.402-2.63.683-.55 1.604-.852 2.796-.747.137.01.259.09.322.206l2.06 3.484c.302.391.339.778.175 1.165-.138.318-.412.61-.79.884-.11.094-.242.19-.38.291-.462.335-.985.72-.806 1.175l-.004-.011zm3.838-1.663a.595.595 0 0 1 .299-1.153 6.147 6.147 0 0 1 2.606 1.46c.739.689 1.311 1.55 1.6 2.475a.597.597 0 0 1-1.138.355c-.227-.724-.682-1.405-1.274-1.958-.596-.557-1.326-.98-2.093-1.18zm.08-3.651a.597.597 0 0 1 .2-1.176c1.819.314 3.546 1.238 4.93 2.534 1.386 1.296 2.434 2.968 2.895 4.781a.597.597 0 0 1-1.158.294c-.405-1.593-1.329-3.066-2.549-4.207-1.217-1.14-2.731-1.951-4.319-2.226zM9.16 1.19A.597.597 0 0 1 9.295.004c2.545.298 4.937 1.465 6.83 3.181 1.898 1.72 3.3 3.996 3.858 6.504a.595.595 0 0 1-1.162.257c-.504-2.262-1.773-4.32-3.494-5.88-1.714-1.552-3.874-2.608-6.167-2.876z" />
+                                </svg></span>
+                            <span class="nice-btn__text--call">+84 (09) 0160-6982</span>
+                        </button><button id="popup-button" class="nice-btn nice-btn--accent" type="button">Gọi lại cho
+                            tôi</button>
+                    </div>
+                </nav>
             </div>
-        </nav>
-    </header>
+        </div>
+    </div>
     <main>
         <section class="item container__padding">
-            <div class="item__grid item__grid--row1 container">
-                <div class="item__mini-map item__grid--row1--cell1">map</div>
-                <div class="item__photos item__grid--row1--cell2">
-                    <div class="photo-box photo-box--img1">
-                        img1
+            <div class="container">
+                <div class="item__intro">
+                    <div class="nice-h2-p middle-arrow">
+                        <span class="filter-by">Xem tất cả</span>
+                        <span class="material-symbols-outlined middle-arrow__icon">keyboard_arrow_right</span>
+                        <span class="sort-by">Mặt Tiền Đường Nhựa Hắc Dịch</span>
                     </div>
-                    <div class="photo-box photo-box--img2">
-                        img2
-                    </div>
-                    <div class="photo-box photo-box--img3">
-                        img3
-                    </div>
-                    <div class="photo-box photo-box--img4">
-                        img4
+                    <!--TODO fix arrow style and animation and use as a separate component breadcrumps, change text according to dropdown choice, and add links -->
+                </div>
+                <div class="grid-1-4 item__visual-info">
+                    <div class="left-area item__mini-map">map</div>
+                    <div class="right-area item__photos">
+                        <div class="right-area__top-left">
+                            <div class="item__photo-wrapper" id="item-photo-1">
+                                <img src="src/img/items/item-1/view_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right-area__top-right" id="item-photo-2">
+                            <div class="item__photo-wrapper">
+                                <img src="src/img/items/item-1/view_2.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right-area__bottom-left" id="item-photo-3">
+                            <div class="item__photo-wrapper">
+                                <img src="src/img/items/item-1/view_3.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="right-area__bottom-right" id="item-photo-4">
+                            <div class="item__photo-wrapper">
+                                <img src="src/img/items/item-1/view_4.jpg" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="item__grid item__grid--row2 container">
-                <div class="item__description item__grid--row2--cell1">
-                    <div class="description-box">
-                        <h2 class="description-box__heading nice-h3">Mặt Tiền Đường Nhựa Hắc Dịch</h2>
-                        <p class="description-box__p nice-h3-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Cần Bán Gấp 7828m2 Kế Công.</p>
-                        <p class="description-box__p nice-h3-p">An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch:</p>
-                        <ul class="description-box__l nice-h3-p">
-                            <li>Ty gia thap so voi tuong duong</li>
-                            <li>Vi tri o cho she phat trien</li>
-                            <li>Giay to day du va kien tra bang ngan hang</li>
-                        </ul>
-                        <p class="nice-h3-p">An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch.</p>
+                <div class="item__text-info">
+                    <div class="item__description">
+                        <div class="description-box">
+                            <h2 class="description-box__heading nice-h3">Mặt Tiền Đường Nhựa Hắc Dịch</h2>
+                            <p class="description-box__p nice-h3-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn
+                                Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ
+                                Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Cần Bán Gấp 7828m2 Kế Công.</p>
+                            <p class="description-box__p nice-h3-p">An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ
+                                Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc
+                                Dịch:</p>
+                            <ul class="description-box__l nice-h3-p">
+                                <li>Ty gia thap so voi tuong duong</li>
+                                <li>Vi tri o cho she phat trien</li>
+                                <li>Giay to day du va kien tra bang ngan hang</li>
+                            </ul>
+                            <p class="nice-h3-p">An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở
+                                Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch.</p>
+                        </div>
                     </div>
-                </div>
-                <div class="item__sidebar item__grid--row2--cell2">
-                    <div class="sidebar">
-                        <div class="sidebar__row sidebar__address nice-h3-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                            </svg>
-                            <span>Địa chỉ: Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu</span>
+                    <div class="item__sidebar">
+                        <div class="land-parameters nice-h3-l">
+                            <div class="land-location">
+                                <span class="material-symbols-outlined land-location__icon">location_on</span>
+                                <span class="land-location__text">Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa -
+                                    Vũng Tàu</span>
+                            </div>
+                            <div class="land-area">
+                                <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                <span class="land-area__text">100 m2</span>
+                            </div>
+                            <div class="land-size">
+                                <div class="land-height">
+                                    <span class="material-symbols-outlined land-height__icon">straighten</span>
+                                    <span class="land-height__text">140 m</span>
+                                </div>
+                                <div class="land-width">
+                                    <span class="material-symbols-outlined land-width__icon">straighten</span>
+                                    <span class="land-width__text">120 m</span>
+                                </div>
+                            </div>
+                            <div class="land-papers">
+                                <span class="material-symbols-outlined land-papers__icon">description</span>
+                                <span class="land-papers__text">Đã có sổ</span>
+                            </div>
+                            <div class="land-direction">
+                                <span class="material-symbols-outlined land-direction__icon">explore</span>
+                                <span class="land-direction__text">Đông Nam</span>
+                            </div>
+                            <div class="land-price">
+                                <span class="material-symbols-outlined land-price__icon">payments</span>
+                                <span class="land-price__text">10 ty (200 trieu/m2)</span>
+                            </div>
+                            <div class="land-link"> <!-- TODO-->
+                                <span class="land-link__text">Sở Quy hoạch</span>
+                            </div>
                         </div>
-                        <div class="sidebar__row sidebar__area nice-h3-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                            </svg>
-                            <span>Diện tích: 100 m2</span>
-                        </div>
-                        <div class="sidebar__row sidebar__size">
-                            <div class="sidebar__height nice-h3-l"><svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2.52211 10.9268L2.34534 11.1036L2.52211 10.9268L2.46011 10.8648C2.12622 10.5309 1.58489 10.5309 1.251 10.8648C0.917115 11.1987 0.917114 11.74 1.251 12.0739L2.37878 13.2017C3.33552 14.1584 4.8867 14.1584 5.84344 13.2017L6.97122 12.0739C7.30511 11.74 7.30511 11.1987 6.97122 10.8648C6.63733 10.5309 6.096 10.5309 5.76211 10.8648L5.70011 10.9268C5.42125 11.2056 4.94444 11.0081 4.94444 10.6138V4.54711C4.94444 4.15275 5.42125 3.95525 5.70011 4.23411L5.76211 4.29611C6.096 4.63 6.63734 4.63 6.97122 4.29611C7.30511 3.96222 7.30511 3.42089 6.97122 3.087L5.84344 1.95922C4.8867 1.00248 3.33552 1.00248 2.37878 1.95922L1.251 3.087C0.917115 3.42089 0.917115 3.96222 1.251 4.29611C1.58489 4.63 2.12622 4.63 2.46011 4.29611L2.52212 4.23411C2.80097 3.95525 3.27778 4.15275 3.27778 4.54711V10.6138C3.27778 11.0081 2.80097 11.2056 2.52211 10.9268Z" fill="#A9A8A7" stroke="#A9A9A7" stroke-width="0.5"/>
-                                </svg>                                
-                                <span>Chiều dài: 140 m</span></div>
-                            <div class="sidebar__width nice-h3-l"><svg width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M10.3463 5.16941L10.5231 5.34619L10.3463 5.16941L10.2843 5.23142C9.95045 5.5653 9.95045 6.10664 10.2843 6.44053C10.6182 6.77441 11.1596 6.77441 11.4934 6.44053L12.6212 5.31275C13.578 4.35601 13.578 2.80483 12.6212 1.84808L11.4934 0.720307C11.1596 0.386421 10.6182 0.386421 10.2843 0.720307C9.95045 1.05419 9.95045 1.59553 10.2843 1.92942L10.3463 1.99142C10.6252 2.27028 10.4277 2.74708 10.0333 2.74708H3.96667C3.5723 2.74708 3.3748 2.27028 3.65366 1.99142L3.71567 1.92942C4.04955 1.59553 4.04955 1.05419 3.71567 0.720307C3.38178 0.386421 2.84044 0.386421 2.50656 0.720307L1.37878 1.84808C0.422038 2.80483 0.422039 4.35601 1.37878 5.31275L2.50656 6.44053C2.84044 6.77441 3.38178 6.77441 3.71567 6.44053C4.04955 6.10664 4.04955 5.5653 3.71567 5.23142L3.65366 5.16941C3.3748 4.89056 3.5723 4.41375 3.96667 4.41375H10.0333C10.4277 4.41375 10.6252 4.89055 10.3463 5.16941Z" fill="#A9A8A7" stroke="#A9A9A7" stroke-width="0.5"/>
-                                </svg>                                
-                                <span>Chiều ngang: 120 m</span></div>
-                        </div>
-                        <div class="sidebar__row sidebar__papers nice-h3-l"><svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.98125 11.8304C2.98125 12.1411 3.23309 12.3929 3.54375 12.3929H8.45625C8.76691 12.3929 9.01875 12.1411 9.01875 11.8304C9.01875 11.5198 8.76691 11.2679 8.45625 11.2679H3.54375C3.23309 11.2679 2.98125 11.5198 2.98125 11.8304ZM2.98125 8.64294C2.98125 8.9536 3.23309 9.20544 3.54375 9.20544H8.45625C8.76691 9.20544 9.01875 8.9536 9.01875 8.64294C9.01875 8.33228 8.76691 8.08044 8.45625 8.08044H3.54375C3.23309 8.08044 2.98125 8.33228 2.98125 8.64294ZM1.125 15.5804C0.825 15.5804 0.5625 15.4679 0.3375 15.2429C0.1125 15.0179 0 14.7554 0 14.4554V1.70544C0 1.40544 0.1125 1.14294 0.3375 0.917944C0.5625 0.692944 0.825 0.580444 1.125 0.580444H4.99019C6.84931 0.580444 8.63228 1.31898 9.94687 2.63357C11.2615 3.94816 12 5.73114 12 7.59025V14.4554C12 14.7554 11.8875 15.0179 11.6625 15.2429C11.4375 15.4679 11.175 15.5804 10.875 15.5804H1.125ZM7.33125 4.16332C7.33125 4.73197 7.79223 5.19294 8.36087 5.19294C9.28215 5.19294 9.73971 4.07567 9.08308 3.42947C8.43211 2.78883 7.33125 3.24999 7.33125 4.16332Z" fill="#A9A9A7"/>
-                            </svg>                            
-                            <span>Giấy tờ pháp lý: Đã có sổ</span>
-                        </div>
-                        <div class="sidebar__row sidebar__direction nice-h3-l"><svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.44638 6.82741C4.71856 8.30341 6.27703 9.86188 7.75303 9.13406C8.09314 8.96635 8.36841 8.69109 8.53612 8.35097C9.26394 6.87498 7.70547 5.31651 6.22947 6.04433C5.88936 6.21204 5.61409 6.4873 5.44638 6.82741ZM7 8.28044C6.80167 8.28044 6.63542 8.21336 6.50125 8.07919C6.36708 7.94503 6.3 7.77878 6.3 7.58044C6.3 7.38211 6.36708 7.21586 6.50125 7.08169C6.63542 6.94753 6.80167 6.88044 7 6.88044C7.19833 6.88044 7.36458 6.94753 7.49875 7.08169C7.63292 7.21586 7.7 7.38211 7.7 7.58044C7.7 7.77878 7.63292 7.94503 7.49875 8.07919C7.36458 8.21336 7.19833 8.28044 7 8.28044ZM7 14.5804C6.04333 14.5804 5.13917 14.3967 4.2875 14.0292C3.43583 13.6617 2.69208 13.16 2.05625 12.5242C1.42042 11.8884 0.91875 11.1446 0.55125 10.2929C0.18375 9.44128 0 8.53711 0 7.58044C0 6.61211 0.18375 5.70211 0.55125 4.85044C0.91875 3.99878 1.42042 3.25794 2.05625 2.62794C2.69208 1.99794 3.43583 1.49919 4.2875 1.13169C5.13917 0.764194 6.04333 0.580444 7 0.580444C7.96833 0.580444 8.87833 0.764194 9.73 1.13169C10.5817 1.49919 11.3225 1.99794 11.9525 2.62794C12.5825 3.25794 13.0812 3.99878 13.4487 4.85044C13.8162 5.70211 14 6.61211 14 7.58044C14 8.53711 13.8162 9.44128 13.4487 10.2929C13.0812 11.1446 12.5825 11.8884 11.9525 12.5242C11.3225 13.16 10.5817 13.6617 9.73 14.0292C8.87833 14.3967 7.96833 14.5804 7 14.5804Z" fill="#A9A8A7"/>
-                            </svg>                            
-                            <span>Hướng cửa chính: Đông Nam</span>
-                        </div>
-                        <div class="sidebar__row sidebar__price nice-h3-l"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                            <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                            </svg>                            
-                            <span>Giá: 10 ty (200 trieu/m2)</span>
-                        </div>
-                        <div class="sidebar__link nice-h3-l">
-                            <span>Sở Quy hoạch</span><svg width="15" height="10" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M31.6091 11.0995L20.9005 0.390884C20.3794 -0.130295 19.5343 -0.130295 19.0132 0.390884C18.492 0.912063 18.492 1.75703 19.0132 2.27821L27.4917 10.7567H1.28641C0.575936 10.7567 0 11.3327 0 12.0431C0 12.7536 0.575978 13.3295 1.28641 13.3295H27.4917L19.0132 21.8081C18.492 22.3292 18.492 23.1742 19.0132 23.6954C19.2738 23.9559 19.6153 24.0862 19.9569 24.0862C20.2984 24.0862 20.6399 23.9559 20.9005 23.6954L31.6091 12.9868C31.733 12.8628 31.8313 12.7157 31.8984 12.5538C31.9655 12.3919 32 12.2184 32 12.0431C32 11.8679 31.9655 11.6943 31.8984 11.5324C31.8313 11.3705 31.733 11.2234 31.6091 11.0995Z" fill="#292823" fill-opacity="0.8"/>
-                                </svg>                                
-                        </div>
+                        <!-- TODO add link to third-party site and arrow-->
+                        <!-- <div class="sidebar"> 
+                            <div class="sidebar__link nice-h3-l">
+                                <span>Sở Quy hoạch</span><svg width="15" height="10" viewBox="0 0 32 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M31.6091 11.0995L20.9005 0.390884C20.3794 -0.130295 19.5343 -0.130295 19.0132 0.390884C18.492 0.912063 18.492 1.75703 19.0132 2.27821L27.4917 10.7567H1.28641C0.575936 10.7567 0 11.3327 0 12.0431C0 12.7536 0.575978 13.3295 1.28641 13.3295H27.4917L19.0132 21.8081C18.492 22.3292 18.492 23.1742 19.0132 23.6954C19.2738 23.9559 19.6153 24.0862 19.9569 24.0862C20.2984 24.0862 20.6399 23.9559 20.9005 23.6954L31.6091 12.9868C31.733 12.8628 31.8313 12.7157 31.8984 12.5538C31.9655 12.3919 32 12.2184 32 12.0431C32 11.8679 31.9655 11.6943 31.8984 11.5324C31.8313 11.3705 31.733 11.2234 31.6091 11.0995Z"
+                                        fill="#292823" fill-opacity="0.8" />
+                                </svg>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
-        <section class="suggestions"> 
+        <section class="suggestions">
             <div class="container__padding">
                 <div class="suggestions__intro container">
                     <h2 class="nice-h2">Dự án tưởng tượng</h2>
@@ -173,155 +212,155 @@
                 <div class="scrolling-wrapper container__padding" id="scrolling-wrapper">
                     <div class="scrolling-wrapper__content container">
                         <div class="scrolling-wrapper__grid" id="scrolling-wrapper-grid">
-                            <div class="project-card" id="item1">
-                                <div class="project-card__image project-card__image--item1">
+                            <div class="card-land" id="item1">
+                                <div class="card-land__image">
+                                    <img src="src/img/items/item-1/view_1.jpg" alt="">
                                 </div>
-                                <div class="project-card__description">
-                                    <div class="project-card__name nice-h4">Mặt Tiền Đường Nhựa Hắc Dịch</div>
-                                    <div class="project-card__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch.</div>
-                                    <div class="project-card__address nice-h4-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                                        </svg>
-                                        <span>Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu</span></div>
-                                    <div class="project-card__area nice-h4-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                                        </svg>
-                                        <span>100</span></div>
-                                    <div class="project-card__price nice-h4-l nice-h4-l--accent"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        </svg>                            
-                                        <span>10</span></div>
-                                </div>
-                            </div>
-                            <div class="project-card" id="item2">
-                                <div class="project-card__image project-card__image--item2">
-                                </div>
-                                <div class="project-card__description">
-                                    <div class="project-card__name nice-h4">Bán đất hẻm 2 ô tô tránh nhau</div>
-                                    <div class="project-card__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch.</div>
-                                    <div class="project-card__address nice-h4-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                                        </svg>
-                                        <span>Đường Quốc lộ 6, Xã Dân Hạ, Huyện Kỳ Sơn, Hòa Bình</span></div>
-                                    <div class="project-card__area nice-h4-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                                        </svg>
-                                        <span>274</span></div>
-                                    <div class="project-card__price nice-h4-l nice-h4-l--accent"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        </svg>                            
-                                        <span>12</span></div>
+                                <div class="card-land__description">
+                                    <div class="card-land__name nice-h4">3,3 Sào Hoà Long</div>
+                                    <div class="card-land__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch.
+                                        Đối Diênn Khu
+                                        Công Nghệ Cao 450ha Chủ Cần.</div>
+                                    <div class="card-land__parameters land-parameters nice-h4-l">
+                                        <div class="land-area">
+                                            <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                            <span class="land-area__text">275,3</span>
+                                        </div>
+                                        <div class="land-price">
+                                            <span class="material-symbols-outlined land-price__icon">payments</span>
+                                            <span class="land-price__text">12</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-card" id="item3">
-                                <div class="project-card__image project-card__image--item3">
+                            <div class="card-land" id="item2">
+                                <div class="card-land__image">
+                                    <img src="src/img/items/item-2/view_1.jpg" alt="">
                                 </div>
-                                <div class="project-card__description">
-                                    <div class="project-card__name nice-h4">Lô thác cao 10m kèm rẫy cà phê</div>
-                                    <div class="project-card__note nice-h4-p">Lô góc VCN Vĩnh Điềm Trung đường C2& C3, đối diện chung cư CT3 Vĩnh Điềm Trung và công viên
-                                        Gần đường Hoàng Cầm</div>
-                                    <div class="project-card__address nice-h4-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                                        </svg>
-                                        <span>Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu</span></div>
-                                    <div class="project-card__area nice-h4-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                                        </svg>
-                                        <span>100</span></div>
-                                    <div class="project-card__price nice-h4-l nice-h4-l--accent"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        </svg>                            
-                                        <span>10</span></div>
-                                </div>
-                            </div>
-                            <div class="project-card" id="item4">
-                                <div class="project-card__image project-card__image--item4">
-                                </div>
-                                <div class="project-card__description">
-                                    <div class="project-card__name nice-h4">Đất Mặt Tiền HL14 cách chợ hòa lợi 300mets</div>
-                                    <div class="project-card__note nice-h4-p">Cần Ra đi miếng đất mặt tiền siêu đẹp  HL14 . Cách chợ hòa lợi 300met </div>
-                                    <div class="project-card__address nice-h4-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                                        </svg>
-                                        <span>Đường Hương Lộ 14, Xã Hòa Lợi, Huyện Châu Thành, Trà Vinh</span></div>
-                                    <div class="project-card__area nice-h4-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                                        </svg>
-                                        <span>336</span></div>
-                                    <div class="project-card__price nice-h4-l nice-h4-l--accent"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        </svg>                            
-                                        <span>1,04</span></div>
+                                <div class="card-land__description">
+                                    <div class="card-land__name nice-h4">3,3 Sào Hoà Long</div>
+                                    <div class="card-land__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch.
+                                        Đối Diênn Khu
+                                        Công Nghệ Cao 450ha Chủ Cần.</div>
+                                    <div class="card-land__parameters land-parameters nice-h4-l">
+                                        <div class="land-area">
+                                            <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                            <span class="land-area__text">275,3</span>
+                                        </div>
+                                        <div class="land-price">
+                                            <span class="material-symbols-outlined land-price__icon">payments</span>
+                                            <span class="land-price__text">12</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-card" id="item5">
-                                <div class="project-card__image project-card__image--item5">
+                            <div class="card-land" id="item3">
+                                <div class="card-land__image">
+                                    <img src="src/img/items/item-3/view_1.jpg" alt="">
                                 </div>
-                                <div class="project-card__description">
-                                    <div class="project-card__name nice-h4">Bán đất mặt tiền đường hương lộ 14. Cách chợ hoà lợi 500m</div>
-                                    <div class="project-card__note nice-h4-p">Cần bán đất hương lộ 14 , cách chợ hoà lợi khoãn 500m 
-                                        Dt : 8 x 40 đất cây lâu năm. Được phép chuyển thỗ cư xây cất nhà ở.</div>
-                                    <div class="project-card__address nice-h4-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                                        </svg>
-                                        <span>Xã Hưng Mỹ, Huyện Châu Thành, Trà Vinh</span></div>
-                                    <div class="project-card__area nice-h4-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                                        </svg>
-                                        <span>320</span></div>
-                                    <div class="project-card__price nice-h4-l nice-h4-l--accent"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        </svg>                            
-                                        <span>10</span></div>
-                                </div>
-                            </div>
-                            <div class="project-card" id="item6">
-                                <div class="project-card__image project-card__image--item6">
-                                </div>
-                                <div class="project-card__description">
-                                    <div class="project-card__name nice-h4">Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường Và Khu Công Nghiệp Becamex</div>
-                                    <div class="project-card__note nice-h4-p">Chính chủ cần bán miếng đất góc 2 mặt tiền rất đẹp 6.600m2, đất lên thổ cư được 1.000m2, mặt tiền lớn đường nhựa 42m vào đất, ô tô chạy thoải mái.</div>
-                                    <div class="project-card__address nice-h4-l"><svg width="9" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M5.25938 15.6C3.62813 13.5938 0 8.73125 0 6C0 2.68625 2.68625 0 6 0C9.3125 0 12 2.68625 12 6C12 8.73125 8.34375 13.5938 6.74062 15.6C6.35625 16.0781 5.64375 16.0781 5.25938 15.6ZM6 8C7.10313 8 8 7.10312 8 6C8 4.89687 7.10313 4 6 4C4.89687 4 4 4.89687 4 6C4 7.10312 4.89687 8 6 8Z" fill="#292823" fill-opacity="0.4"/>
-                                        </svg>
-                                        <span>Quốc lộ 14, Phường Hưng Long, Thị xã Chơn Thành, Bình Phước</span></div>
-                                    <div class="project-card__area nice-h4-l"><svg width="13" height="9" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M0 11.7812V1.21875C0 0.545645 0.545645 0 1.21875 0H3.65625C4.3291 0 4.875 0.545645 4.875 1.21875V2.4375H2.84375C2.62031 2.4375 2.4375 2.62031 2.4375 2.84375C2.4375 3.06719 2.62031 3.25 2.84375 3.25H4.875V4.875H2.84375C2.62031 4.875 2.4375 5.05781 2.4375 5.28125C2.4375 5.50469 2.62031 5.6875 2.84375 5.6875H4.875V7.3125H2.84375C2.62031 7.3125 2.4375 7.49531 2.4375 7.71875C2.4375 7.94219 2.62031 8.125 2.84375 8.125H4.875V10.1562C4.875 10.3797 5.05781 10.5625 5.28125 10.5625C5.50469 10.5625 5.6875 10.3797 5.6875 10.1562V8.125H7.3125V10.1562C7.3125 10.3797 7.49531 10.5625 7.71875 10.5625C7.94219 10.5625 8.125 10.3797 8.125 10.1562V8.125H9.75V10.1562C9.75 10.3797 9.93281 10.5625 10.1562 10.5625C10.3797 10.5625 10.5625 10.3797 10.5625 10.1562V8.125H11.7812C12.4541 8.125 13 8.6709 13 9.34375V11.7812C13 12.4541 12.4541 13 11.7812 13H1.21875C0.587793 13 0.068707 12.5201 0.00628926 11.9057C0.00212773 11.865 0 11.8244 0 11.7812Z" fill="#A9A9A7"/>
-                                        </svg>
-                                        <span>6.600</span></div>
-                                    <div class="project-card__price nice-h4-l nice-h4-l--accent"><svg width="8" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M9.85413 17.6198H1.15788C0.837515 17.6198 0.569238 17.7236 0.35313 17.9305C0.136593 18.1379 0.0283813 18.3919 0.0283813 18.6928C0.0283813 18.9941 0.136593 19.2484 0.35313 19.4553C0.569238 19.6627 0.837515 19.7658 1.15788 19.7658H9.85413C10.1931 19.7658 10.4657 19.6719 10.6731 19.4835C10.8801 19.2954 10.9836 19.0414 10.9836 18.721C10.9836 18.3823 10.8801 18.114 10.6731 17.9163C10.4657 17.7188 10.1931 17.6198 9.85413 17.6198V17.6198Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        <path d="M6.67773 12.6212C6.2161 13.1676 5.64702 13.4402 4.96924 13.4402C4.2729 13.4402 3.71713 13.1719 3.30375 12.6355C2.88918 12.099 2.6825 11.4637 2.6825 10.7295C2.6825 9.95803 2.8892 9.30373 3.30375 8.7672C3.71715 8.23073 4.27292 7.96248 4.96924 7.96248C5.64702 7.96248 6.21611 8.23554 6.67773 8.78121C7.1387 9.32736 7.36951 9.97685 7.36951 10.7295C7.36951 11.4451 7.1387 12.0755 6.67773 12.6212V12.6212ZM11.6755 2.75299C11.4589 2.55522 11.1813 2.45647 10.8425 2.45647H9.91049V1.35525C9.91049 0.959974 9.7835 0.635227 9.52971 0.38122C9.27548 0.126997 8.95074 0 8.55546 0C8.17858 0 7.86372 0.131791 7.60949 0.395223C7.35544 0.658905 7.22824 0.979056 7.22824 1.35525V2.45647H5.78825C5.44944 2.45647 5.17136 2.55522 4.95521 2.75299C4.73867 2.95049 4.63051 3.20953 4.63051 3.52947C4.63051 3.84983 4.73867 4.11305 4.95521 4.32C5.17136 4.52734 5.44944 4.63069 5.78825 4.63069H7.22824V7.17194C6.53142 6.23078 5.58086 5.75997 4.3765 5.75997C3.60457 5.75997 2.88412 5.97651 2.21645 6.40947C1.54791 6.84286 1.01143 7.43559 0.606981 8.18822C0.201869 8.94128 0 9.78849 0 10.7295C0 11.652 0.197503 12.4898 0.592992 13.2425C0.988265 13.9955 1.5151 14.5885 2.17424 15.0214C2.83269 15.4546 3.52925 15.6707 4.26349 15.6707C4.88471 15.6707 5.45384 15.5111 5.97176 15.1907C6.4892 14.8708 6.90809 14.4663 7.22826 13.9765V14.0329C7.22826 14.4284 7.35547 14.7532 7.60951 15.0072C7.86373 15.2614 8.17859 15.3884 8.55548 15.3884C8.95075 15.3884 9.2755 15.2614 9.52972 15.0072C9.78351 14.7532 9.91051 14.4284 9.91051 14.0329V4.63069H10.8425C11.1813 4.63069 11.4589 4.52734 11.6755 4.32C11.8916 4.11305 12 3.84983 12 3.52947C12 3.20953 11.8916 2.95049 11.6755 2.75299H11.6755Z" fill="#CF6F49" fill-opacity="0.9"/>
-                                        </svg>                            
-                                        <span>0.3</span></div>
+                                <div class="card-land__description">
+                                    <div class="card-land__name nice-h4">3,3 Sào Hoà Long</div>
+                                    <div class="card-land__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch.
+                                        Đối Diênn Khu
+                                        Công Nghệ Cao 450ha Chủ Cần.</div>
+                                    <div class="card-land__parameters land-parameters nice-h4-l">
+                                        <div class="land-area">
+                                            <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                            <span class="land-area__text">275,3</span>
+                                        </div>
+                                        <div class="land-price">
+                                            <span class="material-symbols-outlined land-price__icon">payments</span>
+                                            <span class="land-price__text">12</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="card-test"><h2>Card1</h2></div>
-                            <div class="card-test"><h2>Card2</h2></div>
-                            <div class="card-test"><h2>Card3</h2></div>
-                            <div class="card-test"><h2>Card4</h2></div>
-                            <div class="card-test"><h2>Card5</h2></div>
-                            <div class="card-test"><h2>Card6</h2></div>
-                            <div class="card-test"><h2>Card7</h2></div>
-                            <div class="card-test"><h2>Card8</h2></div>
-                            <div class="card-test"><h2>Card9</h2></div>
-                            <div class="card-test"><h2>Card10</h2></div>
+                            <div class="card-land" id="item4">
+                                <div class="card-land__image">
+                                    <img src="src/img/items/item-4/view_1.jpg" alt="">
+                                </div>
+                                <div class="card-land__description">
+                                    <div class="card-land__name nice-h4">3,3 Sào Hoà Long</div>
+                                    <div class="card-land__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch.
+                                        Đối Diênn Khu
+                                        Công Nghệ Cao 450ha Chủ Cần.</div>
+                                    <div class="card-land__parameters land-parameters nice-h4-l">
+                                        <div class="land-area">
+                                            <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                            <span class="land-area__text">275,3</span>
+                                        </div>
+                                        <div class="land-price">
+                                            <span class="material-symbols-outlined land-price__icon">payments</span>
+                                            <span class="land-price__text">12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-land" id="item5">
+                                <div class="card-land__image">
+                                    <img src="src/img/items/item-5/view_1.jpg" alt="">
+                                </div>
+                                <div class="card-land__description">
+                                    <div class="card-land__name nice-h4">3,3 Sào Hoà Long</div>
+                                    <div class="card-land__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch.
+                                        Đối Diênn Khu
+                                        Công Nghệ Cao 450ha Chủ Cần.</div>
+                                    <div class="card-land__parameters land-parameters nice-h4-l">
+                                        <div class="land-area">
+                                            <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                            <span class="land-area__text">275,3</span>
+                                        </div>
+                                        <div class="land-price">
+                                            <span class="material-symbols-outlined land-price__icon">payments</span>
+                                            <span class="land-price__text">12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-land" id="item6">
+                                <div class="card-land__image">
+                                    <img src="src/img/items/item-6/view_1.jpg" alt="">
+                                </div>
+                                <div class="card-land__description">
+                                    <div class="card-land__name nice-h4">3,3 Sào Hoà Long</div>
+                                    <div class="card-land__note nice-h4-p">Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch.
+                                        Đối Diênn Khu
+                                        Công Nghệ Cao 450ha Chủ Cần.</div>
+                                    <div class="card-land__parameters land-parameters nice-h4-l">
+                                        <div class="land-area">
+                                            <span class="material-symbols-outlined land-area__icon">square_foot</span>
+                                            <span class="land-area__text">275,3</span>
+                                        </div>
+                                        <div class="land-price">
+                                            <span class="material-symbols-outlined land-price__icon">payments</span>
+                                            <span class="land-price__text">12</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="container__padding">
                     <div class="scrolling-controls container">
-                        <svg class="arrow-left" id="arrow-left" width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M0.390879 12.9867L11.0995 23.6953C11.6206 24.2165 12.4657 24.2165 12.9868 23.6953C13.508 23.1741 13.508 22.3291 12.9868 21.808L4.50831 13.3295L30.7136 13.3295C31.4241 13.3295 32 12.7535 32 12.0431C32 11.3326 31.424 10.7567 30.7136 10.7567L4.50826 10.7567L12.9868 2.27813C13.508 1.75699 13.508 0.91198 12.9868 0.3908C12.7262 0.130232 12.3847 -5.34058e-05 12.0431 -5.34058e-05C11.7016 -5.34058e-05 11.3601 0.130232 11.0995 0.3908L0.390879 11.0994C0.266956 11.2233 0.168653 11.3705 0.101585 11.5324C0.0345192 11.6943 0 11.8678 0 12.0431C0 12.2183 0.0345192 12.3919 0.101585 12.5538C0.168653 12.7157 0.266956 12.8628 0.390879 12.9867Z" fill="#292823"/>
-                            </svg>
-                        <svg class="arrow-right" id="arrow-right" width="32" height="25" viewBox="0 0 32 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M31.6091 11.0995L20.9005 0.390884C20.3794 -0.130295 19.5343 -0.130295 19.0132 0.390884C18.492 0.912063 18.492 1.75703 19.0132 2.27821L27.4917 10.7567H1.28641C0.575936 10.7567 0 11.3327 0 12.0431C0 12.7536 0.575978 13.3295 1.28641 13.3295H27.4917L19.0132 21.8081C18.492 22.3292 18.492 23.1742 19.0132 23.6954C19.2738 23.9559 19.6153 24.0862 19.9569 24.0862C20.2984 24.0862 20.6399 23.9559 20.9005 23.6954L31.6091 12.9868C31.733 12.8628 31.8313 12.7157 31.8984 12.5538C31.9655 12.3919 32 12.2184 32 12.0431C32 11.8679 31.9655 11.6943 31.8984 11.5324C31.8313 11.3705 31.733 11.2234 31.6091 11.0995Z" fill="#292823"/>
-                            </svg>
+                        <!-- <span class="material-symbols-outlined ">
+                            arrow_back
+                        </span>
+                        <span class="material-symbols-outlined">
+                            arrow_forward
+                        </span> -->
+                        <svg class="arrow-left" id="arrow-left" width="32" height="25" viewBox="0 0 32 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0.390879 12.9867L11.0995 23.6953C11.6206 24.2165 12.4657 24.2165 12.9868 23.6953C13.508 23.1741 13.508 22.3291 12.9868 21.808L4.50831 13.3295L30.7136 13.3295C31.4241 13.3295 32 12.7535 32 12.0431C32 11.3326 31.424 10.7567 30.7136 10.7567L4.50826 10.7567L12.9868 2.27813C13.508 1.75699 13.508 0.91198 12.9868 0.3908C12.7262 0.130232 12.3847 -5.34058e-05 12.0431 -5.34058e-05C11.7016 -5.34058e-05 11.3601 0.130232 11.0995 0.3908L0.390879 11.0994C0.266956 11.2233 0.168653 11.3705 0.101585 11.5324C0.0345192 11.6943 0 11.8678 0 12.0431C0 12.2183 0.0345192 12.3919 0.101585 12.5538C0.168653 12.7157 0.266956 12.8628 0.390879 12.9867Z"
+                                fill="#292823" />
+                        </svg>
+                        <svg class="arrow-right" id="arrow-right" width="32" height="25" viewBox="0 0 32 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M31.6091 11.0995L20.9005 0.390884C20.3794 -0.130295 19.5343 -0.130295 19.0132 0.390884C18.492 0.912063 18.492 1.75703 19.0132 2.27821L27.4917 10.7567H1.28641C0.575936 10.7567 0 11.3327 0 12.0431C0 12.7536 0.575978 13.3295 1.28641 13.3295H27.4917L19.0132 21.8081C18.492 22.3292 18.492 23.1742 19.0132 23.6954C19.2738 23.9559 19.6153 24.0862 19.9569 24.0862C20.2984 24.0862 20.6399 23.9559 20.9005 23.6954L31.6091 12.9868C31.733 12.8628 31.8313 12.7157 31.8984 12.5538C31.9655 12.3919 32 12.2184 32 12.0431C32 11.8679 31.9655 11.6943 31.8984 11.5324C31.8313 11.3705 31.733 11.2234 31.6091 11.0995Z"
+                                fill="#292823" />
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -330,7 +369,7 @@
     <footer>
         <div class="footer">
             <div class="container__padding">
-                <div class="footer__boxes container">
+                <div class="footer__boxes grid container">
                     <!-- TODO -> svg animation -> transformation from company logo into social icons -->
                     <div class="box">
                         <div class="box__content">
@@ -367,12 +406,16 @@
                     <div class="box"></div>
                     <div class="box">
                         <div class="box__content">
-                            <div class="subscription-form">
-                                <div class="subscription-form__title">Nhận ưu đãi mới qua email</div>
-                                <div class="subscription-form__description">Nhận ưu đãi mới nhất về đất nền bán và chiết
+                            <div class="form-subscription">
+                                <div class="form-subscription__title">Nhận ưu đãi mới qua email</div>
+                                <div class="form-subscription__description">Nhận ưu đãi mới nhất về đất nền bán và chiết
                                     khấu cũng như tin tức về quy hoạch đất nền Bà Rịa Vũng Tàu:</div>
-                                <form class="subscription-form__input">
-                                    <input class="nice-input" type="email" placeholder="Email">
+                                <form class="form-subscription__input">
+                                    <div class="nice-input">
+                                        <input class="nice-input__input" type="email" placeholder="Email address"
+                                            id="email-input">
+                                        <label class="nice-input__label" for="email-input">Email address</label>
+                                    </div>
                                     <button class="nice-btn">Đăng ký</button>
                                 </form>
                             </div>
@@ -388,50 +431,216 @@
                         © Mua Bán Đất Vũng Tàu, 2022
                     </div>
                     <div class="credits__links">
-                        <a href="#">Hỗ trợ</a><a href="#">Thông tin về công ty</a><a href="#">Liên hệ</a>
+                        <a href="error.html">Hỗ trợ</a><a href="error.html">Thông tin về công ty</a><a
+                            href="error.html">Liên hệ</a>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__close" id="popup-button-close"><span class="material-symbols-outlined popup__close-icon">
+                    close
+                </span>
+            </div>
+            <div class="form-callback">
+                <div class="form-callback__left">
+                    <div class="form-callback__intro">
+                        <!-- <div class="form-search__tag nice-h2-p">Đất đai là nền tảng cho gia đình</div> -->
+                        <h2 class="form-callback__heading nice-h2">Chúng tôi rất mong nhận được hồi âm từ bạn</h2>
+                        <div class="form-callback__text nice-h2-p">Vui lòng để lại tin nhắn và chúng tôi sẽ gọi lại sớm
+                        </div>
+                    </div>
+                    <form class="form-callback__input">
+                        <div class="nice-input">
+                            <input class="nice-input__input" type="text" placeholder="Full name" id="cf-name-input">
+                            <label class="nice-input__label" for="cf-name-input">Full name</label>
+                        </div>
+                        <div class="nice-input">
+                            <input class="nice-input__input" type="tel" placeholder="Phone number" id="cf-phone-input"
+                                pattern="(\+?84|0[3|5|7|8|9])+([0-9]{8})" required>
+                            <label class="nice-input__label" for="cf-phone-input">Phone number</label>
+                        </div>
+                        <div class="nice-input">
+                            <!-- <input class="nice-input__input" type="text" placeholder="Message" id="cf-message-input"> -->
+                            <textarea id="cf-message-input" name="field" maxlength="5000" data-name="field"
+                                placeholder="Message" required="" class="nice-input__input"></textarea>
+                            <label class="nice-input__label" for="cf-message-input">Message</label>
+                        </div>
+                        <button class="nice-btn nice-btn--accent">Nhập thông tin</button>
+                    </form>
+                </div>
+                <div class="form-callback__right">
+                    <img src="src/img/op0.jpg" loading="lazy" alt="" class="form-callback__image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup" id="popup_images">
+        <div class="popup__content">
+            <div class="popup__close" id="popup_images-button-close"><span
+                    class="material-symbols-outlined popup__close-icon">
+                    close
+                </span>
+            </div>
+            <div class="image-gallery">
+                <div id="main-carousel-item-1" class="splide main-splide image-gallery__main-splide"
+                    aria-label="Land photos">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img data-splide-lazy="src/img/items/item-1/view_1.jpg">
+                            </li>
+                            <li class="splide__slide">
+                                <img data-splide-lazy="src/img/items/item-1/view_2.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img data-splide-lazy="src/img/items/item-1/view_3.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img data-splide-lazy="src/img/items/item-1/view_4.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img data-splide-lazy="src/img/items/item-1/view_5.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img data-splide-lazy="src/img/items/item-1/view_6.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <video width="100%" height="100%" preload="none" muted controls>
+                                    <source src="src/img/items/item-1/view_7.mp4" type="video/mp4">
+                                    Sorry, your browser doesn't support embedded videos.
+                                </video>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="thumbnail-carousel-item-1" class="splide thumbnail-splide image-gallery__thumbnail-splide"
+                    aria-label="Thumbnail buttons for the property item carousel">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_1.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_2.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_3.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_4.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_5.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_6.jpg" alt="">
+                            </li>
+                            <li class="splide__slide">
+                                <img src="src/img/items/item-1/thumbnails/thumb_7.jpg" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
-        document.querySelector('#arrow-left').setAttribute('class','blocked');
-        document.querySelector('#arrow-left').setAttribute('opacity','0.3');
+        document.querySelector('#arrow-left').setAttribute('class', 'blocked');
+        document.querySelector('#arrow-left').setAttribute('opacity', '0.3');
 
         // TODO block arrows depending on number of suggestions and refactor all this code
         let suggestions = document.querySelector('#scrolling-wrapper-grid').childElementCount;
 
         document.querySelector('#arrow-right').addEventListener('click', (evt) => {
             let scroll = document.querySelector('#scrolling-wrapper');
-            if(scroll.classList.contains('moveleft')){
+            if (scroll.classList.contains('moveleft')) {
                 scroll.classList.remove('moveleft');
                 scroll.classList.add('moveleft-2');
-                document.querySelector('#arrow-right').setAttribute('class','blocked');
-                document.querySelector('#arrow-right').setAttribute('opacity','0.3');
+                document.querySelector('#arrow-right').setAttribute('class', 'blocked');
+                document.querySelector('#arrow-right').setAttribute('opacity', '0.3');
             } else if (scroll.classList.contains('moveleft-2')) {
                 // alert("double click");
             } else {
                 scroll.classList.add('moveleft');
-                document.querySelector('#arrow-left').setAttribute('class','');
-                document.querySelector('#arrow-left').setAttribute('opacity','1');
+                document.querySelector('#arrow-left').setAttribute('class', '');
+                document.querySelector('#arrow-left').setAttribute('opacity', '1');
             }
         });
         document.querySelector('#arrow-left').addEventListener('click', () => {
             let scroll = document.querySelector('#scrolling-wrapper');
-            if(scroll.classList.contains('moveleft-2')){
+            if (scroll.classList.contains('moveleft-2')) {
                 scroll.classList.remove('moveleft-2');
                 scroll.classList.add('moveleft');
-                document.querySelector('#arrow-right').setAttribute('class','');
-                document.querySelector('#arrow-right').setAttribute('opacity','1');
-            } else{
+                document.querySelector('#arrow-right').setAttribute('class', '');
+                document.querySelector('#arrow-right').setAttribute('opacity', '1');
+            } else {
                 scroll.classList.remove('moveleft');
-                document.querySelector('#arrow-left').setAttribute('class','blocked');
-                document.querySelector('#arrow-left').setAttribute('opacity','0.3');
+                document.querySelector('#arrow-left').setAttribute('class', 'blocked');
+                document.querySelector('#arrow-left').setAttribute('opacity', '0.3');
                 // evt.target.setAttribute('class','blocked');
                 // evt.target.setAttribute('opacity','0.3');
             }
         });
     </script>
+
+    <script>
+        // TODO remove this and assign links in loop when backend is ready
+        document.getElementById('item1').querySelector('.card-land__description').onclick = function () {
+            location.href = "item.html";
+        }
+        document.getElementById('item2').querySelector('.card-land__description').onclick = function () {
+            location.href = "item.html";
+        }
+        document.getElementById('item3').querySelector('.card-land__description').onclick = function () {
+            location.href = "item.html";
+        }
+        document.getElementById('item4').querySelector('.card-land__description').onclick = function () {
+            location.href = "item.html";
+        }
+        document.getElementById('item5').querySelector('.card-land__description').onclick = function () {
+            location.href = "item.html";
+        }
+        document.getElementById('item6').querySelector('.card-land__description').onclick = function () {
+            location.href = "item.html";
+        }
+
+        // Open second popup on image click ------//
+
+
+
+        // Open and close popup form ------------//
+        document.getElementById('popup-button').onclick = function () {
+            document.getElementById('popup').classList.add("popup--open");
+        }
+
+        document.getElementById('popup-button-close').onclick = function () {
+            document.getElementById('popup').classList.remove("popup--open");
+        }
+
+
+        document.getElementById('popup_images-button-close').onclick = function () {
+            document.getElementById('popup_images').classList.remove("popup--open");
+        }
+
+
+        window.onclick = e => {
+            if (e.target === popup) {
+                popup.classList.remove("popup--open");
+            } else if (e.target === popup_images) {
+                popup_images.classList.remove("popup--open");
+            }
+        }
+        //------------------------------------//
+
+
+    </script>
+
+    <!-- <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script> -->
+    <script src="node_modules/@splidejs/splide/dist/js/splide.js"></script>
+    <script src="src/js/test.js"></script>
     <!--TODO add scroll snap/ JS scroll for smooth scrolling down-->
 </body>
 

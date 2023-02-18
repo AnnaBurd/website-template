@@ -6,16 +6,33 @@
     margin: 0
 
 html
-    font-size: 62.5% // 10px for standart browser font size settings -> 
-                    //  -> base to calculate rem
+    font-size: 62.5% // 10px for standart browser font size settings -> base to calculate rem
 
 body
     font-family: $ff-sans-serif
-    background-color: $color-body-bg
+    background-color: $white-darker-2
+
+    // Testing purposes
+    @include respond(big-desktop)
+        background-color: #dcaf3b
+
+    @include respond(tab-land)
+        background-color: #36ab70
+
+    @include respond(tab-port)
+        background-color: #945a82
+
+    @include respond(phone)
+        background-color: #5a7994
 
 .container
-    max-width: 1160px
+    max-width: $main-container-width
     margin: 0 auto
     &__padding
-        padding-left: 60px
-        padding-right: 60px
+        padding-left: $main-container-padding
+        padding-right: $main-container-padding
+
+// Selected text
+::selection
+    background-color: $color-primary
+    color: $white
