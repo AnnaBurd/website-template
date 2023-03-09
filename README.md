@@ -6,3 +6,6 @@
  
  #### Figma design
  https://www.figma.com/file/K40aNBOOoKdEaAuXSuK0UF/Panorama?node-id=270-6
+ 
+ #### Preview Link
+ https://website-template-preview.netlify.app/index.html
