@@ -148,7 +148,7 @@
                   >+84 (09) 0160-6982</span
                 ></button
               ><button
-                id="popup-button"
+                id="popupFormOpenBtn"
                 class="nice-btn nice-btn--accent"
                 type="button"
               >
@@ -520,9 +520,9 @@
         </div>
       </div>
     </footer>
-    <div class="popup" id="popup">
+    <div class="popup" id="popupForm">
       <div class="popup__content">
-        <div class="popup__close" id="popup-button-close">
+        <div class="popup__close" id="popupFormCloseBtn">
           <span class="material-symbols-outlined popup__close-icon">
             close
           </span>
@@ -564,7 +564,6 @@
                 >
               </div>
               <div class="nice-input">
-                <!-- <input class="nice-input__input" type="text" placeholder="Message" id="cf-message-input"> -->
                 <textarea
                   id="cf-message-input"
                   name="field"
@@ -626,23 +625,9 @@
       };
 
       // Open and close popup form ------------//
-      document.getElementById("popup-button").onclick = function () {
-        document.getElementById("popup").classList.add("popup--open");
-      };
 
-      document.getElementById("popup-button-close").onclick = function () {
-        document.getElementById("popup").classList.remove("popup--open");
-      };
-
-      window.onclick = (e) => {
-        if (e.target === popup) {
-          popup.classList.remove("popup--open");
-        }
-      };
       //------------------------------------//
     </script>
-
-    <!-- TODO minify source files, test for different browsers-->
     <!-- <div>MEDIA query JS: <span class="mq-value"></span></div> TODO - relative size tests -->
   </body>
 </html>
