@@ -1,16 +1,22 @@
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
+node_modules
+.parcel-cache
+dist
 
 
-src/js/test.js
+*.comp.css
+*.concat.css
+*.prefix.css
+
+#*.css.map
+#*.sass.map
+#*.scss.map
+
 src/img/raw
 
-node_modules
 
-style.comp.css
-style.concat.css
-style.prefix.css
+
+
+
+
 
 
