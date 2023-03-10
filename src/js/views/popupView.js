@@ -16,6 +16,8 @@ class PopupView {
     this.#open = false;
   }
 
+  //   addContent()
+
   addHandlers() {
     // Open popup window on button click
     const btnOpenEl = document.getElementById("popupFormOpenBtn");

@@ -22,7 +22,6 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"> -->
 
     <!-- Material icons instead of vectors -->
     <link
@@ -30,8 +29,8 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
-    <!-- <link rel="stylesheet" href="src/css/reset.css" /> -->
-    <!-- <link rel="stylesheet" href="src/css/normalize.css" /> -->
+    <!-- <link rel="stylesheet" href="src/css/reset.css" /> TODO-->
+    <!-- <link rel="stylesheet" href="src/css/normalize.css" />TODO -->
 
     <!-- Custom CSS stylesheet (compiled from SASS files) -->
     <link rel="stylesheet" href="src/sass/main.sass" />
@@ -527,68 +526,6 @@
             close
           </span>
         </div>
-        <div class="form-callback">
-          <div class="form-callback__left">
-            <div class="form-callback__intro">
-              <!-- <div class="form-search__tag nice-h2-p">Đất đai là nền tảng cho gia đình</div> -->
-              <h2 class="form-callback__heading nice-h2">
-                Chúng tôi rất mong nhận được hồi âm từ bạn
-              </h2>
-              <div class="form-callback__text nice-h2-p">
-                Vui lòng để lại tin nhắn và chúng tôi sẽ gọi lại sớm
-              </div>
-            </div>
-            <form class="form-callback__input">
-              <div class="nice-input">
-                <input
-                  class="nice-input__input"
-                  type="text"
-                  placeholder="Full name"
-                  id="cf-name-input"
-                />
-                <label class="nice-input__label" for="cf-name-input"
-                  >Full name</label
-                >
-              </div>
-              <div class="nice-input">
-                <input
-                  class="nice-input__input"
-                  type="tel"
-                  placeholder="Phone number"
-                  id="cf-phone-input"
-                  pattern="(\+?84|0[3|5|7|8|9])+([0-9]{8})"
-                  required
-                />
-                <label class="nice-input__label" for="cf-phone-input"
-                  >Phone number</label
-                >
-              </div>
-              <div class="nice-input">
-                <textarea
-                  id="cf-message-input"
-                  name="field"
-                  maxlength="5000"
-                  data-name="field"
-                  placeholder="Message"
-                  required=""
-                  class="nice-input__input"
-                ></textarea>
-                <label class="nice-input__label" for="cf-message-input"
-                  >Message</label
-                >
-              </div>
-              <button class="nice-btn nice-btn--accent">Nhập thông tin</button>
-            </form>
-          </div>
-          <div class="form-callback__right">
-            <img
-              src="src/img/op0.jpg"
-              loading="lazy"
-              alt=""
-              class="form-callback__image"
-            />
-          </div>
-        </div>
       </div>
     </div>
     <script>
@@ -623,10 +560,6 @@
         .querySelector(".card-land__description").onclick = function () {
         location.href = "item.html";
       };
-
-      // Open and close popup form ------------//
-
-      //------------------------------------//
     </script>
     <!-- <div>MEDIA query JS: <span class="mq-value"></span></div> TODO - relative size tests -->
   </body>
