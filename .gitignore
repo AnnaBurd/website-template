@@ -11,7 +11,10 @@ dist
 #*.sass.map
 #*.scss.map
 
-src/img/raw
+src/img/_raw
+src/img/_hero-options
+src/img/items
+src/icons/_logo-versions
 
 
 
