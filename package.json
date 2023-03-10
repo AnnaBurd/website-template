@@ -11,11 +11,12 @@
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' src/css/style.concat.css -o src/css/style.prefix.css",
     "compress:css": "node-sass src/css/style.prefix.css src/css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css",
-    "start": "parcel ./*.html",
-    "start-secure": "parcel ./*.html --https",
-    "build": "parcel build ./*.html --dist-dir ./dist",
+    "copy-img": "copyfiles -a -V -u 2 ./src/img/plots/*/* ./dist",
     "clean": "del-cli ./dist",
-    "build-clean": "npm run clean && npm run build"
+    "init": "npm run clean && npm run copy-img",
+    "start": "npm run init && parcel ./*.html",
+    "parcel-build": "parcel build ./*.html --dist-dir ./dist",
+    "build": "npm run init && npm run parcel-build"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
     "@parcel/transformer-sass": "^2.8.3",
     "autoprefixer": "^10.4.13",
     "concat": "^1.0.3",
+    "copyfiles": "^2.4.1",
     "del-cli": "^5.0.0",
     "node-sass": "^8.0.0",
     "npm-run-all": "^4.1.5",

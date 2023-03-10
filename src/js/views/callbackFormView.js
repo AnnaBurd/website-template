@@ -6,6 +6,9 @@ class CallbackFormView {
   #generateHTML() {
     // Convert path to image in src folder to path to image in dist bundle (Parcel)
     let imgsrc = new URL("../../img/popup.jpg", import.meta.url);
+    // loader.load(imgsrc);
+
+    // console.log(imgsrc);
 
     return `<div class="form-callback">
           <div class="form-callback__left">
