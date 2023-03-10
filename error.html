@@ -33,7 +33,7 @@
     />
 
     <!-- Custom CSS stylesheet -->
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/sass/main.sass" />
   </head>
 
   <body>
@@ -146,11 +146,9 @@
     </header>
     <main>
       <div class="decorative">
-        <img
-          class="decorative__top-right"
-          src="src/icons/decorative-element-top-right.svg"
-          alt="Decorative element"
-        />
+        <svg class="decorative__top-right">
+          <use href="src/icons/icons.svg#ladder-top-right"></use>
+        </svg>
       </div>
       <section class="error-message container__padding">
         <div class="error-message__box">
@@ -164,11 +162,9 @@
         </div>
       </section>
       <div class="decorative">
-        <img
-          class="decorative__bottom-left"
-          src="src/icons/decorative-element-bottom-left.svg"
-          alt="Decorative element"
-        />
+        <svg class="decorative__bottom-left">
+          <use href="src/icons/icons.svg#ladder-bottom-left"></use>
+        </svg>
       </div>
     </main>
     <footer>

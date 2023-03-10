@@ -41,7 +41,7 @@
     />
 
     <!-- Custom CSS stylesheet (compiled from SASS files) -->
-    <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/sass/main.sass" />
   </head>
 
   <body>
@@ -157,18 +157,14 @@
             <img class="decorative__bottom-right" src="src/icons/decorative-element-bottom-right.svg" alt="Decorative element around form section"> -->
         <div class="search-hero__form-wrapper">
           <div class="decorative">
-            <img
-              class="decorative__top-left"
-              src="src/icons/decorative-element-top-left.svg"
-              alt="Decorative element around form section"
-            />
+            <svg class="decorative__top-left">
+              <use href="src/icons/icons.svg#ladder-top-left"></use>
+            </svg>
           </div>
           <div class="decorative">
-            <img
-              class="decorative__bottom-right"
-              src="src/icons/decorative-element-bottom-right.svg"
-              alt="Decorative element around form section"
-            />
+            <svg class="decorative__bottom-right">
+              <use href="src/icons/icons.svg#ladder-bottom-right"></use>
+            </svg>
           </div>
           <div class="search-hero__form">
             <div class="form-search">
