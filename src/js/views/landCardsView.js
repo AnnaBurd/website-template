@@ -42,11 +42,24 @@ export class LandCardsView {
   }
 
   render(plots) {
-    // console.log("Starting to render data:", plots);
+    this.#parentElement = document.getElementById("projectCards");
+    console.log("Starting to render land cards based on data:", plots);
     let html = this.#generateHTML(plots);
     // console.log("Generated html: ", html);
     this.#parentElement.insertAdjacentHTML("beforeend", html);
-    // console.log("Inserted html in ", this.#parentElement);
+    // console.log(
+    //   "Inserted land cards html in parent element ",
+    //   this.#parentElement
+    // );
+  }
+
+  addClickHandlers(handler) {
+    // When user clicks on land card, determine card id and pass it to handler
+    this.#parentElement.addEventListener("click", function (e) {
+      const cardElement = e.target.closest(".card-land");
+      if (!cardElement) return;
+      handler(cardElement.id);
+    });
   }
 }
 

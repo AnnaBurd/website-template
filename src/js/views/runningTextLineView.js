@@ -41,6 +41,7 @@ class RunningTextLineView {
   }
 
   async startAnimation() {
+    this.#parentElement = document.getElementById("hero-text");
     this.#running = true;
 
     while (this.#running) {
