@@ -94,24 +94,12 @@ export class LandPageView {
                     >
                     <span class="land-height__text">${plot.height} m</span>
                   </div>
-                  <div class="land-width">
-                    <span class="material-symbols-outlined land-width__icon"
-                      >straighten</span
-                    >
-                    <span class="land-width__text">${plot.width} m</span>
-                  </div>
                 </div>
                 <div class="land-papers">
                   <span class="material-symbols-outlined land-papers__icon"
                     >description</span
                   >
                   <span class="land-papers__text">${plot.papers}</span>
-                </div>
-                <div class="land-direction">
-                  <span class="material-symbols-outlined land-direction__icon"
-                    >explore</span
-                  >
-                  <span class="land-direction__text">${plot.direction}</span>
                 </div>
                 <div class="land-price">
                   <span class="material-symbols-outlined land-price__icon"
@@ -121,7 +109,7 @@ export class LandPageView {
                 </div>
                 <div class="land-link">
                   <!-- TODO-->
-                  <span class="land-link__text">Sở Quy hoạch</span>
+                  <span class="land-link__text">Quy hoạch</span>
                 </div>
               </div>
               <!-- TODO add link to third-party site and arrow-->
@@ -140,6 +128,8 @@ export class LandPageView {
         </div>
       </section>`;
   }
+
+  // TODO optional sidebar parameters -> only render those parameters that are specified for object, e.g. height/width or direction are not necessary (example here https://batdongsan.com.vn/ban-dat-duong-phan-thanh-gian-phuong-long-tam/ba-ria-xa-lo-400trieu-cho-lo-mat-tien-ngay-pho-di-bo-va-cong-vien-30-4-ba-ria-pr36683737)
 
   #generateLongDescriptionHTML(longDescription) {
     // console.log(longDescription);
