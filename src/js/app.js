@@ -10,19 +10,35 @@ const gotoLandPage = function (landPlotID) {
   let plotData = model.getLandplotData(landPlotID);
 
   if (!plotData) {
-    console.log("TODO ERROR");
+    console.log(
+      "TODO ERROR -> did not find plot by ID so can not render plot's page"
+    );
     return;
   }
 
   // TODO Can pop state from history later to implement arrow back functionality
   console.log("Going to page", landPlotID);
   window.history.pushState(
-    { page_id: "index" }, // ID of current page to store in window history states
+    { page_id: "index" }, // TODO ID of current page to store in window history states -> curr page should be stored in state
     "",
     urlSlug(plotData.title) // new URL to add into the address line: domain/urlSlug
   );
-  landPageView.render(plotData);
-  // console.log();
+
+  let suggestions = model.getSuggestionsForPLot(landPlotID);
+
+  console.log("Render land page sceleton");
+  landPageView.render(
+    plotData,
+    suggestions,
+    model.getNumberOfSuggestionsPages()
+  ); // Render land plot page
+  if (suggestions.length) {
+    // And include render of suggested pages if any
+    console.log("Render and link similar land plots suggestions", suggestions);
+    landCardsView.render(suggestions, "suggestionsGrid");
+    landCardsView.addClickHandlers(gotoLandPage);
+    landPageView.addClickArrowSuggestionsHandler(model.state);
+  }
 };
 
 const urlSlug = (title) => {
@@ -55,15 +71,18 @@ const init = function () {
   // console.log(model.loadLandplotsData());
 
   window.addEventListener("popstate", function (event) {
-    console.log(event);
+    // console.log(event);
     if (!event.state || event.state.page_id === "index") {
       mainView.render();
       // console.log("Render main land plots:");
       landCardsView.render(model.getLandplotsData());
       landCardsView.addClickHandlers(gotoLandPage);
+      // runningTextLineView.stopAnimation(); // TODO fix animation when returned on page
+      // runningTextLineView.startAnimation();
       // console.log("RENDER INDEX");
     }
   });
 };
 
 init();
+// console.log(model.getSuggestionsForPLot("plot-1"));

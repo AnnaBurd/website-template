@@ -1,5 +1,14 @@
 class Model {
   #landplots = [];
+  state = {
+    currSuggestionsPage: 1,
+    numSuggestionsPages: 1,
+  };
+
+  getNumberOfSuggestionsPages() {
+    // Math.ceil(suggestions.length / 3);
+    return this.numSuggestionsPages;
+  }
 
   /// Temporary -> should load data from backend
   loadLandplotsData() {
@@ -40,6 +49,7 @@ class Model {
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 7,
       videos: 1,
+      similarPlots: ["plot-2", "plot-3", "plot-6"],
     };
 
     let item2 = {
@@ -76,6 +86,15 @@ class Model {
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 6,
       videos: 1,
+      similarPlots: [
+        "plot-1",
+        "plot-2",
+        "plot-5",
+        "plot-6",
+        "plot-1",
+        "plot-2",
+        "plot-3",
+      ],
     };
 
     let item3 = {
@@ -106,6 +125,15 @@ class Model {
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 6,
       videos: 1,
+      similarPlots: [
+        "plot-1",
+        "plot-2",
+        "plot-5",
+        "plot-6",
+        "plot-1",
+        "plot-2",
+        "plot-3",
+      ],
     };
 
     let item4 = {
@@ -137,6 +165,7 @@ class Model {
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 1,
       videos: 0,
+      similarPlots: ["plot-1"],
     };
 
     let item5 = {
@@ -176,6 +205,7 @@ class Model {
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 1,
       videos: 0,
+      similarPlots: ["plot-1"],
     };
 
     let item6 = {
@@ -215,6 +245,7 @@ class Model {
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 1,
       videos: 0,
+      similarPlots: [],
     };
 
     this.#landplots.push(item1);
@@ -225,6 +256,18 @@ class Model {
     this.#landplots.push(item6);
 
     return this.#landplots;
+  }
+
+  getSuggestionsForPLot(landPlotID) {
+    let plot = this.getLandplotData(landPlotID);
+
+    let suggestedPlots = plot.similarPlots.map((plotID) =>
+      this.getLandplotData(plotID)
+    );
+
+    this.state.numSuggestionsPages = Math.ceil(suggestedPlots.length / 3);
+
+    return suggestedPlots;
   }
 
   getLandplotsData() {

@@ -41,11 +41,13 @@ export class LandCardsView {
           </div>`;
   }
 
-  render(plots) {
-    this.#parentElement = document.getElementById("projectCards");
-    console.log("Starting to render land cards based on data:", plots);
+  render(plots, parentID = "projectCards") {
+    this.#parentElement = document.getElementById(parentID);
+    // console.log("Starting to render land cards based on data:", plots);
     let html = this.#generateHTML(plots);
     // console.log("Generated html: ", html);
+    // console.log("TRYING TO INCERT", document.body);
+    // console.log("Parent element for id: ", parentID, this.#parentElement);
     this.#parentElement.insertAdjacentHTML("beforeend", html);
     // console.log(
     //   "Inserted land cards html in parent element ",
