@@ -1,9 +1,14 @@
 import scrollSizeParameters from "../../sass/abstracts/exp.module.scss";
+import PopupView from "./popupView";
+import ImageGalleryView from "./imageGalleryView";
 
 console.log("SCROLLPAR", scrollSizeParameters);
 
 export class LandPageView {
   #parentElement = document.querySelector("main");
+
+  #popup;
+  #imageGallery;
 
   // #currSuggestionsPage;
   // #numSuggestionsPages;
@@ -26,6 +31,33 @@ export class LandPageView {
     );
 
     document.querySelector("header")?.remove();
+
+    /// INIT image gallery popup
+
+    // Init image gallery
+    this.#popup = new PopupView("popupGallery", "_", "popupGalleryCloseBtn");
+    this.#popup.addHandlers();
+    this.#imageGallery = new ImageGalleryView();
+    this.#imageGallery.render(plot);
+    this.#imageGallery.addClickHandler(this.galleryController, this);
+
+    // imagePopupView.addHandlers();
+    // imageGalleryView.render();
+  }
+
+  galleryController(targetImgId, caller) {
+    console.log("Controller of gallery gots input:", targetImgId);
+
+    let slideNum = Number(targetImgId.replace("item-photo-", "")) - 1;
+
+    console.log(slideNum);
+
+    caller.#popup.showPopup();
+    caller.#imageGallery.mainSplide.go(slideNum);
+    // delete document.getElementById("mainCarousel").dataset.splide;
+
+    console.log(caller.#imageGallery.mainSplide);
+    // caller.#imageGallery.mainSplide.jump(slideNum);
   }
 
   #generateHTML(plot, suggestions) {
@@ -65,18 +97,18 @@ export class LandPageView {
                   <img src="/plots/${plot.id}/view_1.jpg" alt="" />
                 </div>
               </div>
-              <div class="right-area__top-right" id="item-photo-2">
-                <div class="item__photo-wrapper">
+              <div class="right-area__top-right">
+                <div class="item__photo-wrapper" id="item-photo-2">
                   <img src="/plots/${plot.id}/view_2.jpg" alt="" />
                 </div>
               </div>
-              <div class="right-area__bottom-left" id="item-photo-3">
-                <div class="item__photo-wrapper">
+              <div class="right-area__bottom-left">
+                <div class="item__photo-wrapper" id="item-photo-3">
                   <img src="/plots/${plot.id}/view_3.jpg" alt="" />
                 </div>
               </div>
-              <div class="right-area__bottom-right" id="item-photo-4">
-                <div class="item__photo-wrapper">
+              <div class="right-area__bottom-right">
+                <div class="item__photo-wrapper" id="item-photo-4">
                   <img src="/plots/${plot.id}/view_4.jpg" alt="" />
                 </div>
               </div>

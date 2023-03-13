@@ -1,9 +1,11 @@
 import runningTextLineView from "./views/runningTextLineView";
-import popupView from "./views/popupView";
+import PopupView from "./views/popupView";
 import callbackFormView from "./views/callbackFormView";
+import imageGalleryView from "./views/imageGalleryView";
 import landCardsView from "./views/landCardsView";
 import landPageView from "./views/landPageView";
 import mainView from "./views/mainView";
+// import
 import model from "./model";
 
 const gotoLandPage = function (landPlotID) {
@@ -65,6 +67,12 @@ const init = function () {
 
   runningTextLineView.startAnimation(); // TODO stop animation when not in focus
 
+  // Init call back form
+  let popupView = new PopupView(
+    "popupForm",
+    "popupFormOpenBtn",
+    "popupFormCloseBtn"
+  );
   popupView.addHandlers(); // TODO reconsider how to init popup
   callbackFormView.render();
 

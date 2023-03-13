@@ -581,35 +581,6 @@
       </div>
     </div>
 
-    <script>
-      // Open second popup on image click ------//
-
-      // Open and close popup form ------------//
-      document.getElementById("popup-button").onclick = function () {
-        document.getElementById("popup").classList.add("popup--open");
-      };
-
-      document.getElementById("popup-button-close").onclick = function () {
-        document.getElementById("popup").classList.remove("popup--open");
-      };
-
-      document.getElementById("popup_images-button-close").onclick =
-        function () {
-          document
-            .getElementById("popup_images")
-            .classList.remove("popup--open");
-        };
-
-      window.onclick = (e) => {
-        if (e.target === popup) {
-          popup.classList.remove("popup--open");
-        } else if (e.target === popup_images) {
-          popup_images.classList.remove("popup--open");
-        }
-      };
-      //------------------------------------//
-    </script>
-
     <!-- <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script> -->
     <script src="node_modules/@splidejs/splide/dist/js/splide.js"></script>
     <script src="src/js/test.js"></script>

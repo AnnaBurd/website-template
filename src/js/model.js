@@ -124,7 +124,7 @@ class Model {
       price: "2.9 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 6,
-      videos: 1,
+      videos: 0,
       similarPlots: [
         "plot-1",
         "plot-2",
@@ -163,7 +163,7 @@ class Model {
       direction: "Tây - Bắc",
       price: "3.5 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
-      images: 1,
+      images: 4,
       videos: 0,
       similarPlots: ["plot-1"],
     };
@@ -203,7 +203,7 @@ class Model {
       direction: "Đông Nam",
       price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
-      images: 1,
+      images: 5,
       videos: 0,
       similarPlots: ["plot-1"],
     };
@@ -243,7 +243,7 @@ class Model {
       direction: "Đông Nam",
       price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
-      images: 1,
+      images: 4,
       videos: 0,
       similarPlots: [],
     };

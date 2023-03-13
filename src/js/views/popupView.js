@@ -1,6 +1,14 @@
-class PopupView {
-  #parentElement = document.getElementById("popupForm");
+export default class PopupView {
+  #parentElement;
   #open = false;
+  #openbtnID;
+  #closebtnID;
+
+  constructor(parentID, openbtnID, closebtnID) {
+    this.#parentElement = document.getElementById(parentID);
+    this.#openbtnID = openbtnID;
+    this.#closebtnID = closebtnID;
+  }
 
   showPopup() {
     if (this.#open) return; // Popup is already visible
@@ -16,15 +24,13 @@ class PopupView {
     this.#open = false;
   }
 
-  //   addContent()
-
   addHandlers() {
     // Open popup window on button click
-    const btnOpenEl = document.getElementById("popupFormOpenBtn");
-    btnOpenEl.addEventListener("click", this.showPopup.bind(this));
+    const btnOpenEl = document.getElementById(this.#openbtnID);
+    btnOpenEl?.addEventListener("click", this.showPopup.bind(this));
 
     // Close popup window on button click
-    const btnCloseEl = document.getElementById("popupFormCloseBtn");
+    const btnCloseEl = document.getElementById(this.#closebtnID);
     btnCloseEl.addEventListener("click", this.hidePopup.bind(this));
 
     // Close popup window on click ouside its boundaries
@@ -48,5 +54,3 @@ class PopupView {
     );
   }
 }
-
-export default new PopupView();
