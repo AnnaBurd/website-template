@@ -5,6 +5,18 @@ class Model {
     numSuggestionsPages: 1,
   };
 
+  getMaxPrice() {
+    return this.#landplots.reduce((max, next) => {
+      return next.price > max ? next.price : max;
+    }, 0);
+  }
+
+  getMaxArea() {
+    return this.#landplots.reduce((max, next) => {
+      return next.area > max ? next.area : max;
+    }, 0);
+  }
+
   getNumberOfSuggestionsPages() {
     // Math.ceil(suggestions.length / 3);
     return this.numSuggestionsPages;
@@ -40,12 +52,13 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
-      area: "100",
+      area: 100,
       height: "120",
       width: "140",
       papers: "Đã có sổ",
       direction: "Đông Nam",
-      price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
+      price: 10,
+      // price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 7,
       videos: 1,
@@ -77,12 +90,13 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
-      area: "1151",
+      area: 1151,
       height: "120",
       width: "140",
       papers: "Sổ đỏ/ Sổ hồng",
       direction: "Đông Nam",
-      price: "13.2 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
+      price: 13.2,
+      // price: "13.2 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 6,
       videos: 1,
@@ -116,12 +130,13 @@ class Model {
         },
       ],
       location: "Bán đất tại phường Long Tâm, thành phố Bà Rịa",
-      area: "100",
+      area: 100,
       height: "120",
       width: "5",
       papers: "Đã có sổ",
       direction: "Đông Nam",
-      price: "2.9 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
+      price: 2.9,
+      // price: "2.9 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 6,
       videos: 0,
@@ -156,12 +171,13 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
-      area: "90",
+      area: 90,
       height: "120",
       width: "5",
       papers: "Sổ đỏ/ Sổ hồng",
       direction: "Tây - Bắc",
-      price: "3.5 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
+      price: 3.5,
+      // price: "3.5 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 4,
       videos: 0,
@@ -196,12 +212,13 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
-      area: "100",
+      area: 122,
       height: "120",
       width: "140",
       papers: "Đã có sổ",
       direction: "Đông Nam",
-      price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
+      price: 10,
+      // price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 5,
       videos: 0,
@@ -236,12 +253,13 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
-      area: "100",
+      area: 541,
       height: "120",
       width: "140",
       papers: "Đã có sổ",
       direction: "Đông Nam",
-      price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
+      price: 23,
+      // price: "10 tỷ (200 triệu/m&sup2)", // TODO 2 superscript, tỷ (200 triệu/m&sup2) <- automatically calculate
       link: "", //TODO LINK TO THIRD PARTY SITE WITH MAP,
       images: 4,
       videos: 0,
@@ -276,6 +294,69 @@ class Model {
 
   getLandplotData(landPlotID) {
     return this.#landplots.find((landplot) => landplot.id === landPlotID);
+  }
+
+  loadFilteredLandplots(priceMin, priceMax, areaMin, areaMax, sortBy) {
+    console.log("Loading", priceMin, priceMax, areaMin, areaMax, sortBy);
+
+    // this.loadLandplotsData();
+
+    console.log(this.#landplots);
+
+    // Filter by price
+    // ToDO check if need to filter
+    let okPrice = this.#landplots.filter(
+      (plot) => plot.price >= priceMin && plot.price <= priceMax
+    );
+    console.log("OK price", okPrice);
+
+    // Filter by area
+    // ToDO check if need to filter
+    let okArea = okPrice.filter(
+      (plot) => plot.area >= areaMin && plot.area <= areaMax
+    );
+
+    console.log("OK area", okArea);
+
+    // Sort resulting data
+    //
+
+    // let sortOptions = {}
+
+    let sorted;
+
+    console.log("SortBy ", sortBy);
+    if (sortBy === "default") {
+      console.log("No sort");
+      sorted = okArea;
+    }
+
+    if (sortBy === "priceUp") {
+      sorted = okArea.sort((plot1, plot2) => {
+        return plot1.price - plot2.price;
+      });
+    }
+
+    if (sortBy === "priceDown") {
+      sorted = okArea.sort((plot1, plot2) => {
+        return plot2.price - plot1.price;
+      });
+    }
+
+    if (sortBy === "areaUp") {
+      sorted = okArea.sort((plot1, plot2) => {
+        return plot1.area - plot2.area;
+      });
+    }
+    if (sortBy === "areaDown") {
+      sorted = okArea.sort((plot1, plot2) => {
+        return plot2.area - plot1.area;
+      });
+    }
+
+    console.log("OK sorted", sorted);
+
+    return sorted;
   }
 }
 

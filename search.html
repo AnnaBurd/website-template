@@ -166,8 +166,8 @@
               <use href="src/icons/icons.svg#ladder-bottom-right"></use>
             </svg>
           </div>
-          <div class="search-hero__form">
-            <div class="form-search">
+          <div class="search-hero__form" id="filterForm">
+            <form class="form-search">
               <div class="form-search__intro">
                 <div class="form-search__tag nice-h2-p">
                   Đất đai là nền tảng cho gia đình
@@ -182,22 +182,26 @@
               </div>
               <div class="form-search__slider">
                 <div class="form-search__label">Giá mỗi lô:</div>
-                <div id="slider-price" class="slider"></div>
+                <div id="priceSlider" class="slider slider--area"></div>
               </div>
               <div class="form-search__slider">
                 <div class="form-search__label">Diện tích đất:</div>
-                <div id="slider-area" class="slider"></div>
+                <div id="areaSlider" class="slider slider--price"></div>
               </div>
               <div class="form-search__dropdown">
                 <div class="form-search__label">Sắp xếp theo:</div>
                 <div class="dropdown">
-                  <div class="dropdown__current" tabindex="1">
+                  <div
+                    class="dropdown__current"
+                    id="dropdownFilter"
+                    tabindex="1"
+                  >
                     <div class="dropdown__value">
                       <input
                         class="dropdown__value__radio-input"
                         type="radio"
-                        id="0"
-                        value="1"
+                        id="radio-default"
+                        value="default"
                         name="button_group"
                         checked="checked"
                       />
@@ -211,8 +215,8 @@
                       <input
                         class="dropdown__value__radio-input"
                         type="radio"
-                        id="1"
-                        value="2"
+                        id="radio-priceUp"
+                        value="priceUp"
                         name="button_group"
                       />
                       <div class="dropdown__value__text">Giá tăng dần</div>
@@ -221,8 +225,8 @@
                       <input
                         class="dropdown__value__radio-input"
                         type="radio"
-                        id="2"
-                        value="3"
+                        id="radio-priceDown"
+                        value="priceDown"
                         name="button_group"
                       />
                       <div class="dropdown__value__text">Giá giảm dần</div>
@@ -231,8 +235,8 @@
                       <input
                         class="dropdown__value__radio-input"
                         type="radio"
-                        id="3"
-                        value="4"
+                        id="radio-areaUp"
+                        value="areaUp"
                         name="button_group"
                       />
                       <div class="dropdown__value__text">
@@ -243,8 +247,8 @@
                       <input
                         class="dropdown__value__radio-input"
                         type="radio"
-                        id="4"
-                        value="5"
+                        id="radio-areaDown"
+                        value="areaDown"
                         name="button_group"
                       />
                       <div class="dropdown__value__text">
@@ -262,29 +266,31 @@
                   <ul class="dropdown__list">
                     <li>
                       <label
-                        for="0"
+                        for="radio-default"
                         class="dropdown__list__option dropdown__list__option--first dropdown__list__option--default"
                         >Chọn cách sắp xếp</label
                       >
                     </li>
                     <li>
-                      <label for="1" class="dropdown__list__option"
+                      <label for="radio-priceUp" class="dropdown__list__option"
                         >Giá tăng dần</label
                       >
                     </li>
                     <li>
-                      <label for="2" class="dropdown__list__option"
+                      <label
+                        for="radio-priceDown"
+                        class="dropdown__list__option"
                         >Giá giảm dần</label
                       >
                     </li>
                     <li>
-                      <label for="3" class="dropdown__list__option"
+                      <label for="radio-areaUp" class="dropdown__list__option"
                         >Diện tích tăng dần</label
                       >
                     </li>
                     <li>
                       <label
-                        for="4"
+                        for="radio-areaDown"
                         class="dropdown__list__option dropdown__list__option--last"
                         >Diện tích giảm dần</label
                       >
@@ -293,7 +299,7 @@
                 </div>
                 <button class="nice-btn">Tìm nhanh</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
         <div class="search-hero__right">
@@ -312,476 +318,7 @@
           </div>
           <!--TODO fix arrow style and animation, change text according to dropdown choice, and add links -->
         </div>
-        <div class="search-results__cards container">
-          <div class="card-land-full" id="item1">
-            <div class="card-land-full__photo-carousel">
-              <div
-                id="main-carousel-item-1"
-                class="splide main-splide"
-                aria-label="Land photos"
-              >
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img data-splide-lazy="src/img/items/item-1/view_1.jpg" />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-1/view_2.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-1/view_3.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-1/view_4.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-1/view_5.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-1/view_6.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <video
-                        width="100%"
-                        height="100%"
-                        preload="none"
-                        muted
-                        controls
-                      >
-                        <source
-                          src="src/img/items/item-1/view_7.mp4"
-                          type="video/mp4"
-                        />
-                        Sorry, your browser doesn't support embedded videos.
-                      </video>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                id="thumbnail-carousel-item-1"
-                class="splide thumbnail-splide"
-                aria-label="Thumbnail buttons for the property item carousel"
-              >
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_1.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_2.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_3.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_4.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_5.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_6.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-1/thumbnails/thumb_7.jpg"
-                        alt=""
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card-land-full__info">
-              <div class="card-land-full__name nice-h4">
-                Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường
-                Và Khu Công Nghiệp Becamex
-              </div>
-              <div class="card-land-full__description nice-h4-p">
-                Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ
-                Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán
-                Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu
-                Công Nghệ
-              </div>
-              <div class="land-parameters nice-h4-l">
-                <div class="land-location">
-                  <span class="material-symbols-outlined land-location__icon"
-                    >location_on</span
-                  >
-                  <span class="land-location__text"
-                    >Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng
-                    Tàu</span
-                  >
-                </div>
-                <div class="land-area">
-                  <span class="material-symbols-outlined land-area__icon"
-                    >square_foot</span
-                  >
-                  <span class="land-area__text">100 m2</span>
-                </div>
-                <div class="land-size">
-                  <div class="land-height">
-                    <span class="material-symbols-outlined land-height__icon"
-                      >straighten</span
-                    >
-                    <span class="land-height__text">140 m</span>
-                  </div>
-                  <div class="land-width">
-                    <span class="material-symbols-outlined land-width__icon"
-                      >straighten</span
-                    >
-                    <span class="land-width__text">120 m</span>
-                  </div>
-                </div>
-                <div class="land-papers">
-                  <span class="material-symbols-outlined land-papers__icon"
-                    >description</span
-                  >
-                  <span class="land-papers__text">Đã có sổ</span>
-                </div>
-                <div class="land-direction">
-                  <span class="material-symbols-outlined land-direction__icon"
-                    >explore</span
-                  >
-                  <span class="land-direction__text">Đông Nam</span>
-                </div>
-                <div class="land-price">
-                  <span class="material-symbols-outlined land-price__icon"
-                    >payments</span
-                  >
-                  <span class="land-price__text">10 ty (200 trieu/m2)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-land-full" id="item2">
-            <div class="card-land-full__photo-carousel">
-              <div
-                id="main-carousel-item-2"
-                class="splide main-splide"
-                aria-label="Land photos"
-              >
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img data-splide-lazy="src/img/items/item-2/view_1.jpg" />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-2/view_2.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-2/view_3.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-2/view_4.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-2/view_5.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-2/view_6.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <video
-                        width="100%"
-                        height="100%"
-                        preload="none"
-                        muted
-                        controls
-                      >
-                        <source
-                          src="src/img/items/item-2/view_7.mp4"
-                          type="video/mp4"
-                        />
-                        Sorry, your browser doesn't support embedded videos.
-                      </video>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                id="thumbnail-carousel-item-2"
-                class="splide thumbnail-splide"
-                aria-label="Thumbnail buttons for the property item carousel"
-              >
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_1.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_2.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_3.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_4.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_5.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_6.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-2/thumbnails/thumb_7.jpg"
-                        alt=""
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card-land-full__info">
-              <div class="card-land-full__name nice-h4">
-                Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường
-                Và Khu Công Nghiệp Becamex
-              </div>
-              <div class="card-land-full__description nice-h4-p">
-                Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ
-                Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán
-                Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu
-                Công Nghệ
-              </div>
-              <div class="land-parameters nice-h4-l">
-                <div class="land-location">
-                  <span class="material-symbols-outlined land-location__icon"
-                    >location_on</span
-                  >
-                  <span class="land-location__text"
-                    >Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng
-                    Tàu</span
-                  >
-                </div>
-                <div class="land-area">
-                  <span class="material-symbols-outlined land-area__icon"
-                    >square_foot</span
-                  >
-                  <span class="land-area__text">100 m2</span>
-                </div>
-                <div class="land-size">
-                  <div class="land-height">
-                    <span class="material-symbols-outlined land-height__icon"
-                      >straighten</span
-                    >
-                    <span class="land-height__text">140 m</span>
-                  </div>
-                  <div class="land-width">
-                    <span class="material-symbols-outlined land-width__icon"
-                      >straighten</span
-                    >
-                    <span class="land-width__text">120 m</span>
-                  </div>
-                </div>
-                <div class="land-papers">
-                  <span class="material-symbols-outlined land-papers__icon"
-                    >description</span
-                  >
-                  <span class="land-papers__text">Đã có sổ</span>
-                </div>
-                <div class="land-direction">
-                  <span class="material-symbols-outlined land-direction__icon"
-                    >explore</span
-                  >
-                  <span class="land-direction__text">Đông Nam</span>
-                </div>
-                <div class="land-price">
-                  <span class="material-symbols-outlined land-price__icon"
-                    >payments</span
-                  >
-                  <span class="land-price__text">10 ty (200 trieu/m2)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-land-full" id="item3">
-            <div class="card-land-full__photo-carousel">
-              <div
-                id="main-carousel-item-3"
-                class="splide main-splide"
-                aria-label="Land photos"
-              >
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img data-splide-lazy="src/img/items/item-3/view_1.jpg" />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-3/view_2.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        data-splide-lazy="src/img/items/item-3/view_3.jpg"
-                        alt=""
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div
-                id="thumbnail-carousel-item-3"
-                class="splide thumbnail-splide"
-                aria-label="Thumbnail buttons for the property item carousel"
-              >
-                <div class="splide__track">
-                  <ul class="splide__list">
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-3/thumbnails/thumb_1.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-3/thumbnails/thumb_2.jpg"
-                        alt=""
-                      />
-                    </li>
-                    <li class="splide__slide">
-                      <img
-                        src="src/img/items/item-3/thumbnails/thumb_3.jpg"
-                        alt=""
-                      />
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="card-land-full__info">
-              <div class="card-land-full__name nice-h4">
-                Bán Góc 2 Mặt Tiền (120x55m)= 6.600m2 Giá 300 Triệu Gần Trường
-                Và Khu Công Nghiệp Becamex
-              </div>
-              <div class="card-land-full__description nice-h4-p">
-                Cần Bán Gấp 7828m2 Kế Công An Hắc Dịch. Đối Diênn Khu Công Nghệ
-                Cao 450ha Chủ Cần Bán Nhanh Để Mở Trang Trại Heo. Nên Cần Bán
-                Gấp m Thổ Cư. Khu Dân Cư. Kế Công An Hắc Dịch. Đối Diênn Khu
-                Công Nghệ
-              </div>
-              <div class="land-parameters nice-h4-l">
-                <div class="land-location">
-                  <span class="material-symbols-outlined land-location__icon"
-                    >location_on</span
-                  >
-                  <span class="land-location__text"
-                    >Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng
-                    Tàu</span
-                  >
-                </div>
-                <div class="land-area">
-                  <span class="material-symbols-outlined land-area__icon"
-                    >square_foot</span
-                  >
-                  <span class="land-area__text">100 m2</span>
-                </div>
-                <div class="land-size">
-                  <div class="land-height">
-                    <span class="material-symbols-outlined land-height__icon"
-                      >straighten</span
-                    >
-                    <span class="land-height__text">140 m</span>
-                  </div>
-                  <div class="land-width">
-                    <span class="material-symbols-outlined land-width__icon"
-                      >straighten</span
-                    >
-                    <span class="land-width__text">120 m</span>
-                  </div>
-                </div>
-                <div class="land-papers">
-                  <span class="material-symbols-outlined land-papers__icon"
-                    >description</span
-                  >
-                  <span class="land-papers__text">Đã có sổ</span>
-                </div>
-                <div class="land-direction">
-                  <span class="material-symbols-outlined land-direction__icon"
-                    >explore</span
-                  >
-                  <span class="land-direction__text">Đông Nam</span>
-                </div>
-                <div class="land-price">
-                  <span class="material-symbols-outlined land-price__icon"
-                    >payments</span
-                  >
-                  <span class="land-price__text">10 ty (200 trieu/m2)</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="search-results__cards container"></div>
       </section>
     </main>
     <footer>
@@ -889,33 +426,17 @@
         </div>
       </div>
     </footer>
-    <!--TODO add links from cards to items -->
+
     <!--TODO add scroll snap/ JS scroll for smooth scrolling down-->
-    <!-- Initialize NoUISliders for form  -->
-    <script src="src/js/sliders-init.js"></script>
-    <!-- Initialize Splider for carousels  -->
-    <!--TODO add scroll snap/ JS scroll for smooth scrolling down-->
-    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
-    <script src="src/js/splide-init.js"></script>
+
+    <!-- <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script> -->
+    <!-- <script type="module" src="src/js/splide-init.js"></script> -->
     <!-- TODO hide all scripts in public folder not to reveal project's inner structure-->
 
-    <script>
-      // TODO remove this and assign links in loop when backend is ready
-      document
-        .getElementById("item1")
-        .querySelector(".card-land-full__info").onclick = function () {
-        location.href = "item.html";
-      };
-      document
-        .getElementById("item2")
-        .querySelector(".card-land-full__info").onclick = function () {
-        location.href = "item.html";
-      };
-      document
-        .getElementById("item3")
-        .querySelector(".card-land-full__info").onclick = function () {
-        location.href = "item.html";
-      };
-    </script>
+    <script
+      type="module"
+      src="src/js/filter.js"
+      type="text/javascript"
+    ></script>
   </body>
 </html>
