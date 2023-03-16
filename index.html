@@ -325,6 +325,7 @@
     </div>
 
     <script>
+      // Sumbit static form to netlify
       const handleSubmit = (event) => {
         event.preventDefault();
 
@@ -333,19 +334,28 @@
         const myForm = event.target;
         const formData = new FormData(myForm);
 
-        // console.log(
-        //   "FORM DATA",
-        //   formData,
-        //   new URLSearchParams(formData).toString()
-        // );
-
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(formData).toString(),
         })
-          .then(() => console.log("Form successfully submitted"))
-          .catch((error) => alert(error));
+          .then((response) => {
+            console.log(response);
+
+            if (response.ok) {
+              console.log("Form successfully submitted");
+            } else {
+              console.log(
+                "Sorry error happend on submission - the service does not accept form?"
+              );
+            }
+          })
+          .catch((error) =>
+            console.log(
+              "Sorry the subscription service is not awailiable (netlify is down?)",
+              error
+            )
+          );
       };
 
       document

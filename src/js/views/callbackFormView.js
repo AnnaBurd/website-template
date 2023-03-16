@@ -20,14 +20,15 @@ class CallbackFormView {
                 Vui lòng để lại tin nhắn và chúng tôi sẽ gọi lại sớm
               </div>
             </div>
-            <form class="form-callback__input" data-netlify="true">
-            <input type="hidden" name="hidden-form-for-netlify" value="callbackForm" />
+            <form class="form-callback__input" data-netlify="true" method="post" id="callbackForm">
+            <input type="hidden" name="form-name" value="callbackForm" />
               <div class="nice-input">
                 <input
                   class="nice-input__input"
                   type="text"
                   placeholder="Full name"
                   id="cf-name-input"
+                  name="name"
                 />
                 <label class="nice-input__label" for="cf-name-input"
                   >Full name</label
@@ -41,6 +42,7 @@ class CallbackFormView {
                   id="cf-phone-input"
                   pattern="(\+?84|0[3|5|7|8|9])+([0-9]{8})"
                   required
+                  name="phone"
                 />
                 <label class="nice-input__label" for="cf-phone-input"
                   >Phone number</label
@@ -49,7 +51,7 @@ class CallbackFormView {
               <div class="nice-input">
                 <textarea
                   id="cf-message-input"
-                  name="field"
+                  name="message"
                   maxlength="5000"
                   data-name="field"
                   placeholder="Message"
@@ -77,6 +79,44 @@ class CallbackFormView {
   render() {
     let html = this.#generateHTML();
     this.#parentElement.insertAdjacentHTML("afterbegin", html);
+
+    // Sumbit dynamic form to netlify
+    const handleSubmit = (event) => {
+      event.preventDefault();
+
+      console.log("CLICKED SUBMIT", event);
+
+      const myForm = event.target;
+      const formData = new FormData(myForm);
+
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData).toString(),
+      })
+        .then((response) => {
+          console.log(response);
+
+          if (response.ok) {
+            console.log("Form successfully submitted");
+            // TODO success and failure form behavior ->
+          } else {
+            console.log(
+              "Sorry error happend on submission - the service does not accept form?"
+            );
+          }
+        })
+        .catch((error) =>
+          console.log(
+            "Sorry the subscription service is not awailiable (netlify is down?)",
+            error
+          )
+        );
+    };
+
+    document
+      .querySelector("#callbackForm")
+      .addEventListener("submit", handleSubmit);
   }
 }
 
