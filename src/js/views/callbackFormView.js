@@ -20,7 +20,7 @@ class CallbackFormView {
                 Vui lòng để lại tin nhắn và chúng tôi sẽ gọi lại sớm
               </div>
             </div>
-            <form class="form-callback__input" data-netlify="true" method="post" id="callbackForm">
+            <form class="form-callback__input" data-netlify="true" method="post" id="callbackForm" name="callbackForm">
             <input type="hidden" name="form-name" value="callbackForm" />
               <div class="nice-input">
                 <input
