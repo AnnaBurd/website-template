@@ -40,6 +40,7 @@
       href="node_modules/@splidejs/splide/dist/css/splide.min.css"
     />
 
+    <link rel="stylesheet" href="/node_modules/leaflet/dist/leaflet.css" />
     <!-- Custom CSS stylesheet (compiled from SASS files) -->
     <link rel="stylesheet" href="src/css/style.css" />
   </head>
@@ -164,7 +165,9 @@
             <!--TODO fix arrow style and animation and use as a separate component breadcrumps, change text according to dropdown choice, and add links -->
           </div>
           <div class="grid-1-4 item__visual-info">
-            <div class="left-area item__mini-map">map</div>
+            <div class="left-area item__mini-map">
+              <div id="singlePlotMap"></div>
+            </div>
             <div class="right-area item__photos">
               <div class="right-area__top-left">
                 <div class="item__photo-wrapper" id="item-photo-1">
@@ -583,7 +586,7 @@
 
     <!-- <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script> -->
     <script src="node_modules/@splidejs/splide/dist/js/splide.js"></script>
-    <script src="src/js/test.js"></script>
+    <script type="module" src="src/js/test.js"></script>
     <!--TODO add scroll snap/ JS scroll for smooth scrolling down-->
   </body>
 </html>

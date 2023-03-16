@@ -2,6 +2,8 @@ import scrollSizeParameters from "../../sass/abstracts/exp.module.scss";
 import PopupView from "./popupView";
 import ImageGalleryView from "./imageGalleryView";
 
+import L from "../../../node_modules/leaflet/dist/leaflet";
+
 console.log("SCROLLPAR", scrollSizeParameters);
 
 export class LandPageView {
@@ -41,9 +43,70 @@ export class LandPageView {
     this.#imageGallery.render(plot);
     this.#imageGallery.addClickHandler(this.galleryController, this);
 
-    // imagePopupView.addHandlers();
-    // imageGalleryView.render();
+    //Position Leaflet Map on page
+    let coords = plot.coords;
+    console.log("COORDS", coords);
+    let zoom = 14;
+    let map = L.map("singlePlotMap", {
+      attributionControl: false,
+      zoomControl: false,
+      //   closePopupOnClick: false,
+      // minZoom: 10,
+      // maxZoom: 18,
+    }).setView(coords, zoom);
+
+    // // Load map tiles from open API (TODO pick a nice looking tiles)
+    L.tileLayer(
+      "https://api.maptiler.com/maps/basic-v2/{z}/{x}/{y}.png?key=ZDZNCIVl4cVYxBsQzORH"
+    ).addTo(map);
+
+    // L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    //   maxZoom: 19,
+    //   attribution:
+    //     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    // }).addTo(map);
+
+    let tooltip = L.tooltip(coords, {
+      content: "Hello world!<br />This is a nice tooltip.",
+    }).addTo(map);
+
+    // Render poligons
+
+    console.log([
+      coords,
+      [coords[0] + 0.5, coords[1] + 0.1],
+      [coords[0] - 0.5, coords[1] - 0.1],
+    ]);
+    let testPoligon = L.polygon(
+      [
+        coords,
+        [coords[0] + 0.001, coords[1]],
+        [coords[0], coords[1] - 0.001],
+        // [coords[0] + 0.001, coords[1] + 0.001],
+      ],
+      { color: "red" }
+    ).addTo(map);
+
+    // L.marker(coords)
+    //   .addTo(map)
+    //   .bindPopup(
+    //     L.popup({
+    //       maxWidth: 250,
+    //       minWidth: 100,
+    //       autoClose: false,
+    //       closeOnClick: false,
+    //       closeOnEscapeKey: false,
+    //       closeButton: false,
+    //       // autoPan: false,
+    //       className: `test-popup`, // TODO Assign css class to popup element // TODO style
+    //     })
+    //   )
+    //   .setPopupContent(`${"sdf"} <br> ${"sdfds"} ty 💰💰💰 `)
+    //   .openPopup();
   }
+
+  // imagePopupView.addHandlers();
+  // imageGalleryView.render();
 
   galleryController(targetImgId, caller) {
     console.log("Controller of gallery gots input:", targetImgId);
@@ -90,7 +153,7 @@ export class LandPageView {
             <!--TODO fix arrow style and animation and use as a separate component breadcrumps, change text according to dropdown choice, and add links -->
           </div>
           <div class="grid-1-4 item__visual-info">
-            <div class="left-area item__mini-map">map</div>
+            <div class="left-area item__mini-map"><div id="singlePlotMap"></div></div>
             <div class="right-area item__photos">
               <div class="right-area__top-left">
                 <div class="item__photo-wrapper" id="item-photo-1">

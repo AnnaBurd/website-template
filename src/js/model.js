@@ -52,6 +52,7 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
+      coords: [10.371839675317428, 107.0940580478397],
       area: 100,
       height: "120",
       width: "140",
@@ -90,6 +91,7 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
+      coords: [10.474545, 107.295599],
       area: 1151,
       height: "120",
       width: "140",
@@ -130,6 +132,7 @@ class Model {
         },
       ],
       location: "Bán đất tại phường Long Tâm, thành phố Bà Rịa",
+      coords: [10.515043, 107.125755],
       area: 100,
       height: "120",
       width: "5",
@@ -171,6 +174,7 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
+      coords: [10.389786, 107.151752],
       area: 90,
       height: "120",
       width: "5",
@@ -212,6 +216,7 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
+      coords: [10.444438, 107.073645],
       area: 122,
       height: "120",
       width: "140",
@@ -253,6 +258,7 @@ class Model {
       ],
       location:
         "Võ Văn Kiệt, Phường Hắc Dịch, Thị xã Phú Mỹ, Bà Rịa - Vũng Tàu",
+      coords: [10.430721, 106.893955],
       area: 541,
       height: "120",
       width: "140",

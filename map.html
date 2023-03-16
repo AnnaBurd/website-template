@@ -146,7 +146,7 @@
     </div>
     <main>
       <section class="map">
-        <div class="map__content" id="custom__map"></div>
+        <div class="map__content" id="allPlotsMap"></div>
       </section>
     </main>
     <footer>
@@ -256,8 +256,19 @@
     </footer>
   </body>
   <!--Custom Leaflet MAP -->
-  <script src="/node_modules/leaflet/dist/leaflet.js"></script>
-  <script src="src/js/countries.geojson"></script>
-  <script src="src/js/custom-map.js"></script>
+  <!-- <script src="/node_modules/leaflet/dist/leaflet.js"></script> -->
+  <!-- <script src="src/js/countries.geojson"></script> -->
+  <script type="module" src="src/js/custom-map.js"></script>
+
+  <style>
+    <!-- .leaflet-interactive {
+      stroke-width: 1;
+      stroke: green;
+      stroke-opacity: 0.1;
+      fill: red;
+      fill-opacity: 0.1;
+      cursor: grab;
+    } -->
+  </style>
   <!--END Custom Leaflet MAP -->
 </html>
