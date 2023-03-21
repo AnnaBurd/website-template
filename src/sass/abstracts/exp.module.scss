@@ -1,0 +1,7 @@
+@import "variables";
+
+:export {
+  scrollexpwidth: $main-container-width;
+  scrollexppadding: $main-container-padding;
+  scrollexpgutter: $gutter-columns--medium;
+}

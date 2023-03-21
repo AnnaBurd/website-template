@@ -2,9 +2,9 @@
 $color-primary: #cf6f49;
 $color-secondary: #939778;
 
-$white: #FFFFFF;
-$white-darker-1: #FFFEFF;
-$white-darker-2: #F6F4F5;
+$white: #ffffff;
+$white-darker-1: #fffeff;
+$white-darker-2: #f6f4f5;
 
 $grey-1: #e7e8e3;
 $grey-2: #fae8e1;
@@ -14,8 +14,8 @@ $black-green: #2a2c1f;
 $color-secondary-black: #383a2d;
 
 /* Fonts -----------------------------------------------------------*/
-$ff-sans-serif: 'Noto Sans', sans-serif;
-$ff-display: 'Noto Sans Display', 'Noto Sans', sans-serif;
+$ff-sans-serif: "Noto Sans", sans-serif;
+$ff-display: "Noto Sans Display", "Noto Sans", sans-serif;
 
 /* Sized and gutters  ----------------------------------------------*/
 $main-container-width: 1160px;
@@ -34,7 +34,7 @@ $gutter-columns--medium: 2rem; // TODO adjust depending on 1160 or smaller -> ca
 $gutter-columns--small: 1.2rem; // TODO adjust depending on 1160 or smaller -> calc relative
 
 /* Style of boxes ------------------------------------------------*/
-$border-radius: .8rem;
+$border-radius: 0.8rem;
 
 $border--solid: 1px solid $grey-1;
 $border--none: 1px solid transparent;
@@ -42,10 +42,9 @@ $border--none: 1px solid transparent;
 $shadow--default: 0px 2px 4px rgba(0, 0, 0, 0.08);
 $shadow--small: 0px 1px 2px rgba(0, 0, 0, 0.08);
 
-
 // TODO make and refactor transitions
 /* Transitions -----------------------------------------------------*/
-$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) .0s;
+$nice-card-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
 $nice-suggestions-transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
-$nice-button-transition: all .2s;
-$nice-dropdown-transition: all .2s ease;
+$nice-button-transition: all 0.2s;
+$nice-dropdown-transition: all 0.2s ease;

@@ -1,16 +1,25 @@
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-
-
-src/js/test.js
-src/img/raw
-
 node_modules
+.parcel-cache
+dist
 
-style.comp.css
-style.concat.css
-style.prefix.css
+
+*.comp.css
+*.concat.css
+*.prefix.css
+
+#*.css.map
+#*.sass.map
+#*.scss.map
+
+src/img/_raw
+src/img/_hero-options
+src/img/items
+src/icons/_logo-versions
+
+
+
+
+
+
 
 

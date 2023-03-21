@@ -4,7 +4,7 @@
     position: fixed
     top: 0
     left: 0
-    z-index: 9999
+    z-index: -1000
     background-color: rgba($black, .9)
     opacity: 0
     visibility: hidden
@@ -34,6 +34,7 @@
         font-size: 2rem
 
     &--open  // Popup in visible state
+        z-index: 9999
         opacity: 1
         visibility: visible
         & > * // .popup__content

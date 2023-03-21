@@ -7,9 +7,24 @@
     &__visual-info
         margin-bottom: $gutter-vertical--large * 0.7 // TODO adjust
     &__mini-map
-        background-color: #c27996ad // TODO add map
+        // background-color: #c27996ad // TODO add map
         border-radius: $border-radius
         box-shadow: $shadow--default
+        overflow: hidden
+        #singlePlotMap
+            height: 100%
+            width: 100%
+            z-index: 10
+            .leaflet-interactive  // TODO style polygone when there are coordinates
+                stroke-width: 1
+                stroke: green
+                stroke-opacity: 0.4
+                fill: red
+                fill-opacity: 0.3
+                cursor: grab
+                
+            // overflow: hidden
+            // background-color: red
     &__photos
     &__photo-wrapper
         border-radius: $border-radius
@@ -78,12 +93,12 @@
                 transition: $nice-card-transition // TODO set transitions
             #arrow-right
                 margin-left: 3rem // TODO animate arrows
+            .btn-suggestions--blocked
+                // background-color: orange
+                opacity: 0
+                cursor: default
 
-.moveleft
-    transform: translateX(calc(-1 * (min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) + #{$gutter-columns--medium})))
 
-.moveleft-2 // TODO remove hardcoded values
-    transform: translateX(calc(-2 * (min(100vw - #{$main-container-padding} * 2, #{$main-container-width}) + #{$gutter-columns--medium})))
 
-// .blocked
-    // background-color: orange
+
+
